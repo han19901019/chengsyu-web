@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>成緒行銷｜AI 電商後勤自動化 × 通路經營顧問 — 後勤交給 AI，人才留給人</title>
-  <meta name="description" content="成緒用「電商通路實戰 × AI」，幫電商品牌把多通路對帳、庫存、客訴監控、報表等後勤自動化——止血、省時、省成本。momo 食品採購 MD 出身、酷澎 TOP 供應商，10 年通路實戰。">
+  <meta name="description" content="成緒用「電商通路實戰 × AI」，幫電商品牌把多通路對帳、庫存、客訴監控、報表等後勤自動化——止血、省時、省成本。momo 食品採購 MD 出身、酷澎 TOP 供應商，15 年通路實戰。">
   <meta name="keywords" content="AI 電商後勤,電商自動化,多通路對帳,庫存管理,客訴監控,電商顧問,通路經營,通路代營運,ChatGPT,Claude,Gemini,成緒行銷,成緒國際">
   <meta name="author" content="成緒行銷 CHENG SYU">
   <meta name="robots" content="index,follow">
@@ -217,6 +217,18 @@
     .ext span{font-size:15px;font-weight:700;color:var(--ink2);background:#fff;
       border:1px solid var(--line);border-radius:999px;padding:11px 20px}
 
+    /* 區塊插畫 */
+    .ill{width:100%;border-radius:18px;display:block}
+    .svc-top{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;margin-bottom:44px}
+    .svc-top .sec-head{margin-bottom:0}
+    .target-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:center;text-align:left}
+    .target-grid .q{margin:0;max-width:24ch}
+    .target-grid .a{margin-top:16px}
+    .ext-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+    .ext-grid .sec-head{margin:0 0 22px;text-align:left}
+    .ext-grid .sec-head h2{text-align:left}
+    .ext-grid .ext{justify-content:flex-start}
+
     /* 聯絡 */
     .contact{text-align:center}
     .contact .btn-row{justify-content:center;margin-top:28px}
@@ -232,6 +244,10 @@
     @media(max-width:860px){
       .hero-grid{grid-template-columns:1fr;gap:36px}
       .hero-visual{max-width:440px}
+    }
+    @media(max-width:820px){
+      .svc-top,.target-grid,.ext-grid{grid-template-columns:1fr;gap:28px}
+      .ext-grid > div{order:2}
     }
     @media(max-width:760px){
       .menu .m-hide{display:none}
@@ -308,12 +324,12 @@
         <div class="sec-head">
           <span class="kick">WHY CHENG SYU</span>
           <h2 id="h2w">懂 AI 的人很多，懂生意又會 AI 的很少</h2>
-          <p class="lead2">momo 食品採購 MD、酷澎 TOP 供應商、曾操盤知名連鎖咖啡與蜂蜜品牌、10 年電商通路實戰——我們<b>待過通路、也服務過品牌</b>，兩邊的痛都懂。加上每天用 AI 自建系統的實戰，我們不是「教你用 AI」，而是<b>幫你把後勤真的跑起來</b>。</p>
+          <p class="lead2">momo 食品採購 MD、酷澎 TOP 供應商、曾操盤知名連鎖咖啡與蜂蜜品牌、15 年電商通路實戰——我們<b>待過通路、也服務過品牌</b>，兩邊的痛都懂。加上每天用 AI 自建系統的實戰，我們不是「教你用 AI」，而是<b>幫你把後勤真的跑起來</b>。</p>
         </div>
         <div class="creds">
           <span><b>momo</b> 食品採購 MD 出身</span>
           <span><b>酷澎</b> TOP 食品供應商</span>
-          <span><b>10 年</b> 電商通路實戰</span>
+          <span><b>15 年</b> 電商通路實戰</span>
           <span>每天用 <b>AI</b> 自建營運系統</span>
         </div>
       </div>
@@ -322,16 +338,19 @@
     <!-- 核心服務 -->
     <section id="services" aria-labelledby="h2s">
       <div class="wrap">
-        <div class="sec-head">
-          <span class="kick">CORE SERVICE</span>
-          <h2 id="h2s">AI 電商後勤自動化</h2>
-          <p>把最吃人力、最容易出錯的後勤，交給 AI。</p>
+        <div class="svc-top">
+          <div class="sec-head">
+            <span class="kick">CORE SERVICE</span>
+            <h2 id="h2s">AI 電商後勤自動化</h2>
+            <p>把最吃人力、最容易出錯的後勤，交給 AI。省下重複勞務的時間，讓你把人力投回更值得的事。</p>
+          </div>
+          <img class="ill" src="/assets/img/auto.jpg" alt="AI 自動處理電商後勤：對帳、庫存、報表、發票" loading="lazy" width="1000" height="730">
         </div>
         <div class="grid">
           <article class="card">
             <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-            <h3>多通路對帳・毛利</h3>
-            <p>各通路帳自動勾稽、毛利即時掌握，不用再人工翻對帳單。</p>
+            <h3>多通路對帳・毛利・發票</h3>
+            <p>各通路帳自動勾稽、毛利即時掌握、快速開立發票，不用再人工翻對帳單。</p>
           </article>
           <article class="card">
             <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
@@ -356,12 +375,15 @@
     <!-- 目標客戶 -->
     <section class="soft target" aria-labelledby="h2t">
       <div class="wrap">
-        <div class="box">
-          <div class="sec-head" style="margin:0 auto 0;max-width:none">
-            <span class="kick" style="text-align:center;display:block">這是不是你？</span>
+        <div class="box target-grid">
+          <img class="ill" src="/assets/img/talent.jpg" alt="省下的時間，投入育才留才、開拓市場" loading="lazy" width="1000" height="730">
+          <div class="target-txt">
+            <div class="sec-head" style="margin:0 0 4px">
+              <span class="kick">這是不是你？</span>
+            </div>
+            <p class="q">營業額做得起來、毛利也 OK，但<span class="hl">管銷和雜事一直吃掉利潤、綁死你的時間</span>？</p>
+            <p class="a">那就是成緒要幫的品牌。</p>
           </div>
-          <p class="q">營業額做得起來、毛利也 OK，<br>但<span class="hl">管銷和雜事一直吃掉利潤、綁死你的時間</span>？</p>
-          <p class="a">那就是成緒要幫的品牌。</p>
         </div>
       </div>
     </section>
@@ -374,10 +396,10 @@
           <h2 id="h2r" style="text-align:center">十年通路，做出來的信用</h2>
         </div>
         <div class="stats">
-          <div class="stat"><div class="n">30 萬+</div><div class="t">協助知名連鎖咖啡品牌<br>濾掛新品・首月營收</div></div>
+          <div class="stat"><div class="n">120 萬+</div><div class="t">協助知名連鎖咖啡品牌<br>經營半年・月營收</div></div>
           <div class="stat"><div class="n">TOP</div><div class="t">酷澎 Coupang<br>食品供應商</div></div>
-          <div class="stat"><div class="n">MD</div><div class="t">富邦 momo 購物<br>食品採購 MD 出身</div></div>
-          <div class="stat"><div class="n">10 年+</div><div class="t">電商通路<br>實戰經驗</div></div>
+          <div class="stat"><div class="n">長期</div><div class="t">momo 購物<br>專案合作商</div></div>
+          <div class="stat"><div class="n">15 年+</div><div class="t">電商通路<br>實戰經驗</div></div>
         </div>
         <p class="channels" style="margin-bottom:22px">長期供貨以下<b>一線通路</b></p>
         <div class="logos">
@@ -418,16 +440,19 @@
 
     <!-- 延伸服務 -->
     <section aria-labelledby="h2e">
-      <div class="wrap">
-        <div class="sec-head" style="margin:0 auto 28px;text-align:center;max-width:none">
-          <span class="kick">MORE</span>
-          <h2 id="h2e" style="text-align:center">後勤之外，我們還能接住你</h2>
+      <div class="wrap ext-grid">
+        <div>
+          <div class="sec-head">
+            <span class="kick">MORE</span>
+            <h2 id="h2e">後勤之外，我們還能接住你</h2>
+          </div>
+          <div class="ext">
+            <span>🧭 通路經營顧問</span>
+            <span>🚚 合作倉儲物流</span>
+            <span>📦 包材訂製（正隆製造，降低成本）</span>
+          </div>
         </div>
-        <div class="ext">
-          <span>🧭 通路經營顧問</span>
-          <span>🚚 合作倉儲物流</span>
-          <span>📦 包材訂製（正隆製造，降低成本）</span>
-        </div>
+        <img class="ill" src="/assets/img/channel.jpg" alt="多通路訂單順暢流動、穩定成長" loading="lazy" width="1000" height="730">
       </div>
     </section>
 
