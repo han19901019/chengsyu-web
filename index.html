@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>成緒行銷｜電商顧問 × AI 自動化，幫電商蓋出會自己跑的營運系統</title>
+  <meta name="description" content="成緒行銷（CHENG SYU）── 電商顧問 Hank 的實戰基地。用 AI 幫中小電商把帳務、對帳、每日回報等日常雜事，變成會自己跑的自動化營運系統。附 AI 工具實測分享。">
+  <meta name="keywords" content="電商顧問,AI 自動化,電商 AI,自動化系統,電商營運,中小企業 AI,ChatGPT,Claude,Gemini,成緒行銷,成緒國際">
+  <meta name="author" content="成緒行銷 CHENG SYU">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://chengsyu.com/">
+  <meta name="theme-color" content="#FFD22D">
+
+  <!-- Open Graph / 分享卡 -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="成緒行銷 CHENG SYU">
+  <meta property="og:title" content="成緒行銷｜電商顧問 × AI 自動化">
+  <meta property="og:description" content="用 AI 幫電商蓋出會自己跑的營運系統。電商顧問 Hank 的實戰紀錄與 AI 工具實測分享。">
+  <meta property="og:url" content="https://chengsyu.com/">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="成緒行銷｜電商顧問 × AI 自動化">
+  <meta name="twitter:description" content="用 AI 幫電商蓋出會自己跑的營運系統。">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFD22D'/><text x='50' y='72' font-size='62' font-weight='800' text-anchor='middle' fill='%23222' font-family='sans-serif'>成</text></svg>">
+
+  <!-- JSON-LD 結構化資料（利於 Google 收錄與品牌卡） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://chengsyu.com/#org",
+        "name": "成緒行銷",
+        "alternateName": "CHENG SYU",
+        "url": "https://chengsyu.com/",
+        "description": "電商顧問，協助中小電商導入 AI 自動化、建置會自己跑的營運系統。",
+        "sameAs": [
+          "https://www.threads.net/@成緒Hank",
+          "https://www.instagram.com/成緒Hank"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://chengsyu.com/#site",
+        "url": "https://chengsyu.com/",
+        "name": "成緒行銷 CHENG SYU",
+        "inLanguage": "zh-Hant",
+        "publisher": { "@id": "https://chengsyu.com/#org" }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --y:#FFD22D; --o:#F58250; --gray:#666666; --ink:#1f2024; --ink2:#5a5f66;
+      --bg:#ffffff; --soft:#faf8f2; --line:#ececec; --line2:#f1efe9;
+      --grad:linear-gradient(135deg,#FFD22D 0%,#F58250 100%);
+      --r:16px; --maxw:1080px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",-apple-system,"Segoe UI",system-ui,sans-serif;
+      color:var(--ink);background:var(--bg);line-height:1.7;font-size:16px;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    img{max-width:100%;height:auto;display:block}
+
+    /* 頂欄 */
+    header.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);
+      backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px}
+    .brand .mk{width:34px;height:34px;border-radius:9px;background:var(--grad);color:#241a00;
+      display:grid;place-items:center;font-weight:900;font-size:19px}
+    .brand small{display:block;font-size:10px;font-weight:600;color:var(--gray);letter-spacing:2px}
+    .menu{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:600}
+    .menu a{color:var(--ink2);transition:color .15s}
+    .menu a:hover{color:var(--ink)}
+    .menu .cta{background:var(--ink);color:#fff;padding:9px 18px;border-radius:999px;font-weight:700}
+    .menu .cta:hover{color:#fff;opacity:.88}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;background:var(--soft)}
+    .hero::after{content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;
+      border-radius:50%;background:var(--grad);filter:blur(20px);opacity:.22;pointer-events:none}
+    .hero .wrap{position:relative;padding:88px 24px 84px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;
+      letter-spacing:1.5px;color:var(--o);text-transform:uppercase;margin-bottom:20px}
+    .eyebrow::before{content:"";width:26px;height:3px;border-radius:3px;background:var(--grad)}
+    h1{font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.22;letter-spacing:-.5px;
+      text-wrap:balance;max-width:16ch}
+    h1 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{margin-top:22px;font-size:clamp(16px,2.2vw,20px);color:var(--ink2);max-width:52ch;line-height:1.7}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:16px;
+      padding:14px 26px;border-radius:999px;transition:transform .15s,box-shadow .15s}
+    .btn-p{background:var(--grad);color:#241a00;box-shadow:0 10px 26px -10px rgba(245,130,80,.6)}
+    .btn-p:hover{transform:translateY(-2px)}
+    .btn-s{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+    .btn-s:hover{border-color:var(--o);color:var(--o)}
+
+    /* 區段 */
+    section{padding:72px 0}
+    .sec-head{max-width:60ch;margin-bottom:40px}
+    .sec-head .kick{font-size:13px;font-weight:800;letter-spacing:1.5px;color:var(--o);text-transform:uppercase}
+    h2{font-size:clamp(26px,3.5vw,34px);font-weight:900;line-height:1.3;margin-top:12px;text-wrap:balance}
+    .sec-head p{margin-top:14px;color:var(--ink2);font-size:17px}
+
+    /* 服務卡 */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;
+      transition:transform .15s,box-shadow .15s,border-color .15s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(0,0,0,.22);border-color:var(--line2)}
+    .card .ic{width:48px;height:48px;border-radius:12px;background:rgba(255,210,45,.16);
+      display:grid;place-items:center;font-size:24px;margin-bottom:16px}
+    .card h3{font-size:19px;font-weight:800;margin-bottom:8px}
+    .card p{color:var(--ink2);font-size:15px;line-height:1.65}
+
+    /* 交錯底色 */
+    .soft{background:var(--soft)}
+
+    /* AI 分享精選 */
+    .feat{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+    .feat-card{background:#0e1730;color:#eaf0ff;border-radius:20px;padding:34px 32px;position:relative;overflow:hidden}
+    .feat-card::before{content:"";position:absolute;inset:0;background:
+      radial-gradient(500px 200px at 80% 0,rgba(255,210,45,.18),transparent 60%)}
+    .feat-card .tag{position:relative;font-size:12px;font-weight:800;letter-spacing:1px;color:var(--y)}
+    .feat-card h3{position:relative;font-size:24px;font-weight:900;margin:12px 0 12px;line-height:1.35}
+    .feat-card p{position:relative;color:#b9c4de;font-size:15px;margin-bottom:22px}
+    .feat-card .btn-p{position:relative}
+    .feat ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+    .feat ul li{display:flex;gap:12px;font-size:16px;color:var(--ink2)}
+    .feat ul li b{color:var(--ink)}
+    .feat ul li::before{content:"✓";color:var(--o);font-weight:900;flex:none}
+
+    /* 聯絡 */
+    .contact{text-align:center}
+    .contact .btn-row{justify-content:center;margin-top:28px}
+    .social{display:flex;gap:14px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+    .social a{font-weight:700;color:var(--ink2);padding:9px 18px;border:1px solid var(--line);border-radius:999px}
+    .social a:hover{border-color:var(--o);color:var(--o)}
+
+    footer{border-top:1px solid var(--line);padding:34px 0;color:var(--gray);font-size:14px}
+    .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+
+    @media(max-width:760px){
+      .menu .m-hide{display:none}
+      .feat{grid-template-columns:1fr}
+      section{padding:56px 0}
+      .hero .wrap{padding:64px 24px 60px}
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <span class="mk">成</span>
+        <span>成緒行銷<small>CHENG SYU</small></span>
+      </a>
+      <nav class="menu" aria-label="主選單">
+        <a class="m-hide" href="#services">服務</a>
+        <a href="/ai/">AI 分享</a>
+        <a class="m-hide" href="#contact">聯絡</a>
+        <a class="cta" href="#contact">預約諮詢</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="h1">
+      <div class="wrap">
+        <span class="eyebrow">電商顧問 × AI 自動化</span>
+        <h1 id="h1">用 AI，幫電商蓋出<br><span class="hl">會自己跑的營運系統</span></h1>
+        <p class="lead">成緒行銷｜電商顧問 Hank 的實戰基地。把帳務、對帳、每日回報這些天天在做的雜事，交給 AI 自動處理——讓中小電商用更少的人力，跑更穩的營運。</p>
+        <div class="cta-row">
+          <a class="btn btn-p" href="#contact">預約諮詢 →</a>
+          <a class="btn btn-s" href="/ai/">看 AI 工具實測</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 服務 -->
+    <section id="services" aria-labelledby="h2s">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kick">SERVICES</span>
+          <h2 id="h2s">我能幫你什麼</h2>
+          <p>不是賣工具，是幫你把「天天重複、最花時間」的環節，一步步變成自動化系統。</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="ic">🛠️</div>
+            <h3>AI 自動化導入</h3>
+            <p>從你最煩的那件重複工作開始，用 AI 蓋成會自己跑的流程——訂單、對帳、回報、通知，逐項自動化。</p>
+          </article>
+          <article class="card">
+            <div class="ic">📊</div>
+            <h3>電商營運顧問</h3>
+            <p>多通路經營、金流物流、數據拆解到決策建議。以實戰經驗，陪你把電商營運做穩、做順。</p>
+          </article>
+          <article class="card">
+            <div class="ic">🤖</div>
+            <h3>營運系統建置</h3>
+            <p>依你的實際流程，量身打造內部系統與儀表板，讓資料自己流動、每天自動回報，不再人工搬資料。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI 分享精選 -->
+    <section class="soft" id="ai" aria-labelledby="h2a">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="kick">AI 分享</span>
+          <h2 id="h2a">AI 工具實測與教學</h2>
+          <p>不會寫程式，也能用 AI 蓋系統。這裡分享我一路實測、踩坑、選型的心得。</p>
+        </div>
+        <div class="feat">
+          <div class="feat-card">
+            <span class="tag">🥊 精選</span>
+            <h3>三大 AI 自我 PK 賽<br>ChatGPT × Claude × Gemini</h3>
+            <p>五大電商實戰情境，讓三家 AI 互相評分、互打槍，原話全收錄——到底誰最適合幫你做事？</p>
+            <a class="btn btn-p" href="/ai/pk/">看完整比較 →</a>
+          </div>
+          <ul>
+            <li><b>文案生成</b>　誰寫得最像人？</li>
+            <li><b>長文件分析</b>　誰讀得最準？</li>
+            <li><b>程式開發</b>　誰能真的幫你蓋系統？</li>
+            <li><b>市場搜尋</b>　誰的即時性最強？</li>
+            <li><b>商業圖表</b>　誰能一路做到結論？</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 聯絡 -->
+    <section id="contact" class="contact" aria-labelledby="h2c">
+      <div class="wrap">
+        <div class="sec-head" style="margin:0 auto 8px">
+          <span class="kick">CONTACT</span>
+          <h2 id="h2c" style="text-align:center">想用 AI 讓電商更輕鬆？</h2>
+          <p style="text-align:center">聊聊你最想先自動化的那一件事，我陪你把它變成會自己跑的系統。</p>
+        </div>
+        <div class="cta-row btn-row">
+          <a class="btn btn-p" href="mailto:han19901019@gmail.com">寄信給我 →</a>
+        </div>
+        <div class="social">
+          <a href="https://www.threads.net/@成緒Hank" rel="me noopener" target="_blank">Threads @成緒Hank</a>
+          <a href="https://www.instagram.com/成緒Hank" rel="me noopener" target="_blank">Instagram @成緒Hank</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>© 2026 成緒行銷 CHENG SYU</div>
+      <div>電商顧問 × AI 自動化</div>
+    </div>
+  </footer>
+</body>
+</html>

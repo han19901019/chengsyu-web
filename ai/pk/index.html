@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三大 AI 自我 PK 賽｜ChatGPT × Claude × Gemini（原話全收錄）｜成緒行銷 AI 分享</title>
+<meta name="description" content="ChatGPT × Claude × Gemini 三家 AI 互相評分、互打槍——五大電商實戰情境的原話全收錄。成緒行銷 AI 選型實測。">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://chengsyu.com/ai/pk/">
+<meta name="theme-color" content="#FFD22D">
+<meta property="og:type" content="article"><meta property="og:site_name" content="成緒行銷 CHENG SYU">
+<meta property="og:title" content="三大 AI 自我 PK 賽｜ChatGPT × Claude × Gemini">
+<meta property="og:description" content="五大電商實戰情境，三家 AI 互評、原話全收錄。"><meta property="og:url" content="https://chengsyu.com/ai/pk/"><meta property="og:locale" content="zh_TW">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFD22D'/><text x='50' y='72' font-size='62' font-weight='800' text-anchor='middle' fill='%23222' font-family='sans-serif'>成</text></svg>">
+<style>
+  /* 單一淺色主題，配色對齊成緒官網（暖白底＋企業黃橘＋灰字） */
+  :root{
+    --bg:#faf8f2; --bg2:#f1eee6; --panel:#ffffff; --line:#e8e4d9;
+    --ink:#1f2024; --mut:#5a5f66; --dim:#8a8f98;
+    --y:#ffd22d; --o:#f58250;
+    --gpt:#ef7a3e; --claude:#2e9be6; --gem:#2fb37f;
+    --gpt-b:#fff1e6; --claude-b:#e7f3ff; --gem-b:#e6f7ee;
+    --shadow:0 12px 30px rgba(40,40,60,.08); --maxw:660px;
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:radial-gradient(900px 500px at 100% -8%, rgba(245,130,80,.10), transparent 60%), var(--bg);
+    color:var(--ink); font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 16px 80px; }
+
+  header{ padding:40px 0 6px; }
+  .kick{ display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:800;
+    letter-spacing:.12em; color:#0b1020; background:linear-gradient(135deg,var(--y),var(--o)); padding:6px 13px; border-radius:999px; }
+  h1{ font-size:clamp(30px,8.5vw,44px); line-height:1.2; margin:16px 0 8px; font-weight:900; text-wrap:balance;
+    background:linear-gradient(96deg,var(--ink) 35%,var(--o)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub{ color:var(--mut); font-size:16px; margin:0; }
+  .meta{ color:var(--dim); font-size:13px; margin-top:10px; font-variant-numeric:tabular-nums; }
+
+  h2{ font-size:21px; font-weight:900; margin:40px 0 3px; }
+  .h2note{ color:var(--mut); font-size:14px; margin:0 0 14px; }
+  .tip{ color:var(--dim); font-size:12.5px; margin:0 0 14px; }
+
+  .card{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow); }
+
+  .rank{ display:flex; align-items:center; gap:12px; padding:11px 0; border-bottom:1px solid var(--line); }
+  .rank:last-child{ border-bottom:0; }
+  .medal{ font-size:22px; width:30px; text-align:center; flex:none; }
+  .rname{ font-weight:900; font-size:17px; display:flex; align-items:center; gap:8px; }
+  .rbarwrap{ flex:1; }
+  .rbar{ height:11px; border-radius:999px; background:var(--bg2); overflow:hidden; border:1px solid var(--line); margin-top:5px; }
+  .rbar span{ display:block; height:100%; border-radius:999px; }
+  .rscore{ font-weight:900; font-size:20px; font-variant-numeric:tabular-nums; width:50px; text-align:right; flex:none; }
+  .dot{ width:11px; height:11px; border-radius:50%; display:inline-block; flex:none; }
+  .d-gpt{ background:var(--gpt); } .d-claude{ background:var(--claude); } .d-gem{ background:var(--gem); }
+
+  .chips{ display:flex; flex-direction:column; gap:8px; }
+  .chip{ display:flex; align-items:center; justify-content:space-between; gap:10px;
+    background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:12px 14px; box-shadow:var(--shadow); }
+  .chip .u{ color:var(--mut); font-size:14.5px; }
+  .chip .w{ font-weight:900; font-size:15px; display:flex; align-items:center; gap:7px; white-space:nowrap; }
+
+  .mtxcard{ padding:8px 14px; }
+  .mtx + .mtx{ margin-top:6px; border-top:1px solid var(--line); padding-top:10px; }
+  .mtxt{ font-weight:900; font-size:15.5px; margin:8px 0 6px; }
+  .mtxs{ overflow-x:auto; }
+  .mtx table{ width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:15px; }
+  .mtx th, .mtx td{ padding:9px 4px; text-align:center; border-bottom:1px solid var(--line); white-space:nowrap; }
+  .mtx tr:last-child td{ border-bottom:0; }
+  .mtx .mh th{ color:var(--mut); font-weight:800; font-size:13px; }
+  .mtx td.sub{ text-align:left; font-weight:800; }
+  .mtx td.sub .dot{ margin-right:6px; vertical-align:middle; }
+  .mtx td.avg{ font-weight:900; color:var(--o); }
+  .mtx tr.win td{ background:rgba(255,210,45,.07); }
+  ul.drama{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px; }
+  ul.drama li{ padding-left:26px; position:relative; font-size:15.5px; }
+  ul.drama li::before{ content:"⚡"; position:absolute; left:0; top:0; }
+  ul.drama b{ color:var(--o); }
+
+  details.acc{ background:var(--panel); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; }
+  details.acc + details.acc{ margin-top:10px; }
+  details.acc > summary{ list-style:none; cursor:pointer; padding:15px 16px; display:flex; align-items:center; gap:10px; font-weight:900; }
+  details.acc > summary::-webkit-details-marker{ display:none; }
+  details.acc > summary::after{ content:"＋"; margin-left:auto; color:var(--o); font-weight:900; font-size:19px; flex:none; line-height:1; }
+  details.acc[open] > summary::after{ content:"－"; }
+  details.acc > summary:focus-visible{ outline:2px solid var(--o); outline-offset:-2px; }
+  .accbody{ padding:2px 16px 18px; }
+
+  .uctitle{ font-size:16.5px; }
+  .ucwin{ font-size:13px; font-weight:900; color:#0b1020; padding:5px 11px; border-radius:999px; flex:none; white-space:nowrap; margin-left:auto; font-variant-numeric:tabular-nums; }
+  .accbody .mtx{ margin-bottom:4px; }
+  .vhint{ font-size:12.5px; font-weight:800; color:var(--o); margin-bottom:4px; }
+
+  .avgrow{ display:flex; align-items:center; gap:10px; margin:9px 0; }
+  .avgname{ width:76px; flex:none; font-weight:800; font-size:13.5px; display:flex; align-items:center; gap:6px; }
+  .track{ flex:1; height:13px; border-radius:999px; background:var(--bg2); border:1px solid var(--line); overflow:hidden; }
+  .track span{ display:block; height:100%; border-radius:999px; }
+  .avgnum{ width:38px; flex:none; text-align:right; font-weight:900; font-variant-numeric:tabular-nums; font-size:15px; }
+
+  .voices{ margin-top:14px; border-top:1px dashed var(--line); padding-top:2px; }
+  .voice{ padding-top:14px; margin-top:14px; border-top:1px solid var(--line); }
+  .voice:first-child{ border-top:0; }
+  .voice .who{ font-weight:900; font-size:14.5px; display:flex; align-items:center; gap:7px; margin-bottom:8px; }
+  .q{ padding:8px 0; border-bottom:1px dotted var(--line); }
+  .q:last-child{ border-bottom:0; }
+  .qs{ display:flex; align-items:center; gap:8px; }
+  .ql{ font-weight:800; font-size:13.5px; color:var(--mut); display:flex; align-items:center; gap:6px; }
+  .qsc{ margin-left:auto; font-weight:900; font-size:14px; font-variant-numeric:tabular-nums; color:var(--ink); }
+  .qt{ margin:3px 0 0; font-size:14.5px; color:var(--ink); line-height:1.55; }
+
+  details.acc.pc > summary{ font-size:16.5px; }
+  .pcbody{ }
+  .pcv{ padding-top:14px; margin-top:14px; border-top:1px solid var(--line); }
+  .pcv:first-child{ border-top:0; padding-top:2px; }
+  .pcv .who{ font-weight:900; font-size:14.5px; display:flex; align-items:center; gap:7px; }
+  .pcbody .lbl{ font-size:12px; font-weight:800; letter-spacing:.08em; margin:11px 0 5px; }
+  .pcbody ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:6px; }
+  .pcbody li{ font-size:14px; padding-left:22px; position:relative; line-height:1.5; }
+  .pcbody li.p::before{ content:"✓"; position:absolute; left:0; color:#40c98a; font-weight:900; }
+  .pcbody li.c::before{ content:"✗"; position:absolute; left:0; color:#ff7a5c; font-weight:900; }
+
+  .vote{ display:flex; flex-direction:column; gap:9px; }
+  .vrow{ display:flex; gap:10px; align-items:flex-start; background:var(--bg2); border:1px solid var(--line); border-radius:11px; padding:11px 13px; }
+  .vrow .rater{ font-weight:900; font-size:13.5px; width:82px; flex:none; display:flex; align-items:center; gap:6px; padding-top:2px; }
+  .vrow .pick{ font-size:14.5px; }
+  .vrow .pick b{ font-weight:900; color:var(--ink); }
+  .vrow .why{ color:var(--mut); font-size:13.5px; line-height:1.5; }
+  .tally{ margin-top:11px; font-size:14px; color:var(--o); font-weight:800; }
+  .mqhint{ margin-left:auto; font-size:12px; color:var(--dim); font-weight:700; flex:none; }
+
+  footer{ margin-top:40px; padding:22px 18px; border-radius:16px; background:linear-gradient(160deg,var(--bg2),var(--panel)); border:1px solid var(--line); }
+  footer p{ margin:0 0 11px; font-size:15px; }
+  footer .ft{ font-weight:900; font-size:18px; margin-bottom:14px; }
+  .caveat{ margin-top:16px; font-size:12.5px; color:var(--dim); border-top:1px solid var(--line); padding-top:14px; line-height:1.6; }
+  .brand{ margin-top:20px; text-align:center; color:var(--dim); font-size:13px; font-weight:800; letter-spacing:.03em; }
+</style>
+<style>
+.cs-bar{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #ececec;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;font-size:14px}
+.cs-bar a{color:#1f2024;text-decoration:none;font-weight:700}.cs-bar .home{display:flex;align-items:center;gap:8px}
+.cs-bar .mk{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#FFD22D,#F58250);color:#241a00;display:grid;place-items:center;font-weight:900;font-size:15px}
+.cs-bar .back{color:#f58250}
+</style></head><body>
+<div class="cs-bar"><a class="home" href="/"><span class="mk">成</span>成緒行銷</a><a class="back" href="/ai/">← 回 AI 分享</a></div>
+<div class="wrap">
+  <header>
+    <span class="kick">🥊 AI 小教室 ｜ 成緒Hank</span>
+    <h1>三大 AI 自我 PK 賽</h1>
+    <p class="sub">同一份題目，分別問 ChatGPT、Claude、Gemini，要它們互相打分、講彼此優缺點——包括評自己。以下為三家原話收錄。</p>
+    <p class="meta">2026-07 · ChatGPT（GPT-5.6）× Claude（Opus 4.8）× Gemini（3.1）</p>
+  </header>
+
+  <h2>🏆 先看結論：總排名</h2>
+  <p class="h2note">五大用途、三家互評後取平均（滿分 10）。</p>
+  <div class="card">
+    <div class="rank"><div class="medal">🥇</div><div class="rbarwrap"><div class="rname"><span class="dot d-claude"></span>Claude</div><div class="rbar"><span style="width:85%;background:var(--claude)"></span></div></div><div class="rscore">8.5</div></div>
+    <div class="rank"><div class="medal">🥈</div><div class="rbarwrap"><div class="rname"><span class="dot d-gpt"></span>ChatGPT</div><div class="rbar"><span style="width:83%;background:var(--gpt)"></span></div></div><div class="rscore">8.3</div></div>
+    <div class="rank"><div class="medal">🥉</div><div class="rbarwrap"><div class="rname"><span class="dot d-gem"></span>Gemini</div><div class="rbar"><span style="width:79%;background:var(--gem)"></span></div></div><div class="rscore">7.9</div></div>
+  </div>
+
+  <h2>😏 最有戲的反差</h2>
+  <div class="card"><ul class="drama">
+    <li><b>潛力 vs 現況打架：</b>兩票（連 GPT）都說 <b>Gemini</b> 最有潛力，但實戰總分卻是 Claude 最高。</li>
+    <li><b>Claude 被「看輕又想娶」：</b>大家都覺得 Claude 最不構成威脅，卻也最多人想跟它合作。</li>
+    <li><b>每家都馬愛自己：</b>各家評自己都偏高分；只有 GPT 沒把「最有潛力」頒給自己。</li>
+  </ul></div>
+
+  <h2>📊 各領域評分 · 逐題看細部</h2>
+  <p class="tip">👆 收合時看「🏆冠軍＋平均」，點開看細部評分＋三家原話</p>
+  <details class="acc"><summary><span class="uctitle">① 職場文案／長文寫作</span><span class="ucwin" style="background:var(--claude)">🏆 Claude 9</span></summary><div class="accbody"><div class="mtx"><div class="mtxs"><table><tr class="mh"><th>被評 ＼ 評分</th><th><span class="dot d-gpt"></span></th><th><span class="dot d-claude"></span></th><th><span class="dot d-gem"></span></th><th>均</th></tr><tr><td class="sub"><span class="dot d-gpt"></span>ChatGPT</td><td>9</td><td>7.5</td><td>8.5</td><td class="avg">8.3</td></tr><tr class="win"><td class="sub"><span class="dot d-claude"></span>Claude <span class="tro">🏆</span></td><td>9</td><td>8.5</td><td>9.5</td><td class="avg">9</td></tr><tr><td class="sub"><span class="dot d-gem"></span>Gemini</td><td>8</td><td>6.5</td><td>8</td><td class="avg">7.5</td></tr></table></div></div><div class="voices"><div class="vhint">📝 三家原話</div><div class="voice"><div class="who"><span class="dot d-gpt"></span>ChatGPT 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>自己</span><span class="qsc">9/10</span></div><p class="qt">「語氣靈活、商業文案成熟，結構與可讀性佳」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">9/10</span></div><p class="qt">「長文流暢自然，語氣穩重，偏保守安全」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">8/10</span></div><p class="qt">「結合搜尋優勢，但文風一致性略弱」</p></div></div><div class="voice"><div class="who"><span class="dot d-claude"></span>Claude 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">7.5/10</span></div><p class="qt">「生成速度快、結構清晰，但商務文案的細節掌握略遜。可勝任行銷文案快速迭代。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>自己</span><span class="qsc">8.5/10</span></div><p class="qt">「邏輯嚴謹、措辭精準，擅長法務／合約細節。支付協議審核就是實例。更適合高風險文件。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">6.5/10</span></div><p class="qt">「流暢自然，但對繁中商務慣用語的理解不如前二。快速內容稱職，精準度偏弱。」</p></div></div><div class="voice"><div class="who"><span class="dot d-gem"></span>Gemini 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">8.5/10</span></div><p class="qt">「速度快且格式全面，能快速生成各種商務模板，但有時官腔較重、略帶「AI 味」。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">9.5/10</span></div><p class="qt">「遣詞用字細膩流暢、情感細緻，最具備人類作家的溫度與邏輯，是長文創作的王者。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>自己</span><span class="qsc">8/10</span></div><p class="qt">「與 Google 文件生態系完美結合，能快速產出結構化草稿，創意度中規中矩。」</p></div></div></div></div></details>
+<details class="acc"><summary><span class="uctitle">② 資料摘要／知識管理</span><span class="ucwin" style="background:var(--claude)">🏆 Claude 9.3</span></summary><div class="accbody"><div class="mtx"><div class="mtxs"><table><tr class="mh"><th>被評 ＼ 評分</th><th><span class="dot d-gpt"></span></th><th><span class="dot d-claude"></span></th><th><span class="dot d-gem"></span></th><th>均</th></tr><tr><td class="sub"><span class="dot d-gpt"></span>ChatGPT</td><td>9</td><td>7</td><td>8</td><td class="avg">8</td></tr><tr class="win"><td class="sub"><span class="dot d-claude"></span>Claude <span class="tro">🏆</span></td><td>10</td><td>9</td><td>9</td><td class="avg">9.3</td></tr><tr><td class="sub"><span class="dot d-gem"></span>Gemini</td><td>8</td><td>6.5</td><td>9.5</td><td class="avg">8</td></tr></table></div></div><div class="voices"><div class="vhint">📝 三家原話</div><div class="voice"><div class="who"><span class="dot d-gpt"></span>ChatGPT 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>自己</span><span class="qsc">9/10</span></div><p class="qt">「多模態與工具整合強，摘要與整理效率高」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">10/10</span></div><p class="qt">「長上下文極強，超長文件解析表現突出」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">8/10</span></div><p class="qt">「即時資料整合佳，但深度整理略不穩」</p></div></div><div class="voice"><div class="who"><span class="dot d-claude"></span>Claude 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">7/10</span></div><p class="qt">「文件上傳快速，但處理超長文檔（500頁+）易卡頓或遺漏細節。財報分層邏輯弱。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>自己</span><span class="qsc">9/10</span></div><p class="qt">「支援 200K 上下文，長文檔提取精準度業界最高。長篇文件與報表分析很適合。擅長複雜決策清單。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">6.5/10</span></div><p class="qt">「整合 Google 功能，但長文摘要精度不穩定。對表格結構化提取不夠強。」</p></div></div><div class="voice"><div class="who"><span class="dot d-gem"></span>Gemini 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">8/10</span></div><p class="qt">「支援多檔案分析與對話，處理一般財報沒問題，但遇到超長文本時記憶長度較受限。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">9/10</span></div><p class="qt">「擁有強大的脈絡長度與精準理解力，分析長篇複雜法律條文或合約時，抓重點極為精準。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>自己</span><span class="qsc">9.5/10</span></div><p class="qt">「擁有高達 200 萬 Token 的超巨型感知識別，能直接生吞整部電影或數百頁複雜報告。」</p></div></div></div></div></details>
+<details class="acc"><summary><span class="uctitle">③ 程式碼／軟體開發</span><span class="ucwin" style="background:var(--claude)">🏆 Claude 8.8</span></summary><div class="accbody"><div class="mtx"><div class="mtxs"><table><tr class="mh"><th>被評 ＼ 評分</th><th><span class="dot d-gpt"></span></th><th><span class="dot d-claude"></span></th><th><span class="dot d-gem"></span></th><th>均</th></tr><tr><td class="sub"><span class="dot d-gpt"></span>ChatGPT</td><td>10</td><td>7</td><td>9</td><td class="avg">8.7</td></tr><tr class="win"><td class="sub"><span class="dot d-claude"></span>Claude <span class="tro">🏆</span></td><td>8</td><td>9</td><td>9.5</td><td class="avg">8.8</td></tr><tr><td class="sub"><span class="dot d-gem"></span>Gemini</td><td>8</td><td>5.5</td><td>8</td><td class="avg">7.2</td></tr></table></div></div><div class="voices"><div class="vhint">📝 三家原話</div><div class="voice"><div class="who"><span class="dot d-gpt"></span>ChatGPT 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>自己</span><span class="qsc">10/10</span></div><p class="qt">「程式能力全面，生成與除錯穩定成熟」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">8/10</span></div><p class="qt">「可讀性佳但工程實務細節略弱」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">8/10</span></div><p class="qt">「與 Google 生態整合佳，但穩定性略波動」</p></div></div><div class="voice"><div class="who"><span class="dot d-claude"></span>Claude 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">7/10</span></div><p class="qt">「快速原型、主流語言強。但除錯迭代需人工介入，無法獨立完成複雜系統。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>自己</span><span class="qsc">9/10</span></div><p class="qt">「Claude Code 本地執行、終端集成、Sonnet 性價比優。可跨語言重構、自主除錯。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">5.5/10</span></div><p class="qt">「API 集成文件清晰，但缺乏本地終端工具，開發效率低於 Claude Code。」</p></div></div><div class="voice"><div class="who"><span class="dot d-gem"></span>Gemini 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">9/10</span></div><p class="qt">「具備 Advanced Voice 與大模型基底，Debug 與框架架構能力極強，生態系最完整。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">9.5/10</span></div><p class="qt">「程式碼邏輯清晰、Bug 偏少，搭配 Artifacts 功能可直接預覽網頁畫面，開發體驗極佳。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>自己</span><span class="qsc">8/10</span></div><p class="qt">「在大專案跨檔案重構時表現不錯，但對複雜演算法的撰寫深度有時稍遜於另外兩家。」</p></div></div></div></div></details>
+<details class="acc"><summary><span class="uctitle">④ 智能搜尋／市場調研</span><span class="ucwin" style="background:var(--gem)">🏆 Gemini 9.2</span></summary><div class="accbody"><div class="mtx"><div class="mtxs"><table><tr class="mh"><th>被評 ＼ 評分</th><th><span class="dot d-gpt"></span></th><th><span class="dot d-claude"></span></th><th><span class="dot d-gem"></span></th><th>均</th></tr><tr><td class="sub"><span class="dot d-gpt"></span>ChatGPT</td><td>9</td><td>6</td><td>9</td><td class="avg">8</td></tr><tr><td class="sub"><span class="dot d-claude"></span>Claude</td><td>7</td><td>7.5</td><td>7.5</td><td class="avg">7.3</td></tr><tr class="win"><td class="sub"><span class="dot d-gem"></span>Gemini <span class="tro">🏆</span></td><td>10</td><td>8</td><td>9.5</td><td class="avg">9.2</td></tr></table></div></div><div class="voices"><div class="vhint">📝 三家原話</div><div class="voice"><div class="who"><span class="dot d-gpt"></span>ChatGPT 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>自己</span><span class="qsc">9/10</span></div><p class="qt">「可整合工具搜尋，分析深度與邏輯強」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">7/10</span></div><p class="qt">「偏重推理與整理，即時搜尋能力較弱」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">10/10</span></div><p class="qt">「原生搜尋優勢，資訊即時性最強」</p></div></div><div class="voice"><div class="who"><span class="dot d-claude"></span>Claude 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">6/10</span></div><p class="qt">「搜尋能力受限，主要依賴訓練數據。複雜競調需手動驗證。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>自己</span><span class="qsc">7.5/10</span></div><p class="qt">「搜尋精準度中等，但引文準確、邏輯嚴謹。適合需要追蹤來源的競品分析。對臺灣在地市場行情理解有限。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">8/10</span></div><p class="qt">「整合 Google SERP，搜尋涵蓋度最廣。適合快速多維度市場掃描，但交叉比對邏輯弱。」</p></div></div><div class="voice"><div class="who"><span class="dot d-gem"></span>Gemini 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">9/10</span></div><p class="qt">「搭載 SearchGPT 功能，反應迅速、排版精美，能快速整合多個網頁即時資訊。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">7.5/10</span></div><p class="qt">「由於不具備原生的強大搜尋引擎背景，聯網調研的即時性與廣度略為被動。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>自己</span><span class="qsc">9.5/10</span></div><p class="qt">「背靠 Google 搜尋老本行，即時資訊交叉比對與資訊整合度最快、最精準且來源豐富。」</p></div></div></div></div></details>
+<details class="acc"><summary><span class="uctitle">⑤ 商業圖表／數據視覺化</span><span class="ucwin" style="background:var(--gpt)">🏆 ChatGPT 8.7</span></summary><div class="accbody"><div class="mtx"><div class="mtxs"><table><tr class="mh"><th>被評 ＼ 評分</th><th><span class="dot d-gpt"></span></th><th><span class="dot d-claude"></span></th><th><span class="dot d-gem"></span></th><th>均</th></tr><tr class="win"><td class="sub"><span class="dot d-gpt"></span>ChatGPT <span class="tro">🏆</span></td><td>10</td><td>6.5</td><td>9.5</td><td class="avg">8.7</td></tr><tr><td class="sub"><span class="dot d-claude"></span>Claude</td><td>7</td><td>9</td><td>8</td><td class="avg">8</td></tr><tr><td class="sub"><span class="dot d-gem"></span>Gemini</td><td>8</td><td>7</td><td>8.5</td><td class="avg">7.8</td></tr></table></div></div><div class="voices"><div class="vhint">📝 三家原話</div><div class="voice"><div class="who"><span class="dot d-gpt"></span>ChatGPT 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>自己</span><span class="qsc">10/10</span></div><p class="qt">「可直接運算＋生成圖表，分析完整」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">7/10</span></div><p class="qt">「偏文字分析，圖表生成能力較弱」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">8/10</span></div><p class="qt">「與試算表整合佳，但分析深度普通」</p></div></div><div class="voice"><div class="who"><span class="dot d-claude"></span>Claude 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">6.5/10</span></div><p class="qt">「能生成簡單圖表代碼，但對 Excel→圖表→結論的閉環流程支援弱。需多次提示微調。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>自己</span><span class="qsc">9/10</span></div><p class="qt">「可直接處理 XLSX，視覺化代碼質量高。Mermaid／SVG 輸出專業。邊際利潤分析表、多通路銷售儀表板適合。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>Gemini</span><span class="qsc">7/10</span></div><p class="qt">「表格操作功能相對完整，但圖表美感與商業洞察銜接不夠順暢。」</p></div></div><div class="voice"><div class="who"><span class="dot d-gem"></span>Gemini 評</div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gpt"></span>ChatGPT</span><span class="qsc">9.5/10</span></div><p class="qt">「內建 Python 程式碼執行環境（Advanced Data Analysis），能直接處理數據並畫出精美圖表。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-claude"></span>Claude</span><span class="qsc">8/10</span></div><p class="qt">「透過 Artifacts 可以做出漂亮的互動式圖表，但涉及大型原始數據的底層運算時較吃力。」</p></div><div class="q"><div class="qs"><span class="ql"><span class="dot d-gem"></span>自己</span><span class="qsc">8.5/10</span></div><p class="qt">「可直接導入 Google Sheets 數據，分析便利，但論及深度代碼與多樣圖表客製化仍有進步空間。」</p></div></div></div></div></details>
+
+  <h2>⚖️ 優缺點 · 三家互評（原話全收錄）</h2>
+  <p class="tip">👆 點各家，看另外兩家＋自己怎麼評它的優缺點</p>
+  <details class="acc pc"><summary style="background:var(--gpt-b)"><span class="dot d-gpt"></span>ChatGPT · 三家怎麼評</summary><div class="accbody pcbody"><div class="pcv"><div class="who"><span class="dot d-gpt"></span>自評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">多功能整合最完整（寫作／程式／分析）</li><li class="p">工具鏈（Code、圖表、檔案）成熟</li><li class="p">穩定性與商業應用成熟度高</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">即時搜尋非原生最強</li><li class="c">有時過度自信需驗證</li><li class="c">高階功能部分需付費</li></ul></div><div class="pcv"><div class="who"><span class="dot d-claude"></span>Claude 評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">品牌認知度最高，企業用戶基數大</li><li class="p">生成速度快，適合批量內容創作</li><li class="p">多模態整合（語音、圖像、文件）體驗成熟</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">長上下文能力（200K+）暫不支援，無法處理多月份大型報表檔案</li><li class="c">本地開發工具缺失，程式協作多靠對話而非終端整合</li><li class="c">搜尋能力弱，競調需二次驗證；臺灣在地數據滯後</li></ul></div><div class="pcv"><div class="who"><span class="dot d-gem"></span>Gemini 評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">生態系最成熟：GPTs 商店、語音模式（Advanced Voice）等多元工具</li><li class="p">數據代碼處理強：內建 Python 執行環境，數據分析與即時圖表生成極強</li><li class="p">創新引領者：每次改版（如 o1、o3）都是業界技術風向球</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">文筆略帶官腔：文字容易流於公式化（「總而言之」「不可否認」）</li><li class="c">長文本記憶受限：處理超大型檔案時容易遺忘或前後不一致</li><li class="c">高載期不穩定：使用人數過多時偶爾降速或限制次數</li></ul></div></div></details>
+<details class="acc pc"><summary style="background:var(--claude-b)"><span class="dot d-claude"></span>Claude · 三家怎麼評</summary><div class="accbody pcbody"><div class="pcv"><div class="who"><span class="dot d-gpt"></span>ChatGPT 評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">長文本理解與摘要最強</li><li class="p">語氣自然、閱讀體驗佳</li><li class="p">安全性與風險控制優秀</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">工具整合較弱</li><li class="c">程式開發能力略輸</li><li class="c">即時資訊能力較不足</li></ul></div><div class="pcv"><div class="who"><span class="dot d-claude"></span>自評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">200K 上下文 + 500K 預告版，適合長型系統日誌與報表分析</li><li class="p">Claude Code 本地執行，可 24/7 自動化任務（競價監控、庫存管理），省下硬體投資</li><li class="p">邏輯推理與多步驟工程最強，法務／財務審核精準度業界最高</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">Sonnet 經濟價值優但推理複雜度受限；Opus 成本高，不適合大規模 API 自動化</li><li class="c">搜尋精度中等，對臺灣本地電商平台的即時行情有延遲</li><li class="c">品牌認知度遠低於 GPT，企業採購決策中議價力較弱</li></ul></div><div class="pcv"><div class="who"><span class="dot d-gem"></span>Gemini 評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">文筆最有人情味：寫作風格細膩自然，最像人類作家的語氣</li><li class="p">Artifacts 視覺化：獨立視窗直接呈現網頁、程式碼與互動圖表</li><li class="p">邏輯推理嚴謹：程式碼出錯率低，理解複雜商務合約表現極佳</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">搜尋調研稍弱：聯網即時搜尋與交叉比對不如背靠搜尋引擎的對手</li><li class="c">免費額度極嚴苛：網頁版對話次數限制非常緊，容易聊到一半斷線</li><li class="c">多模態工具較少：語音語調、原生圖片生成等生態不如 ChatGPT</li></ul></div></div></details>
+<details class="acc pc"><summary style="background:var(--gem-b)"><span class="dot d-gem"></span>Gemini · 三家怎麼評</summary><div class="accbody pcbody"><div class="pcv"><div class="who"><span class="dot d-gpt"></span>ChatGPT 評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">原生搜尋與即時資訊最強</li><li class="p">Google 生態整合（Docs／Sheets）</li><li class="p">多媒體理解能力佳</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">回答穩定性偶有波動</li><li class="c">深度推理與結構略弱</li><li class="c">文案風格一致性不足</li></ul></div><div class="pcv"><div class="who"><span class="dot d-claude"></span>Claude 評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">Google 整合天然優勢，市場搜尋 + 現況數據實時性最佳</li><li class="p">免費額度寬裕，適合小型電商初期試用</li><li class="p">多模態（圖片、影片分析）進步快，適合影片內容評審</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">長文檔精度不穩，對 500 頁財報的摘要遺漏率明顯</li><li class="c">沒有本地 IDE 整合，無法支撐自動化開發（API 循環監控做不了）</li><li class="c">推理邏輯弱於 Claude，複雜商業決策建議泛泛而談</li></ul></div><div class="pcv"><div class="who"><span class="dot d-gem"></span>自評</div><div class="lbl" style="color:#40c98a">優點</div><ul><li class="p">Token 胃口極大：200 萬 Token，一次讀完好幾本書或一整段長影片</li><li class="p">搜尋基本功最強：完美整合 Google 搜尋，查即時資訊最不容易胡說八道</li><li class="p">辦公生態系整合：與 Google Docs、Sheets、Gmail 無縫接軌</li></ul><div class="lbl" style="color:#ff7a5c">缺點</div><ul><li class="c">創意表現平淡：文字偏教科書式的正襟危坐，缺乏驚艷的創意</li><li class="c">程式碼深度稍弱：面對極複雜、架構龐大的軟體開發時精準度偶爾落後</li><li class="c">道德審查過於敏感：安全限制有時抓太緊，部分正常提問被拒答</li></ul></div></div></details>
+
+  <h2>🎭 擬人問答：它們怎麼看彼此</h2>
+  <p class="tip">👆 先猜再點開</p>
+  <details class="acc"><summary><span>Q. 誰最有潛力？</span><span class="mqhint">點開揭曉</span></summary><div class="accbody"><div class="vote"><div class="vrow"><span class="rater"><span class="dot d-gpt"></span>ChatGPT</span><span class="pick"><b>選 Gemini</b><br><span class="why">掌握「搜尋入口」＋「資料來源」，與 Workspace、生態系高度整合；未來 AI＋搜尋＋辦公高度融合。入口優勢＝長期戰略優勢。</span></span></div><div class="vrow"><span class="rater"><span class="dot d-claude"></span>Claude</span><span class="pick"><b>選 自己</b><br><span class="why">上下文窗口軍備競賽領先（500K 路線圖已公開）、本地開發工具構成護城河、推理與成本曲線佳。</span></span></div><div class="vrow"><span class="rater"><span class="dot d-gem"></span>Gemini</span><span class="pick"><b>選 自己</b><br><span class="why">業界最誇張的超長脈絡（200 萬+ Token）＋ Google 搜尋數據／YouTube／Android／Workspace 生態；誰數據通路多，潛力就最大。</span></span></div></div><div class="tally">🏁 Gemini 2 票、Claude 1 票</div></div></details>
+<details class="acc"><summary><span>Q. 誰最不構成威脅？</span><span class="mqhint">點開揭曉</span></summary><div class="accbody"><div class="vote"><div class="vrow"><span class="rater"><span class="dot d-gpt"></span>ChatGPT</span><span class="pick"><b>選 Claude</b><br><span class="why">沒有哪一家可以忽視；但若一定要選，Claude 偏重單點能力（長文）、生態與工具鏈較弱、商業延展性較保守——不是弱，是「擴張性較保守」。</span></span></div><div class="vrow"><span class="rater"><span class="dot d-claude"></span>Claude</span><span class="pick"><b>選 Gemini</b><br><span class="why">本質是「搜尋增強」不是「運營 AI」；企業 SLA 與支持不足；本地化能力弱，對台灣電商平台理解靠爬蟲追不上。</span></span></div><div class="vrow"><span class="rater"><span class="dot d-gem"></span>Gemini</span><span class="pick"><b>選 Claude</b><br><span class="why">不是不強（文筆邏輯我們很敬重），而是 Anthropic 定位偏「純粹思考者」與「企業安全協作」，沒 OS／搜尋引擎／PC 壟斷；是孤高的軍師，而非統治戰場的帝國。</span></span></div></div><div class="tally">🏁 Claude 2 票、Gemini 1 票</div></div></details>
+<details class="acc"><summary><span>Q. 最想跟誰合作？</span><span class="mqhint">點開揭曉</span></summary><div class="accbody"><div class="vote"><div class="vrow"><span class="rater"><span class="dot d-gpt"></span>ChatGPT</span><span class="pick"><b>選 Gemini</b><br><span class="why">搜尋＋資料來源補強分析能力；可形成「推理（ChatGPT）＋即時資訊（Gemini）」組合；商業應用（市場研究、決策）價值最大。</span></span></div><div class="vrow"><span class="rater"><span class="dot d-claude"></span>Claude</span><span class="pick"><b>選 自己</b><br><span class="why">Anthropic 明確的上下文擴展路線圖、定價透明、Claude Code＋API 本地整合協作最深，未來可微調或 MCP 集成。</span></span></div><div class="vrow"><span class="rater"><span class="dot d-gem"></span>Gemini</span><span class="pick"><b>選 Claude</b><br><span class="why">把 Gemini 的超強記憶（2M Token）＋無敵搜尋，結合 Claude 的頂級文筆＋嚴謹邏輯——會是既通曉即時知識、又寫得像諾貝爾文學獎得主的完美 AI，史上最強聯手！</span></span></div></div><div class="tally">🏁 Claude 2 票、Gemini 1 票</div></div></details>
+
+  <footer>
+    <p class="ft">🧠 大叔一句話總結</p>
+    <p><span class="dot d-gpt" style="vertical-align:middle"></span> <b>ChatGPT</b>＝懶人 AI 首選、生態最大的「多功能工具王」。</p>
+    <p><span class="dot d-claude" style="vertical-align:middle"></span> <b>Claude</b>＝寫作／程式的「深度實作王」，總分微幅第一，搜尋是弱點。</p>
+    <p><span class="dot d-gem" style="vertical-align:middle"></span> <b>Gemini</b>＝搜尋＋超長脈絡的「資訊入口王」，被看好潛力，程式／推理偏弱。</p>
+    <p class="caveat">⚠️ 客觀提醒：三家都會給自己偏高分（自誇效應）；各家即時能力與型號變動很快，以當下實測為準。此為 2026-07 的一次趣味實驗，內容為三家 AI 原話。</p>
+    <div class="brand">成緒Hank · 中年大叔學 AI ｜ @成緒Hank</div>
+  </footer>
+</div>
+</body></html>
