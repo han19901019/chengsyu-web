@@ -253,6 +253,8 @@
     .chips-in label:hover{border-color:var(--o)}
     .chips-in label:has(input:checked){background:rgba(245,130,80,.12);border-color:var(--o);color:var(--ink)}
     .chips-in input{width:auto;accent-color:var(--o);margin:0}
+    .frow3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+    .other-in{margin-top:8px}
     .hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
     .fsubmit{display:flex;align-items:center;gap:16px;margin-top:6px;flex-wrap:wrap}
     .fsubmit .btn{cursor:pointer;border:none}
@@ -260,7 +262,7 @@
     .fmsg.err{color:var(--o)}
     .inq .okbox{text-align:center;padding:26px 10px;font-size:19px;font-weight:800;color:var(--ink)}
     .inq .okbox span{display:block;margin-top:8px;font-size:14px;font-weight:600;color:var(--ink2)}
-    @media(max-width:600px){.inq{padding:22px 18px}.inq .frow{grid-template-columns:1fr}}
+    @media(max-width:600px){.inq{padding:22px 18px}.inq .frow,.frow3{grid-template-columns:1fr}}
     .social{display:flex;gap:14px;justify-content:center;margin-top:22px;flex-wrap:wrap}
     .social a{font-weight:700;color:var(--ink2);padding:9px 18px;border:1px solid var(--line);border-radius:999px}
     .social a:hover{border-color:var(--o);color:var(--o)}
@@ -495,7 +497,14 @@
             <label class="fld"><span>品牌／公司名稱 <i>*</i></span><input name="brand" required maxlength="100"></label>
             <label class="fld"><span>聯絡人 <i>*</i></span><input name="name" required maxlength="60"></label>
           </div>
-          <label class="fld"><span>聯絡方式（Email／電話／Line 擇一）<i>*</i></span><input name="contact" required maxlength="120" placeholder="怎麼找到你最快"></label>
+          <div class="fgrp">
+            <span class="glabel">聯絡方式（Email／電話／Line 至少填一項）<i>*</i></span>
+            <div class="frow3">
+              <input name="email" type="email" maxlength="120" placeholder="Email">
+              <input name="phone" maxlength="40" placeholder="電話">
+              <input name="line" maxlength="60" placeholder="Line ID">
+            </div>
+          </div>
           <div class="fgrp">
             <span class="glabel">目前銷售通路</span>
             <div class="chips-in">
@@ -505,8 +514,8 @@
               <label><input type="checkbox" name="channels" value="酷澎">酷澎</label>
               <label><input type="checkbox" name="channels" value="博客來">博客來</label>
               <label><input type="checkbox" name="channels" value="自有網站">自有網站</label>
-              <label><input type="checkbox" name="channels" value="其他">其他</label>
             </div>
+            <input class="other-in" name="channels_other" maxlength="80" placeholder="其他通路（可自行填寫，多個用、分隔）">
           </div>
           <div class="fgrp">
             <span class="glabel">最頭痛的後勤問題</span>
@@ -517,8 +526,8 @@
               <label><input type="checkbox" name="pains" value="報表">報表</label>
               <label><input type="checkbox" name="pains" value="發票">發票</label>
               <label><input type="checkbox" name="pains" value="人力吃緊">人力</label>
-              <label><input type="checkbox" name="pains" value="其他">其他</label>
             </div>
+            <input class="other-in" name="pains_other" maxlength="80" placeholder="其他問題（可自行填寫）">
           </div>
           <label class="fld"><span>方便聯絡時段（選填）</span><input name="best_time" maxlength="60" placeholder="例：平日下午"></label>
           <label class="fld"><span>想解決的一句話</span><textarea name="message" rows="3" maxlength="500" placeholder="現在最想先解決什麼？"></textarea></label>
@@ -556,8 +565,18 @@
         v = ('' + v).trim(); if (!v) return;
         data[k] = (data[k] !== undefined) ? (data[k] + '、' + v) : v;
       });
+      // 聯絡方式：三欄組成 contact（至少填一項）
+      var parts = [];
+      if (data.email) parts.push('Email：' + data.email);
+      if (data.phone) parts.push('電話：' + data.phone);
+      if (data.line) parts.push('Line：' + data.line);
+      data.contact = parts.join('｜');
+      delete data.email; delete data.phone; delete data.line;
+      // 「其他」通路／問題併入
+      if (data.channels_other) { data.channels = (data.channels ? data.channels + '、' : '') + data.channels_other; delete data.channels_other; }
+      if (data.pains_other) { data.pains = (data.pains ? data.pains + '、' : '') + data.pains_other; delete data.pains_other; }
       if (!data.brand || !data.name || !data.contact) {
-        msg.textContent = '請填品牌、聯絡人、聯絡方式'; msg.className = 'fmsg err'; return;
+        msg.textContent = '請填品牌、聯絡人，並至少填一種聯絡方式（Email／電話／Line）'; msg.className = 'fmsg err'; return;
       }
       var old = btn.textContent;
       btn.disabled = true; btn.textContent = '送出中…'; msg.textContent = ''; msg.className = 'fmsg';
