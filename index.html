@@ -83,9 +83,8 @@
     header.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);
       backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px}
-    .brand .mk{height:36px;width:auto;display:block}
-    .brand small{display:block;font-size:10px;font-weight:600;color:var(--gray);letter-spacing:2px}
+    .brand{display:flex;align-items:center}
+    .brand .brandlogo{height:46px;width:auto;display:block}
     .menu{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:600}
     .menu a{color:var(--ink2);transition:color .15s}
     .menu a:hover{color:var(--ink)}
@@ -260,9 +259,8 @@
 <body>
   <header class="top">
     <div class="wrap nav">
-      <a class="brand" href="/">
-        <img class="mk" src="/assets/cs-mark.png" alt="成緒行銷 CHENG SYU" width="34" height="36">
-        <span>成緒行銷<small>CHENG SYU</small></span>
+      <a class="brand" href="/" aria-label="成緒行銷 CHENG SYU International Marketing">
+        <img class="brandlogo" src="/assets/cs-logo.png" alt="成緒行銷 CHENG SYU International Marketing" width="238" height="110">
       </a>
       <nav class="menu" aria-label="主選單">
         <a class="m-hide" href="#services">服務</a>
