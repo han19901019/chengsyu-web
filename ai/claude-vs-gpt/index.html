@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude vs GPT 怎麼選？2026 實用比較（寫程式、生圖、定價一次看）｜成緒行銷 AI 分享</title>
+<meta name="description" content="Claude 與 GPT（ChatGPT）到底差在哪、怎麼選？從寫程式、生圖、生態串接到 API 定價，一篇看懂兩大 AI 的差異與適用情境。成緒行銷 AI 選型實測分享。">
+<meta name="keywords" content="Claude vs GPT,Claude 和 GPT 比較,Claude GPT 差異,ChatGPT Claude 選擇,AI 選型,AI 工具比較,Claude Code,Codex,AI 寫程式,成緒行銷">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://chengsyu.com/ai/claude-vs-gpt/">
+<meta name="theme-color" content="#FFD22D">
+<meta property="og:type" content="article"><meta property="og:site_name" content="成緒行銷 CHENG SYU">
+<meta property="og:title" content="Claude vs GPT 怎麼選？2026 實用比較">
+<meta property="og:description" content="從寫程式、生圖、生態到 API 定價，一篇看懂 Claude 與 GPT 的差異與怎麼選。">
+<meta property="og:url" content="https://chengsyu.com/ai/claude-vs-gpt/"><meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://chengsyu.com/assets/img/auto.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://chengsyu.com/assets/img/auto.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFD22D'/><text x='50' y='72' font-size='62' font-weight='800' text-anchor='middle' fill='%23222' font-family='sans-serif'>成</text></svg>">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Claude vs GPT 怎麼選？2026 實用比較（寫程式、生圖、定價一次看）",
+  "description":"Claude 與 GPT（ChatGPT）到底差在哪、怎麼選？從寫程式、生圖、生態串接到 API 定價，一篇看懂兩大 AI 的差異與適用情境。",
+  "image":"https://chengsyu.com/assets/img/auto.jpg",
+  "inLanguage":"zh-Hant",
+  "datePublished":"2026-07-13","dateModified":"2026-07-13",
+  "author":{"@type":"Organization","name":"成緒行銷","url":"https://chengsyu.com/"},
+  "publisher":{"@type":"Organization","name":"成緒行銷","logo":{"@type":"ImageObject","url":"https://chengsyu.com/assets/cs-logo.png"}},
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://chengsyu.com/ai/claude-vs-gpt/"},
+  "about":["Claude","GPT","ChatGPT","AI 選型","AI 工具比較"],
+  "isPartOf":{"@type":"CollectionPage","name":"AI 分享","url":"https://chengsyu.com/ai/"},
+  "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"首頁","item":"https://chengsyu.com/"},
+    {"@type":"ListItem","position":2,"name":"AI 分享","item":"https://chengsyu.com/ai/"},
+    {"@type":"ListItem","position":3,"name":"Claude vs GPT 怎麼選","item":"https://chengsyu.com/ai/claude-vs-gpt/"}
+  ]}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Claude 和 GPT 差在哪？","acceptedAnswer":{"@type":"Answer","text":"簡單說，Claude 像可靠的工程師與顧問，最強在寫程式、深度推理、長文分析、要求正確且少亂編；GPT（ChatGPT）像全能通才，樣樣通、生態最大，生圖、語音、助手功能齊全。要正確與寫程式偏 Claude，要多模態與生態偏 GPT。"}},
+    {"@type":"Question","name":"寫程式要用 Claude 還是 GPT？","acceptedAnswer":{"@type":"Answer","text":"兩家都很強。Claude 以可靠、少 bug 著稱，搭配 Claude Code 適合實際蓋系統；GPT 這邊把 Codex 折進主力模型，agentic coding 也很強、更省 token。若最重視穩定與正確，多數人偏好 Claude；若已在 OpenAI 生態或想用 Codex 代理，選 GPT。"}},
+    {"@type":"Question","name":"Claude 可以生圖嗎？","acceptedAnswer":{"@type":"Answer","text":"不行。Claude 只能看圖、理解圖片，不能生成圖片。要生圖請用 GPT（DALL·E）或 Google 的 Gemini。"}},
+    {"@type":"Question","name":"Claude 和 GPT 哪個比較便宜？","acceptedAnswer":{"@type":"Answer","text":"以同級距的 API token 計價來看，Claude 的輸出通常較便宜（例如旗艦 Opus 輸出約每百萬 token 25 美元，而 GPT 標準版輸出約 30 美元）；但實際成本取決於用哪個模型與用量，且價格會變動，請以官方最新價目為準。"}}
+  ]
+}
+</script>
+<style>
+  :root{ --bg:#faf8f2; --bg2:#f1eee6; --panel:#fff; --line:#e8e4d9; --ink:#1f2024; --mut:#5a5f66; --dim:#8a8f98;
+    --y:#ffd22d; --o:#f58250; --claude:#2e9be6; --gpt:#ef7a3e; --claude-b:#e7f3ff; --gpt-b:#fff1e6;
+    --shadow:0 12px 30px rgba(40,40,60,.08); --maxw:720px; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:radial-gradient(900px 500px at 100% -8%, rgba(245,130,80,.10), transparent 60%), var(--bg);
+    color:var(--ink); font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif; line-height:1.75; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 18px 70px; }
+  a{ color:inherit; }
+  header.art{ padding:40px 0 6px; }
+  .kick{ display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:800; letter-spacing:.1em; color:#0b1020;
+    background:linear-gradient(135deg,var(--y),var(--o)); padding:6px 13px; border-radius:999px; }
+  h1{ font-size:clamp(28px,7vw,40px); line-height:1.22; margin:16px 0 10px; font-weight:900; text-wrap:balance; }
+  .sub{ color:var(--mut); font-size:16.5px; margin:0; }
+  .meta{ color:var(--dim); font-size:13px; margin-top:12px; font-variant-numeric:tabular-nums; }
+  h2{ font-size:22px; font-weight:900; margin:42px 0 12px; scroll-margin-top:70px; }
+  p{ margin:0 0 14px; }
+  .card{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px 20px; box-shadow:var(--shadow); margin:0 0 16px; }
+  .lead{ font-size:18px; }
+  .lead b.c{ color:var(--claude); } .lead b.g{ color:var(--gpt); }
+  .tags{ display:flex; gap:8px; flex-wrap:wrap; margin:2px 0 4px; }
+  .tag{ font-size:13px; font-weight:800; padding:4px 11px; border-radius:999px; }
+  .tag.c{ background:var(--claude-b); color:var(--claude); } .tag.g{ background:var(--gpt-b); color:var(--gpt); }
+  .tblwrap{ overflow-x:auto; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); margin:0 0 16px; }
+  table{ border-collapse:collapse; width:100%; min-width:520px; background:var(--panel); font-size:14.5px; }
+  th,td{ text-align:left; padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ font-weight:900; background:var(--bg2); }
+  thead th.c{ color:var(--claude); } thead th.g{ color:var(--gpt); }
+  tbody tr:last-child td{ border-bottom:0; }
+  td.k{ font-weight:800; color:var(--ink); white-space:nowrap; }
+  .callout{ background:#fffaf0; border:1px solid #f3dcae; border-left:4px solid var(--o);
+    border-radius:12px; padding:14px 16px; margin:0 0 16px; font-size:15px; }
+  ul.clean{ margin:0 0 16px; padding-left:20px; } ul.clean li{ margin:0 0 8px; }
+  .pick{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:0 0 16px; }
+  .pick .box{ border:1px solid var(--line); border-radius:14px; padding:16px 16px; background:var(--panel); box-shadow:var(--shadow); }
+  .pick .box h3{ margin:0 0 8px; font-size:16px; }
+  .pick .box.c h3{ color:var(--claude); } .pick .box.g h3{ color:var(--gpt); }
+  .pick .box ul{ margin:0; padding-left:18px; font-size:14.5px; } .pick .box li{ margin:0 0 6px; }
+  @media(max-width:560px){ .pick{ grid-template-columns:1fr; } }
+  .cta{ margin-top:34px; background:linear-gradient(160deg,var(--bg2),var(--panel)); border:1px solid var(--line); border-radius:16px; padding:24px 22px; text-align:center; }
+  .cta h3{ margin:0 0 8px; font-size:19px; font-weight:900; }
+  .cta p{ color:var(--mut); font-size:15px; margin:0 0 16px; }
+  .btn{ display:inline-block; background:linear-gradient(135deg,var(--y),var(--o)); color:#241a00; font-weight:800;
+    padding:12px 26px; border-radius:999px; text-decoration:none; }
+  .caveat{ margin-top:22px; font-size:12.5px; color:var(--dim); border-top:1px solid var(--line); padding-top:14px; line-height:1.65; }
+  .foothome{ margin-top:16px; text-align:center; font-size:13px; }
+  .cs-bar{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #ececec;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;font-size:14px}
+  .cs-bar a{color:#1f2024;text-decoration:none;font-weight:700}.cs-bar .home{display:flex;align-items:center;gap:8px}
+  .cs-bar .mk{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#FFD22D,#F58250);color:#241a00;display:grid;place-items:center;font-weight:900;font-size:15px}
+  .cs-bar .back{color:#f58250}
+</style></head><body>
+<div class="cs-bar"><a class="home" href="/"><span class="mk">成</span>成緒行銷</a><a class="back" href="/ai/">← 回 AI 分享</a></div>
+<div class="wrap">
+  <header class="art">
+    <span class="kick">⚖️ AI 選型 ｜ 成緒Hank</span>
+    <h1>Claude vs GPT 怎麼選？</h1>
+    <p class="sub">兩大 AI 到底差在哪、各適合做什麼？從寫程式、生圖、生態到 API 定價，一篇看懂，幫你少走冤枉路。</p>
+    <p class="meta">2026-07 更新 · Claude（Opus 4.8）× GPT（ChatGPT / GPT-5.6）</p>
+  </header>
+
+  <div class="callout"><b>一句話結論：</b>Claude 像<b>可靠的工程師與顧問</b>——寫程式、深度推理、長文分析、要正確少亂編選它；GPT 像<b>生態最大的全能通才</b>——樣樣通，生圖、語音、助手齊全、最多人用。兩者其實互補，未必只能選一個。</div>
+
+  <h2>先分清名稱</h2>
+  <div class="card">
+    <p style="margin-bottom:8px"><span class="tag c">Claude</span>　Anthropic 公司出品的 AI。日常有網頁、桌面、手機 App，以及給工程師的 <b>Claude Code</b>。</p>
+    <p style="margin:0"><span class="tag g">GPT</span>　OpenAI 的模型；<b>ChatGPT</b> 是聊天 App、<b>Codex</b> 是會自己寫程式的代理、<b>DALL·E / Sora</b> 負責生圖與生影片。常聽到的「GPT-5.6」就是它的模型版本。</p>
+  </div>
+
+  <h2>核心強項對照</h2>
+  <div class="tblwrap"><table>
+    <thead><tr><th>項目</th><th class="c">🔵 Claude</th><th class="g">🟠 GPT</th></tr></thead>
+    <tbody>
+      <tr><td class="k">人設</td><td>嚴謹的工程師／顧問</td><td>全能通才名師</td></tr>
+      <tr><td class="k">最擅長</td><td>寫程式、推理、長文、要正確</td><td>樣樣通、生態最大、多模態齊全</td></tr>
+      <tr><td class="k">文字調性</td><td>精煉、邏輯嚴、助理感高</td><td>多才多藝、通用好上手</td></tr>
+      <tr><td class="k">生圖</td><td>❌ 只能看圖、不生圖</td><td>✅ 可生圖（DALL·E）、生影片（Sora）</td></tr>
+      <tr><td class="k">語音 / 助手</td><td>相對少</td><td>✅ 語音、GPTs、外掛生態最大</td></tr>
+      <tr><td class="k">串接生態</td><td>MCP 開放標準，好接外部資料庫與工具；部署中立</td><td>生態最大、最多人用；朝「超級 App」整合（聊天＋寫程式＋瀏覽器）</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>寫程式：Claude Code vs Codex</h2>
+  <p>這是兩家最貼身的戰場，2026 年都很強：</p>
+  <ul class="clean">
+    <li><b>Claude</b>：主打<b>可靠、少 bug</b>，旗艦 Opus 在複雜程式任務上錯誤更少，搭配 <b>Claude Code</b> 適合實際蓋系統、長時間迭代。</li>
+    <li><b>GPT</b>：把 <b>Codex</b>（會自己寫程式的代理）折進主力模型，agentic coding 能力強、更省 token；「Codex」現在指那個常駐的寫程式代理軟體。</li>
+  </ul>
+  <div class="callout">👉 最重視<b>穩定與正確</b>、要把系統真的跑起來，多數人偏好 <b>Claude</b>；已在 <b>OpenAI 生態</b>、或想用 Codex 代理，選 <b>GPT</b>。</div>
+
+  <h2>生圖與多模態</h2>
+  <p>關鍵差異很單純：<b>Claude 不能生圖</b>（只能看圖、理解圖片）。要生圖、生影片、做語音助手，<b>GPT</b> 一站到位（DALL·E、Sora、語音）。若只是要一張插畫或情境圖，用 GPT 或 Google 的 Gemini 都可以。</p>
+
+  <h2>API 定價（參考級距）</h2>
+  <div class="tblwrap"><table>
+    <thead><tr><th>模型</th><th>輸入 / 輸出（每百萬 token）</th><th>適合</th></tr></thead>
+    <tbody>
+      <tr><td class="k">🔵 Claude Opus 4.8</td><td>約 $5 / $25</td><td>最難、最需要正確的任務</td></tr>
+      <tr><td class="k">🔵 Claude Sonnet 5</td><td>約 $3 / $15</td><td>品質與成本的平衡點</td></tr>
+      <tr><td class="k">🔵 Claude Haiku 4.5</td><td>約 $1 / $5</td><td>最便宜、簡單任務</td></tr>
+      <tr><td class="k">🟠 GPT 標準版</td><td>約 $5 / $30</td><td>通用全能（另有更貴的 Pro 版）</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:13.5px;color:var(--dim)">※ 價格為參考級距、會隨官方調整，實際請以各家官方價目為準。同級距下 Claude 的輸出通常較便宜。</p>
+
+  <h2>那到底怎麼選？</h2>
+  <div class="pick">
+    <div class="box c"><h3>🔵 選 Claude</h3><ul>
+      <li>寫程式、蓋系統、要長時間迭代</li>
+      <li>財務／商務文件分析，要求正確</li>
+      <li>寫作、擬文、要精煉少亂編</li>
+    </ul></div>
+    <div class="box g"><h3>🟠 選 GPT</h3><ul>
+      <li>要生圖、生影片、語音助手</li>
+      <li>想用 Codex 寫程式代理</li>
+      <li>已在 OpenAI 生態、要最大外掛選擇</li>
+    </ul></div>
+  </div>
+  <p>其實不必二選一：把 <b>Claude 當大腦</b>（推理、寫程式、寫作），需要<b>生圖與多模態</b>時交給 GPT 或 Gemini——依任務搭配，才是最省又最好用的做法。</p>
+
+  <h2>常見問題</h2>
+  <div class="card"><p style="margin:0 0 10px"><b>Q：Claude 和 GPT 差在哪？</b><br>Claude 偏可靠的工程師／顧問（寫程式、推理、要正確），GPT 偏全能通才（生態大、生圖語音齊全）。</p>
+  <p style="margin:0 0 10px"><b>Q：寫程式用哪個？</b><br>都很強；重視穩定正確偏 Claude（＋Claude Code），已在 OpenAI 生態或想用 Codex 偏 GPT。</p>
+  <p style="margin:0"><b>Q：Claude 可以生圖嗎？</b><br>不行，只能看圖；生圖用 GPT（DALL·E）或 Gemini。</p></div>
+
+  <div class="cta">
+    <h3>把 AI 用在對的地方，才是關鍵</h3>
+    <p>成緒行銷用「電商通路實戰 × AI」，幫品牌把對帳、庫存、客訴、報表等後勤自動化——後勤交給 AI，人才留給人。</p>
+    <a class="btn" href="/#contact">預約 30 分鐘後勤診斷 →</a>
+    <div class="foothome"><a href="/ai/" style="color:var(--o);font-weight:700">← 看更多 AI 分享</a></div>
+  </div>
+
+  <p class="caveat">※ 本文為 2026 年 7 月公開來源整理，AI 模型與定價更新快速，型號、benchmark 與價格屬參考性質，引用具體數據前請再核對官方最新資訊。</p>
+</div>
+</body></html>
