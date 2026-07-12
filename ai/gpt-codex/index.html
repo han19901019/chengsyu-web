@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPT + Codex 是什麼？OpenAI 的新方向：寫程式代理與「超級 App」｜成緒行銷 AI 分享</title>
+<meta name="description" content="OpenAI Codex 是什麼？從被砍、復活到折進 GPT，Codex 現在是「會自己寫程式的代理」而非獨立模型。一篇看懂 GPT + Codex 的新方向、超級 App 計劃，以及對一般人與企業的意義。">
+<meta name="keywords" content="Codex,OpenAI Codex,GPT Codex,Codex 是什麼,寫程式代理,agentic coding,Claude Code,ChatGPT Atlas,超級 App,AI 自動化,成緒行銷">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://chengsyu.com/ai/gpt-codex/">
+<meta name="theme-color" content="#FFD22D">
+<meta property="og:type" content="article"><meta property="og:site_name" content="成緒行銷 CHENG SYU">
+<meta property="og:title" content="GPT + Codex 是什麼？OpenAI 的新方向">
+<meta property="og:description" content="從被砍到縫進 GPT，Codex 現在是會自己寫程式的代理。一篇看懂 GPT + Codex 的新方向與超級 App 計劃。">
+<meta property="og:url" content="https://chengsyu.com/ai/gpt-codex/"><meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://chengsyu.com/assets/img/auto.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://chengsyu.com/assets/img/auto.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFD22D'/><text x='50' y='72' font-size='62' font-weight='800' text-anchor='middle' fill='%23222' font-family='sans-serif'>成</text></svg>">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Article",
+  "headline":"GPT + Codex 是什麼？OpenAI 的新方向：寫程式代理與「超級 App」",
+  "description":"OpenAI Codex 從被砍、復活到折進 GPT，現在是會自己寫程式的代理而非獨立模型。一篇看懂 GPT + Codex 的新方向與超級 App 計劃。",
+  "image":"https://chengsyu.com/assets/img/auto.jpg","inLanguage":"zh-Hant",
+  "datePublished":"2026-07-13","dateModified":"2026-07-13",
+  "author":{"@type":"Organization","name":"成緒行銷","url":"https://chengsyu.com/"},
+  "publisher":{"@type":"Organization","name":"成緒行銷","logo":{"@type":"ImageObject","url":"https://chengsyu.com/assets/cs-logo.png"}},
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://chengsyu.com/ai/gpt-codex/"},
+  "about":["OpenAI Codex","GPT","agentic coding","AI 寫程式代理"],
+  "isPartOf":{"@type":"CollectionPage","name":"AI 分享","url":"https://chengsyu.com/ai/"},
+  "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"首頁","item":"https://chengsyu.com/"},
+    {"@type":"ListItem","position":2,"name":"AI 分享","item":"https://chengsyu.com/ai/"},
+    {"@type":"ListItem","position":3,"name":"GPT + Codex 的新方向","item":"https://chengsyu.com/ai/gpt-codex/"}
+  ]}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"OpenAI Codex 是什麼？","acceptedAnswer":{"@type":"Answer","text":"Codex 現在指 OpenAI 那個「會自己寫程式的代理軟體」——它能自己開檔案、跑指令、改程式、反覆迭代，底層模型是主力的 GPT。它已經不是一顆獨立的 AI 模型。"}},
+    {"@type":"Question","name":"Codex 還是獨立的 AI 模型嗎？","acceptedAnswer":{"@type":"Answer","text":"不是了。初代 Codex 模型 2023 年被下架，2025 年以 Codex-1 復活，2026 年 2 月的 GPT-5.3-Codex 是最後一顆獨立 Codex 模型；之後 OpenAI 從 GPT-5.4 起把 Codex 能力折進主力 GPT，不再有獨立的寫程式模型。「Codex」這名字現在指的是那個寫程式代理軟體。"}},
+    {"@type":"Question","name":"Codex 跟 Claude Code 差在哪？","acceptedAnswer":{"@type":"Answer","text":"兩者都是 agentic coding（會自己動手寫程式的 AI 代理）：Codex 是 OpenAI 出品、底層 GPT；Claude Code 是 Anthropic 出品、底層 Claude。差別主要在生態與模型調性，Claude 主打可靠少 bug、Codex 走 OpenAI 生態與超級 App 整合。"}},
+    {"@type":"Question","name":"OpenAI 的超級 App 是什麼？","acceptedAnswer":{"@type":"Answer","text":"OpenAI 計劃把 ChatGPT（聊天）、Codex（寫程式代理）與 Atlas 瀏覽器（上網）縫成一個桌面「超級 App」，讓聊天、寫程式、上網都在同一個入口完成。"}}
+  ]
+}
+</script>
+<style>
+  :root{ --bg:#faf8f2; --bg2:#f1eee6; --panel:#fff; --line:#e8e4d9; --ink:#1f2024; --mut:#5a5f66; --dim:#8a8f98;
+    --y:#ffd22d; --o:#f58250; --gpt:#ef7a3e; --shadow:0 12px 30px rgba(40,40,60,.08); --maxw:720px; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:radial-gradient(900px 500px at 100% -8%, rgba(245,130,80,.10), transparent 60%), var(--bg);
+    color:var(--ink); font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif; line-height:1.75; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 18px 70px; }
+  a{ color:inherit; }
+  header.art{ padding:40px 0 6px; }
+  .kick{ display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:800; letter-spacing:.1em; color:#0b1020;
+    background:linear-gradient(135deg,var(--y),var(--o)); padding:6px 13px; border-radius:999px; }
+  h1{ font-size:clamp(27px,6.6vw,38px); line-height:1.24; margin:16px 0 10px; font-weight:900; text-wrap:balance; }
+  .sub{ color:var(--mut); font-size:16.5px; margin:0; }
+  .meta{ color:var(--dim); font-size:13px; margin-top:12px; font-variant-numeric:tabular-nums; }
+  h2{ font-size:22px; font-weight:900; margin:42px 0 12px; scroll-margin-top:70px; }
+  p{ margin:0 0 14px; }
+  .card{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px 20px; box-shadow:var(--shadow); margin:0 0 16px; }
+  .callout{ background:#fffaf0; border:1px solid #f3dcae; border-left:4px solid var(--o); border-radius:12px; padding:14px 16px; margin:0 0 16px; font-size:15px; }
+  ul.clean{ margin:0 0 16px; padding-left:20px; } ul.clean li{ margin:0 0 8px; }
+  .tl{ list-style:none; margin:0; padding:0; position:relative; }
+  .tl:before{ content:""; position:absolute; left:9px; top:6px; bottom:6px; width:2px; background:linear-gradient(var(--y),var(--o)); }
+  .tl li{ position:relative; padding:0 0 18px 34px; }
+  .tl li:last-child{ padding-bottom:0; }
+  .tl .dot{ position:absolute; left:2px; top:4px; width:16px; height:16px; border-radius:50%; background:var(--panel); border:3px solid var(--o); }
+  .tl .yr{ font-weight:900; color:var(--gpt); font-size:14px; }
+  .tl .txt{ font-size:15px; }
+  .cta{ margin-top:34px; background:linear-gradient(160deg,var(--bg2),var(--panel)); border:1px solid var(--line); border-radius:16px; padding:24px 22px; text-align:center; }
+  .cta h3{ margin:0 0 8px; font-size:19px; font-weight:900; }
+  .cta p{ color:var(--mut); font-size:15px; margin:0 0 16px; }
+  .btn{ display:inline-block; background:linear-gradient(135deg,var(--y),var(--o)); color:#241a00; font-weight:800; padding:12px 26px; border-radius:999px; text-decoration:none; }
+  .foothome{ margin-top:16px; text-align:center; font-size:13px; }
+  .caveat{ margin-top:22px; font-size:12.5px; color:var(--dim); border-top:1px solid var(--line); padding-top:14px; line-height:1.65; }
+  .cs-bar{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #ececec;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;font-size:14px}
+  .cs-bar a{color:#1f2024;text-decoration:none;font-weight:700}.cs-bar .home{display:flex;align-items:center}
+  .cs-bar .cslogo{height:30px;width:auto;display:block}
+  .cs-bar .back{color:#f58250}
+</style></head><body>
+<div class="cs-bar"><a class="home" href="/"><img class="cslogo" src="/assets/cs-logo.png" alt="成緒行銷 CHENG SYU"></a><a class="back" href="/ai/">← 回 AI 分享</a></div>
+<div class="wrap">
+  <header class="art">
+    <span class="kick">🧵 AI 小教室 ｜ 成緒Hank</span>
+    <h1>GPT + Codex 是什麼？<br>OpenAI 的新方向</h1>
+    <p class="sub">Codex 被砍過、又復活、現在被縫進 GPT——它到底是什麼？OpenAI 想把它變成什麼？一篇看懂「寫程式代理」與「超級 App」的方向。</p>
+    <p class="meta">2026-07 更新 · OpenAI Codex × GPT-5.x</p>
+  </header>
+
+  <div class="callout"><b>一句話：</b>「Codex」現在<b>不是一顆 AI 模型</b>，而是 OpenAI 那個<b>會自己寫程式的代理軟體</b>——底層跑的是主力 GPT。OpenAI 正把「聊天 + 寫程式 + 上網」縫成一個<b>超級 App</b>。</div>
+
+  <h2>Codex 的身世：被砍 → 復活 → 再收</h2>
+  <p>Codex 這名字命運多舛，重點是它從「模型」變成了「代理」：</p>
+  <div class="card"><ul class="tl">
+    <li><span class="dot"></span><span class="yr">2023</span><div class="txt">初代 Codex 程式模型被下架，OpenAI 改用通用 GPT 處理寫程式。</div></li>
+    <li><span class="dot"></span><span class="yr">2025 / 5</span><div class="txt">以 <b>Codex-1</b>（基於 o3）＋ Codex 代理軟體 <b>復活</b>。</div></li>
+    <li><span class="dot"></span><span class="yr">2026 / 2</span><div class="txt"><b>GPT-5.3-Codex</b>＝最後一顆「獨立」的 Codex 模型。</div></li>
+    <li><span class="dot"></span><span class="yr">2026 / 3–4</span><div class="txt">從 <b>GPT-5.4</b> 起，把 Codex 能力<b>折進主力 GPT</b>，不再有獨立的寫程式模型。</div></li>
+    <li><span class="dot"></span><span class="yr">現在</span><div class="txt">「Codex」＝那個會自己寫程式、甚至能盯著你螢幕操作的<b>常駐代理</b>，模型底層是 GPT-5.x。</div></li>
+  </ul></div>
+
+  <h2>「超級 App」的終局：把三件事縫成一個</h2>
+  <p>OpenAI 的大方向，是把三塊縫進<b>同一個桌面入口</b>：</p>
+  <ul class="clean">
+    <li><b>ChatGPT</b>——聊天、問答、寫作</li>
+    <li><b>Codex</b>——會自己動手的寫程式代理</li>
+    <li><b>Atlas 瀏覽器</b>——直接上網、操作網頁</li>
+  </ul>
+  <p>聊天、寫程式、上網全在一個 App 裡完成——這就是所謂的「超級 App（super app）」策略：把越多事情收進同一個入口，越黏著、越難離開。</p>
+
+  <h2>新戰場：agentic coding（會自己動手的 AI）</h2>
+  <p>Codex 代表的是一個趨勢——<b>AI 不只回答，而是自己動手做</b>：開檔案、跑指令、改程式、反覆迭代，甚至常駐在你電腦裡幫你做事。這條路 OpenAI 用 Codex，Anthropic 用 <b>Claude Code</b>，兩家正面對決。</p>
+  <div class="callout">👉 差別主要在<b>生態與調性</b>：Claude 主打可靠、少 bug；Codex 走 OpenAI 生態、綁進超級 App。想深入比較，可看我們的 <a href="/ai/claude-vs-gpt/" style="color:var(--o);font-weight:700">Claude vs GPT 選型</a>。</div>
+
+  <h2>實戰現場：成緒怎麼用 AI 代理</h2>
+  <p>這些不是我們紙上談兵——成緒自己就是重度使用者。目前的架構是<b>用 Claude（搭配 Claude Code）當大腦</b>，一步步自建電商後勤系統：多通路對帳、庫存監控、客訴監控與每日自動化排程，都是用 AI 代理蓋出來、每天真的在跑；需要<b>生圖與素材</b>時，再交給 Gemini。</p>
+  <p>換句話說，我們把「會自己動手的 AI 代理」拿來<b>解決電商營運的實際後勤</b>，而不只是拿來聊天。這也是成緒的底氣——<b>不是教你用 AI，而是每天用它把系統跑起來</b>，再把這套經驗帶給品牌。</p>
+
+  <h2>這對一般人與企業的意義</h2>
+  <ul class="clean">
+    <li><b>好消息</b>：不會寫程式，也能讓 AI 代理幫你把工具「<b>做出來</b>」，而不只是「教你怎麼做」——這正在快速降低導入自動化的門檻。</li>
+    <li><b>要注意</b>：「什麼都縫進一個 App」有取捨——越綁生態，選型自由越少。挑工具還是要看<b>任務</b>，別被單一入口綁死。</li>
+    <li><b>務實觀點</b>：AI 代理是趨勢，但真正的價值不在「用了哪個」，而在「<b>用在對的地方</b>」——把重複、耗人力的後勤先自動化，效益最直接。</li>
+  </ul>
+
+  <h2>常見問題</h2>
+  <div class="card">
+    <p style="margin:0 0 10px"><b>Q：Codex 是什麼？</b><br>OpenAI 那個會自己寫程式的代理軟體，底層是主力 GPT，已不是獨立模型。</p>
+    <p style="margin:0 0 10px"><b>Q：Codex 還是獨立模型嗎？</b><br>不是了，GPT-5.4 起折進主力 GPT；「Codex」現在指代理軟體。</p>
+    <p style="margin:0"><b>Q：Codex 跟 Claude Code 差在哪？</b><br>都是 agentic coding 代理，差在生態與模型（Codex＝GPT／Claude Code＝Claude）。</p>
+  </div>
+
+  <div class="cta">
+    <h3>AI 代理很強，但要用在對的地方</h3>
+    <p>成緒行銷用「電商通路實戰 × AI」，幫品牌把對帳、庫存、客訴、報表等後勤自動化——後勤交給 AI，人才留給人。</p>
+    <a class="btn" href="/#contact">預約 30 分鐘後勤診斷 →</a>
+    <div class="foothome"><a href="/ai/" style="color:var(--o);font-weight:700">← 看更多 AI 分享</a></div>
+  </div>
+
+  <p class="caveat">※ 本文為 2026 年 7 月公開來源整理，AI 模型與產品更新快速，型號、時間點與功能屬參考性質，引用具體資訊前請再核對官方最新公告。</p>
+</div>
+</body></html>

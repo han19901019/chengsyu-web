@@ -48,9 +48,8 @@
     .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
     header.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px}
-    .brand .mk{width:34px;height:34px;border-radius:9px;background:var(--grad);color:#241a00;display:grid;place-items:center;font-weight:900;font-size:19px}
-    .brand small{display:block;font-size:10px;font-weight:600;color:var(--gray);letter-spacing:2px}
+    .brand{display:flex;align-items:center}
+    .brand .brandlogo{height:42px;width:auto;display:block}
     .menu{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:600}
     .menu a{color:var(--ink2)} .menu a:hover{color:var(--ink)}
     .menu .cur{color:var(--o)}
@@ -84,7 +83,7 @@
 <body>
   <header class="top">
     <div class="wrap nav">
-      <a class="brand" href="/"><span class="mk">成</span><span>成緒行銷<small>CHENG SYU</small></span></a>
+      <a class="brand" href="/"><img class="brandlogo" src="/assets/cs-logo.png" alt="成緒行銷 CHENG SYU"></a>
       <nav class="menu" aria-label="主選單">
         <a class="m-hide" href="/#services">服務</a>
         <a class="cur" href="/ai/">AI 分享</a>
@@ -128,6 +127,20 @@
             <div class="meta">
               <span class="cat">AI 選型</span>
               <a class="go" href="/ai/claude-vs-gpt/">看完整比較 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="post">
+          <a href="/ai/gpt-codex/" class="cover">
+            <span class="tag">🧵 AI 觀察</span>
+            <h2>GPT + Codex<br>是什麼？新方向</h2>
+          </a>
+          <div class="body">
+            <p>Codex 被砍過、又復活、現在被縫進 GPT。一篇看懂「寫程式代理」與 OpenAI 的超級 App 方向，以及成緒怎麼用 AI 代理蓋系統。</p>
+            <div class="meta">
+              <span class="cat">AI 觀察</span>
+              <a class="go" href="/ai/gpt-codex/">看完整解析 →</a>
             </div>
           </div>
         </article>
