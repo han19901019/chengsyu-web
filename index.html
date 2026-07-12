@@ -233,6 +233,34 @@
     .contact .btn-row{justify-content:center;margin-top:28px}
     .mailtxt{margin-top:16px;font-size:15px;color:var(--ink2)}
     .mailtxt b{color:var(--ink)}
+
+    /* 諮詢表單 */
+    .inq{max-width:680px;margin:0 auto;text-align:left;background:#fff;border:1px solid var(--line);
+      border-radius:20px;padding:30px 30px 24px;box-shadow:0 24px 50px -34px rgba(0,0,0,.2)}
+    .inq .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .inq .fld{display:block;margin-bottom:16px}
+    .inq .fld span{display:block;font-size:14px;font-weight:700;color:var(--ink2);margin-bottom:6px}
+    .inq .fld i{color:var(--o);font-style:normal}
+    .inq input,.inq select,.inq textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);
+      background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;transition:border-color .15s}
+    .inq input:focus,.inq select:focus,.inq textarea:focus{outline:none;border-color:var(--o)}
+    .inq textarea{resize:vertical;min-height:66px}
+    .fgrp{margin-bottom:16px}
+    .fgrp .glabel{display:block;font-size:14px;font-weight:700;color:var(--ink2);margin-bottom:8px}
+    .chips-in{display:flex;flex-wrap:wrap;gap:8px}
+    .chips-in label{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--ink2);
+      background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;transition:.15s}
+    .chips-in label:hover{border-color:var(--o)}
+    .chips-in label:has(input:checked){background:rgba(245,130,80,.12);border-color:var(--o);color:var(--ink)}
+    .chips-in input{width:auto;accent-color:var(--o);margin:0}
+    .hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
+    .fsubmit{display:flex;align-items:center;gap:16px;margin-top:6px;flex-wrap:wrap}
+    .fsubmit .btn{cursor:pointer;border:none}
+    .fmsg{font-size:14px;font-weight:700;color:var(--ink2)}
+    .fmsg.err{color:var(--o)}
+    .inq .okbox{text-align:center;padding:26px 10px;font-size:19px;font-weight:800;color:var(--ink)}
+    .inq .okbox span{display:block;margin-top:8px;font-size:14px;font-weight:600;color:var(--ink2)}
+    @media(max-width:600px){.inq{padding:22px 18px}.inq .frow{grid-template-columns:1fr}}
     .social{display:flex;gap:14px;justify-content:center;margin-top:22px;flex-wrap:wrap}
     .social a{font-weight:700;color:var(--ink2);padding:9px 18px;border:1px solid var(--line);border-radius:999px}
     .social a:hover{border-color:var(--o);color:var(--o)}
@@ -280,7 +308,7 @@
           <h1 id="h1">後勤交給 AI，<br><span class="hl">人才留給人</span></h1>
           <p class="lead">成緒用「電商通路實戰 × AI」，幫品牌把後勤自動化——止血、省時、省成本，把你的人和時間，還給更值得的事。</p>
           <div class="cta-row">
-            <a class="btn btn-p" href="mailto:ai_serve@chengsyu.com?subject=預約%2030%20分鐘後勤診斷">預約 30 分鐘後勤診斷 →</a>
+            <a class="btn btn-p" href="#contact">預約 30 分鐘後勤診斷 →</a>
             <a class="btn btn-s" href="#services">看我們怎麼做</a>
           </div>
         </div>
@@ -457,15 +485,58 @@
     <!-- 聯絡 -->
     <section id="contact" class="soft contact" aria-labelledby="h2c">
       <div class="wrap">
-        <div class="sec-head" style="margin:0 auto 8px">
+        <div class="sec-head" style="margin:0 auto 24px">
           <span class="kick">CONTACT</span>
           <h2 id="h2c" style="text-align:center">先從一次 30 分鐘後勤診斷開始</h2>
-          <p style="text-align:center">花 30 分鐘，我們幫你找出後勤最漏的那個洞。</p>
+          <p style="text-align:center">留下資料，我們幫你找出後勤最漏的那個洞。填完直接送出即可。</p>
         </div>
-        <div class="cta-row btn-row">
-          <a class="btn btn-p" href="mailto:ai_serve@chengsyu.com?subject=預約%2030%20分鐘後勤診斷">預約後勤診斷 →</a>
-        </div>
-        <p class="mailtxt">或直接來信：<b>ai_serve@chengsyu.com</b></p>
+        <form id="inqForm" class="inq" novalidate>
+          <div class="frow">
+            <label class="fld"><span>品牌／公司名稱 <i>*</i></span><input name="brand" required maxlength="100"></label>
+            <label class="fld"><span>聯絡人 <i>*</i></span><input name="name" required maxlength="60"></label>
+          </div>
+          <label class="fld"><span>聯絡方式（Email／電話／Line 擇一）<i>*</i></span><input name="contact" required maxlength="120" placeholder="怎麼找到你最快"></label>
+          <div class="fgrp">
+            <span class="glabel">目前銷售通路</span>
+            <div class="chips-in">
+              <label><input type="checkbox" name="channels" value="momo">momo</label>
+              <label><input type="checkbox" name="channels" value="蝦皮">蝦皮</label>
+              <label><input type="checkbox" name="channels" value="PChome">PChome</label>
+              <label><input type="checkbox" name="channels" value="酷澎">酷澎</label>
+              <label><input type="checkbox" name="channels" value="博客來">博客來</label>
+              <label><input type="checkbox" name="channels" value="自有網站">自有網站</label>
+              <label><input type="checkbox" name="channels" value="其他">其他</label>
+            </div>
+          </div>
+          <div class="fgrp">
+            <span class="glabel">最頭痛的後勤問題</span>
+            <div class="chips-in">
+              <label><input type="checkbox" name="pains" value="多通路對帳">對帳</label>
+              <label><input type="checkbox" name="pains" value="庫存補貨">庫存</label>
+              <label><input type="checkbox" name="pains" value="客訴監控">客訴</label>
+              <label><input type="checkbox" name="pains" value="報表">報表</label>
+              <label><input type="checkbox" name="pains" value="發票">發票</label>
+              <label><input type="checkbox" name="pains" value="人力吃緊">人力</label>
+              <label><input type="checkbox" name="pains" value="其他">其他</label>
+            </div>
+          </div>
+          <div class="frow">
+            <label class="fld"><span>每月營業額級距（選填）</span>
+              <select name="revenue">
+                <option value="">不方便說</option>
+                <option>100 萬以下</option><option>100–300 萬</option>
+                <option>300–1000 萬</option><option>1000 萬以上</option>
+              </select></label>
+            <label class="fld"><span>方便聯絡時段（選填）</span><input name="best_time" maxlength="60" placeholder="例：平日下午"></label>
+          </div>
+          <label class="fld"><span>想解決的一句話</span><textarea name="message" rows="3" maxlength="500" placeholder="現在最想先解決什麼？"></textarea></label>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="fsubmit">
+            <button type="submit" class="btn btn-p" id="inqBtn">送出預約 →</button>
+            <span class="fmsg" id="inqMsg"></span>
+          </div>
+          <p class="mailtxt">不想填表？直接來信 <b>ai_serve@chengsyu.com</b></p>
+        </form>
         <div class="social">
           <a href="https://www.threads.com/@cheng_syu" rel="me noopener" target="_blank">Threads @cheng_syu</a>
           <a href="https://www.instagram.com/cheng_syu" rel="me noopener" target="_blank">Instagram @cheng_syu</a>
@@ -480,5 +551,41 @@
       <div>AI 電商後勤自動化 × 通路經營顧問</div>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    var f = document.getElementById('inqForm');
+    if (!f) return;
+    f.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var btn = document.getElementById('inqBtn'), msg = document.getElementById('inqMsg');
+      var data = {};
+      new FormData(f).forEach(function (v, k) {
+        v = ('' + v).trim(); if (!v) return;
+        data[k] = (data[k] !== undefined) ? (data[k] + '、' + v) : v;
+      });
+      if (!data.brand || !data.name || !data.contact) {
+        msg.textContent = '請填品牌、聯絡人、聯絡方式'; msg.className = 'fmsg err'; return;
+      }
+      var old = btn.textContent;
+      btn.disabled = true; btn.textContent = '送出中…'; msg.textContent = ''; msg.className = 'fmsg';
+      try {
+        var r = await fetch('https://hub.chengsyu.com/api/inquiry', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
+        });
+        var j = await r.json().catch(function () { return {}; });
+        if (r.ok && j.ok) {
+          f.innerHTML = '<div class="okbox">✅ 已收到你的預約！<span>我們會盡快與你聯繫。急件可直接來信 ai_serve@chengsyu.com</span></div>';
+        } else {
+          msg.textContent = (j && j.error) || '送出失敗，請稍後再試'; msg.className = 'fmsg err';
+          btn.disabled = false; btn.textContent = old;
+        }
+      } catch (err) {
+        msg.textContent = '連線失敗，請稍後或來信 ai_serve@chengsyu.com'; msg.className = 'fmsg err';
+        btn.disabled = false; btn.textContent = old;
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
