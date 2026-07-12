@@ -18,9 +18,12 @@
   <meta property="og:description" content="後勤交給 AI，人才留給人。用電商通路實戰 × AI，幫品牌把後勤自動化——止血、省時、省成本。">
   <meta property="og:url" content="https://chengsyu.com/">
   <meta property="og:locale" content="zh_TW">
+  <meta property="og:image" content="https://chengsyu.com/assets/img/auto.jpg">
+  <meta property="og:image:alt" content="成緒行銷 — AI 電商後勤自動化">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="成緒行銷｜AI 電商後勤自動化">
   <meta name="twitter:description" content="後勤交給 AI，人才留給人。用電商通路實戰 × AI，幫品牌把後勤自動化。">
+  <meta name="twitter:image" content="https://chengsyu.com/assets/img/auto.jpg">
 
   <link rel="icon" type="image/png" href="/assets/favicon.png">
 
@@ -33,10 +36,27 @@
         "@type": "Organization",
         "@id": "https://chengsyu.com/#org",
         "name": "成緒行銷",
-        "alternateName": "CHENG SYU",
+        "alternateName": ["CHENG SYU", "成緒國際智能系統"],
         "url": "https://chengsyu.com/",
+        "logo": "https://chengsyu.com/assets/cs-logo.png",
+        "image": "https://chengsyu.com/assets/img/auto.jpg",
         "email": "ai_serve@chengsyu.com",
+        "slogan": "後勤交給 AI，人才留給人",
         "description": "以電商通路實戰結合 AI，幫電商品牌把對帳、庫存、客訴監控、報表等後勤自動化，並提供通路經營顧問服務。",
+        "founder": { "@type": "Person", "name": "Hank", "jobTitle": "電商顧問" },
+        "areaServed": { "@type": "Country", "name": "台灣" },
+        "knowsAbout": [
+          "AI 電商後勤自動化", "多通路對帳", "電商庫存管理", "電商客訴監控",
+          "電商報表自動化", "跨通路自動轉單", "通路經營顧問", "電商發票開立",
+          "ChatGPT", "Claude", "Gemini"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "ai_serve@chengsyu.com",
+          "contactType": "customer service",
+          "areaServed": "TW",
+          "availableLanguage": ["zh-Hant"]
+        },
         "sameAs": [
           "https://www.threads.com/@cheng_syu",
           "https://www.instagram.com/cheng_syu"
@@ -51,11 +71,81 @@
         "publisher": { "@id": "https://chengsyu.com/#org" }
       },
       {
+        "@type": "WebPage",
+        "@id": "https://chengsyu.com/#webpage",
+        "url": "https://chengsyu.com/",
+        "name": "成緒行銷｜AI 電商後勤自動化 × 通路經營顧問",
+        "isPartOf": { "@id": "https://chengsyu.com/#site" },
+        "about": { "@id": "https://chengsyu.com/#org" },
+        "inLanguage": "zh-Hant",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".lead", "#faq"]
+        }
+      },
+      {
         "@type": "Service",
+        "@id": "https://chengsyu.com/#service",
+        "serviceType": "AI 電商後勤自動化",
         "name": "AI 電商後勤自動化",
         "provider": { "@id": "https://chengsyu.com/#org" },
-        "areaServed": "TW",
-        "description": "多通路對帳、庫存與補貨提醒、客訴監控與罰款預警、自動報表與自動轉單。"
+        "areaServed": { "@type": "Country", "name": "台灣" },
+        "description": "多通路對帳、庫存與補貨提醒、客訴監控與罰款預警、自動報表與自動轉單。",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "電商後勤自動化項目",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "多通路對帳・毛利・發票" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "庫存與補貨提醒" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "客訴監控與罰款預警" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "自動報表與自動轉單" } }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ 結構化資料（AEO：利於 Google AI 概覽／ChatGPT／Perplexity 直接引用問答） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "成緒行銷是做什麼的？",
+        "acceptedAnswer": { "@type": "Answer", "text": "成緒行銷是用 AI 武裝的電商後勤夥伴。我們結合 15 年電商通路實戰與 AI 自動化，幫電商品牌把多通路對帳、庫存、客訴監控、報表、發票等後勤工作自動化，讓品牌省時、省成本，把人力投回更有價值的事。" }
+      },
+      {
+        "@type": "Question",
+        "name": "什麼是 AI 電商後勤自動化？",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI 電商後勤自動化，是把電商營運中最重複、最耗人力的後勤流程——例如各通路對帳、庫存補貨提醒、客訴逾時預警、每日報表、跨通路轉單——交給 AI 24 小時自動處理，讓品牌不必再手動翻對帳單或盯後台，也能降低人為疏漏。" }
+      },
+      {
+        "@type": "Question",
+        "name": "成緒適合哪一種電商品牌？",
+        "acceptedAnswer": { "@type": "Answer", "text": "最適合營業額做得起來、毛利也 OK，但管銷和雜事一直吃掉利潤、綁死時間的品牌。如果你有穩定的多通路銷售，卻卡在後勤人力與重複作業，成緒就是為你設計的。" }
+      },
+      {
+        "@type": "Question",
+        "name": "AI 電商後勤自動化可以幫我省下哪些工作？",
+        "acceptedAnswer": { "@type": "Answer", "text": "常見可自動化的後勤包括：多通路對帳與毛利計算、發票開立、庫存與補貨提醒、平台客訴監控與罰款預警、每日營運報表、跨通路訂單自動轉單。我們會先用「品牌到銷售 SOP」盤點你的基礎需求，再依你的專屬痛點客製。" }
+      },
+      {
+        "@type": "Question",
+        "name": "成緒和一般「AI 教學／顧問」有什麼不同？",
+        "acceptedAnswer": { "@type": "Answer", "text": "我們不是教你怎麼用 AI，而是幫你把後勤真的跑起來。成緒待過通路、也服務過品牌，兩端的痛都懂，並且每天用 AI 自建營運系統——是實戰派，不是講師派。" }
+      },
+      {
+        "@type": "Question",
+        "name": "成緒的收費方式是怎麼算的？",
+        "acceptedAnswer": { "@type": "Answer", "text": "成緒以幫你省下的價值來定價、收固定服務費，而非傳統的高額營業額抽成。實際方案會依你的通路數量、後勤複雜度與客製範圍，在一次 30 分鐘後勤診斷後提供。" }
+      },
+      {
+        "@type": "Question",
+        "name": "服務地區在哪裡？要怎麼開始合作？",
+        "acceptedAnswer": { "@type": "Answer", "text": "成緒服務台灣的電商品牌。最簡單的開始方式，是預約一次 30 分鐘後勤診斷——我們幫你找出後勤最漏的那個洞，你再決定要不要合作。" }
       }
     ]
   }
@@ -481,6 +571,60 @@
           </div>
         </div>
         <img class="ill" src="/assets/img/channel.jpg" alt="多通路訂單順暢流動、穩定成長" loading="lazy" width="1000" height="730">
+      </div>
+    </section>
+
+    <!-- 常見問題（AEO） -->
+    <style>
+      .faqsec{padding:8px 0 4px}
+      .faqwrap{max-width:820px;margin:0 auto}
+      .faqlist{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+      .faqitem{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;transition:border-color .15s}
+      .faqitem[open]{border-color:#f3d7bf}
+      .faqitem summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:800;font-size:16.5px;
+        display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--ink)}
+      .faqitem summary::-webkit-details-marker{display:none}
+      .faqitem summary .qmk{flex:none;width:22px;height:22px;border-radius:50%;background:var(--soft);
+        display:grid;place-items:center;color:var(--o);font-weight:900;transition:transform .2s}
+      .faqitem[open] summary .qmk{transform:rotate(45deg)}
+      .faqitem .ans{padding:0 22px 20px;color:var(--ink2);font-size:15.5px;line-height:1.8}
+    </style>
+    <section class="faqsec" id="faq" aria-labelledby="h2f">
+      <div class="wrap faqwrap">
+        <div class="sec-head" style="text-align:center;margin:0 auto">
+          <span class="kick">FAQ</span>
+          <h2 id="h2f" style="text-align:center">關於成緒，你可能想問</h2>
+        </div>
+        <div class="faqlist">
+          <details class="faqitem" open>
+            <summary>成緒行銷是做什麼的？<span class="qmk">＋</span></summary>
+            <div class="ans">成緒行銷是「用 AI 武裝的電商後勤夥伴」。我們結合 15 年電商通路實戰與 AI 自動化，幫電商品牌把多通路對帳、庫存、客訴監控、報表、發票等後勤工作自動化，讓品牌省時、省成本，把人力投回更有價值的事。</div>
+          </details>
+          <details class="faqitem">
+            <summary>什麼是 AI 電商後勤自動化？<span class="qmk">＋</span></summary>
+            <div class="ans">AI 電商後勤自動化，是把電商營運中最重複、最耗人力的後勤流程——例如各通路對帳、庫存補貨提醒、客訴逾時預警、每日報表、跨通路轉單——交給 AI 24 小時自動處理，讓品牌不必再手動翻對帳單或盯後台，也能降低人為疏漏。</div>
+          </details>
+          <details class="faqitem">
+            <summary>成緒適合哪一種電商品牌？<span class="qmk">＋</span></summary>
+            <div class="ans">最適合「營業額做得起來、毛利也 OK，但管銷和雜事一直吃掉利潤、綁死時間」的品牌。如果你有穩定的多通路銷售，卻卡在後勤人力與重複作業，成緒就是為你設計的。</div>
+          </details>
+          <details class="faqitem">
+            <summary>AI 電商後勤自動化可以幫我省下哪些工作？<span class="qmk">＋</span></summary>
+            <div class="ans">常見可自動化的後勤包括：多通路對帳與毛利計算、發票開立、庫存與補貨提醒、平台客訴監控與罰款預警、每日營運報表、跨通路訂單自動轉單。我們會先用「品牌到銷售 SOP」盤點你的基礎需求，再依你的專屬痛點客製。</div>
+          </details>
+          <details class="faqitem">
+            <summary>成緒和一般「AI 教學／顧問」有什麼不同？<span class="qmk">＋</span></summary>
+            <div class="ans">我們不是教你怎麼用 AI，而是幫你把後勤真的跑起來。成緒待過通路、也服務過品牌，兩端的痛都懂，並且每天用 AI 自建營運系統——是實戰派，不是講師派。</div>
+          </details>
+          <details class="faqitem">
+            <summary>成緒的收費方式是怎麼算的？<span class="qmk">＋</span></summary>
+            <div class="ans">成緒以「幫你省下的價值」來定價、收固定服務費，而非傳統的高額營業額抽成。實際方案會依你的通路數量、後勤複雜度與客製範圍，在一次 30 分鐘後勤診斷後提供。</div>
+          </details>
+          <details class="faqitem">
+            <summary>服務地區在哪裡？要怎麼開始合作？<span class="qmk">＋</span></summary>
+            <div class="ans">成緒服務台灣的電商品牌。最簡單的開始方式，是預約一次 30 分鐘後勤診斷——我們幫你找出後勤最漏的那個洞，你再決定要不要合作。</div>
+          </details>
+        </div>
       </div>
     </section>
 
