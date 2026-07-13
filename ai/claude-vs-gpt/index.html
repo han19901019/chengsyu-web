@@ -68,6 +68,8 @@
   .tag{ font-size:13px; font-weight:800; padding:4px 11px; border-radius:999px; }
   .tag.c{ background:var(--claude-b); color:var(--claude); } .tag.g{ background:var(--gpt-b); color:var(--gpt); }
   .tblwrap{ overflow-x:auto; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); margin:0 0 16px; }
+  .scrollhint{ display:none; }
+  @media(max-width:640px){ .scrollhint{ display:block; font-size:12px; color:var(--dim); font-weight:700; text-align:right; margin:0 4px 5px; letter-spacing:.3px; } }
   table{ border-collapse:collapse; width:100%; min-width:520px; background:var(--panel); font-size:14.5px; }
   th,td{ text-align:left; padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
   thead th{ font-weight:900; background:var(--bg2); }
@@ -116,6 +118,7 @@
   </div>
 
   <h2>核心強項對照</h2>
+  <div class="scrollhint" aria-hidden="true">← 左右滑動看完整表格 →</div>
   <div class="tblwrap"><table>
     <thead><tr><th>項目</th><th class="c">🔵 Claude</th><th class="g">🟠 GPT</th></tr></thead>
     <tbody>
@@ -140,6 +143,7 @@
   <p>關鍵差異很單純：<b>Claude 不能生圖</b>（只能看圖、理解圖片）。要生圖、生影片、做語音助手，<b>GPT</b> 一站到位（DALL·E、Sora、語音）。若只是要一張插畫或情境圖，用 GPT 或 Google 的 Gemini 都可以。</p>
 
   <h2>API 定價（參考級距）</h2>
+  <div class="scrollhint" aria-hidden="true">← 左右滑動看完整表格 →</div>
   <div class="tblwrap"><table>
     <thead><tr><th>模型</th><th>輸入 / 輸出（每百萬 token）</th><th>適合</th></tr></thead>
     <tbody>
