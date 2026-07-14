@@ -10,8 +10,8 @@
 <meta property="og:title" content="GEO／AEO 是什麼？怎麼讓 AI 主動推薦你的品牌">
 <meta property="og:description" content="消費者改問 AI 不 Google 了。教你用 GEO／AEO 讓 ChatGPT、Gemini、Perplexity 主動推薦你——2026 電商必修的 7 個實作。">
 <meta property="og:url" content="https://chengsyu.com/ai/geo-aeo/"><meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://chengsyu.com/assets/ai/hero-geo-aeo.png">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://chengsyu.com/assets/ai/hero-geo-aeo.png">
+<meta property="og:image" content="https://chengsyu.com/assets/ai/hero-geo-aeo.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://chengsyu.com/assets/ai/hero-geo-aeo.jpg">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <script type="application/ld+json">
 {
@@ -19,7 +19,7 @@
   "@type":"Article",
   "headline":"GEO／AEO 是什麼？怎麼讓 AI 主動推薦你的品牌（2026 電商必修）",
   "description":"消費者開始問 AI、不再只 Google。GEO（生成引擎優化）與 AEO（答案引擎優化）教你怎麼讓 ChatGPT、Gemini、Perplexity 主動推薦你的品牌，2026 電商必修的 7 個實作重點。",
-  "image":"https://chengsyu.com/assets/ai/hero-geo-aeo.png",
+  "image":"https://chengsyu.com/assets/ai/hero-geo-aeo.jpg",
   "inLanguage":"zh-Hant",
   "datePublished":"2026-07-15","dateModified":"2026-07-15",
   "author":{"@type":"Organization","name":"成緒行銷","url":"https://chengsyu.com/"},
@@ -44,10 +44,11 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/assets/v2.css">
 <style>
-  :root{ --bg:#faf8f2; --bg2:#f1eee6; --panel:#fff; --line:#e8e4d9; --ink:#1f2024; --mut:#5a5f66; --dim:#8a8f98;
-    --y:#ffd22d; --o:#f58250; --a:#e0662f; --a-b:#fff1e6;
-    --shadow:0 12px 30px rgba(40,40,60,.08); --maxw:720px; }
+  :root{       
+       
+     --maxw:720px; }
   *{ box-sizing:border-box; }
   body{ margin:0; background:radial-gradient(900px 500px at 100% -8%, rgba(245,130,80,.10), transparent 60%), var(--bg);
     color:var(--ink); font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif; line-height:1.75; -webkit-font-smoothing:antialiased; }
@@ -74,7 +75,7 @@
   thead th{ font-weight:900; background:var(--bg2); }
   tbody tr:last-child td{ border-bottom:0; }
   td.k{ font-weight:800; color:var(--ink); white-space:nowrap; }
-  .callout{ background:#fffaf0; border:1px solid #f3dcae; border-left:4px solid var(--o);
+  .callout{ background:var(--call-bg); border:1px solid var(--call-line); border-left:4px solid var(--o);
     border-radius:12px; padding:14px 16px; margin:0 0 16px; font-size:15px; }
   ul.clean{ margin:0 0 16px; padding-left:20px; } ul.clean li{ margin:0 0 8px; }
   ol.steps{ margin:0 0 16px; padding-left:0; list-style:none; counter-reset:s; }
@@ -92,22 +93,30 @@
     padding:12px 26px; border-radius:999px; text-decoration:none; }
   .caveat{ margin-top:22px; font-size:12.5px; color:var(--dim); border-top:1px solid var(--line); padding-top:14px; line-height:1.65; }
   .foothome{ margin-top:16px; text-align:center; font-size:13px; }
-  .cs-bar{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #ececec;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;font-size:14px}
-  .cs-bar a{color:#1f2024;text-decoration:none;font-weight:700}.cs-bar .home{display:flex;align-items:center}
-  .cs-bar .cslogo{height:30px;width:auto;display:block}
-  .cs-bar .back{color:#f58250}
   .herofig{margin:22px 0 6px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
   .herofig img{width:100%;height:auto;display:block}
 </style></head><body>
-<div class="cs-bar"><a class="home" href="/"><img class="cslogo" src="/assets/cs-logo.png" alt="成緒行銷 CHENG SYU"></a><a class="back" href="/ai/">← 回 AI 應用知識</a></div>
+<header class="v2top" id="v2top">
+  <div class="v2bar">
+    <a class="v2brand" href="/" aria-label="成緒行銷 首頁"><img src="/assets/cs-logotype.png" alt="成緒行銷 CHENG SYU" width="312" height="96"></a>
+    <nav class="v2nav" aria-label="主選單">
+      <a href="/#service">服務</a>
+      <a href="/#why">為什麼是成緒</a>
+      <a class="cur" href="/ai/">AI 應用知識</a>
+      <a href="/#faq">常見問題</a>
+    </nav>
+    <button class="v2tog" id="v2theme" aria-label="切換深淺色主題"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg></button>
+    <a class="v2cta" href="/#contact">預約後勤診斷</a>
+  </div>
+</header>
 <div class="wrap">
   <header class="art">
-    <span class="kick">🎯 AI 行銷 ｜ 成緒Hank</span>
+    <span class="kick">AI 行銷 ｜ 成緒Hank</span>
     <h1>GEO／AEO 是什麼？<br>怎麼讓 AI 主動推薦你的品牌</h1>
-    <p class="sub">越來越多人不 Google、直接問 AI。當 ChatGPT、Gemini、Perplexity 開始幫消費者「決定買誰」，你的品牌有沒有被它推薦，就是 2026 的新生死線。</p>
+    <p class="sub">客人已經不搜了。他直接問 ChatGPT、Gemini、Perplexity：「幫我挑三家」——名單唸完，那筆生意就分完了。你在不在名單上，就是 2026 的新生死線。</p>
     <p class="meta">2026-07 更新 · 電商必修 · 約 6 分鐘讀完</p>
   </header>
-<figure class="herofig"><img src="/assets/ai/hero-geo-aeo.png" alt="AI 助理主動推薦一個品牌的示意插畫" width="1344" height="768"></figure>
+<figure class="herofig"><img src="/assets/ai/hero-geo-aeo.jpg" alt="AI 助理主動推薦一個品牌的示意插畫" width="1344" height="768"></figure>
 
   <div class="callout"><b>一句話結論：</b>以前拚 <b>SEO</b>（在 Google 排前面），現在還要拚 <b>GEO／AEO</b>（讓 AI 回答時直接引用、推薦你）。做法不玄——把內容寫得<b>可被引用、事實明確、結構清楚</b>，把品牌資訊<b>各處一致</b>，再讓別人願意提到你。</div>
 
@@ -136,7 +145,7 @@
   </div>
 
   <h2>為什麼 2026 電商一定要在意</h2>
-  <p>消費者的習慣正在換：想找「送禮的伴手禮」「哪家咖啡豆新鮮」，很多人直接問 AI，AI 給一份精簡名單就下決定——<b>常常連一個網站都沒點</b>。這代表：</p>
+  <p>回想你自己上一次找餐廳：是耐著性子翻三頁搜尋結果，還是直接問 AI「幫我挑」？你的客人也一樣。想買送禮的伴手禮、想找新鮮的咖啡豆，AI 給一份精簡名單就下決定——<b>常常連一個網站都沒點</b>。這代表：</p>
   <ul class="clean">
     <li>如果 AI 的回答裡<b>沒有你</b>，你等於在那筆生意裡「不存在」，連被比較的機會都沒有。</li>
     <li>被 AI 點名推薦的品牌，拿到的是<b>近乎背書</b>的信任感，比自己打廣告更有份量。</li>
@@ -144,7 +153,7 @@
   </ul>
 
   <h2>AI 是怎麼「決定推薦誰」的？</h2>
-  <p>先懂它的邏輯，才知道要優化什麼。AI 的答案大致來自三個來源：</p>
+  <p>想被 AI 推薦，先懂 AI 怎麼想。它決定「講誰」的時候，看的大致是三個來源：</p>
   <div class="card">
     <h3 class="sh">① 訓練資料裡的「既有印象」</h3>
     <p style="margin:0 0 12px">模型被訓練時讀過的大量網路內容。你被越多地方、越一致地提到，它對你的「印象」越深。這塊更新慢，靠長期累積。</p>
@@ -199,40 +208,31 @@
   </ul>
   <p class="caveat">※ 本文為 2026 年 7 月公開來源整理。AI 搜尋與推薦機制更新快速，各家演算法未公開細節，文中作法屬通則性建議、無法保證特定成效或時程，執行前請以各平台官方最新說明為準。</p>
 </div>
-<style>
-.csf{background:#faf8f2;border-top:1px solid #e8e4d9;padding:46px 20px 24px;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",-apple-system,system-ui,sans-serif;color:#5a5f66;line-height:1.7;font-size:14px}
-.csf a{color:#5a5f66;text-decoration:none}
-.csf a:hover{color:#f58250}
-.csf-in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:26px 56px;justify-content:space-between}
-.csf-brand{max-width:340px}
-.csf-logo{height:38px;width:auto;display:block;margin-bottom:12px}
-.csf-tag{font-size:13px;color:#8a8f98;line-height:1.7}
-.csf-col{display:flex;flex-direction:column;gap:9px}
-.csf-col .h{font-weight:800;color:#1f2024;font-size:12.5px;letter-spacing:1px;margin-bottom:3px}
-.csf-copy{max-width:1080px;margin:28px auto 0;padding-top:18px;border-top:1px solid #ececec;font-size:12px;color:#a49a8d;text-align:center}
-@media(max-width:640px){.csf-in{gap:20px 30px}.csf-brand{max-width:none;flex:1 1 100%}}
-</style>
-<div class="csf" role="contentinfo">
-  <div class="csf-in">
-    <div class="csf-brand">
-      <img class="csf-logo" src="/assets/cs-logo.png" alt="成緒行銷 CHENG SYU">
-      <div class="csf-tag">後勤交給 AI，人才留給人。<br>AI 電商後勤自動化 × 通路經營顧問。</div>
+<footer class="v2foot" role="contentinfo">
+  <div class="v2foot-in">
+    <div class="v2foot-grid">
+      <div>
+        <a class="fbrand" href="/"><img src="/assets/cs-logo-full.png" alt="成緒行銷 CHENG SYU INTERNATIONAL MARKETING" width="388" height="180"></a>
+        <p class="fslogan">後勤交給 AI，人才留給人</p>
+      </div>
+      <div class="v2foot-nav">
+        <div class="v2foot-col"><h4>服務</h4>
+          <a href="/#service">AI 電商後勤自動化</a>
+          <a href="/#service">通路經營顧問</a>
+          <a href="/#service">延伸整合服務</a></div>
+        <div class="v2foot-col"><h4>認識成緒</h4>
+          <a href="/#why">為什麼是成緒</a>
+          <a href="/#proof">實績</a>
+          <a href="/ai/">AI 應用知識</a>
+          <a href="/#faq">常見問題</a></div>
+        <div class="v2foot-col"><h4>聯絡</h4>
+          <a href="mailto:ai_serve@chengsyu.com">ai_serve@chengsyu.com</a>
+          <a href="https://www.threads.com/@cheng_syu" target="_blank" rel="me noopener">Threads @cheng_syu</a>
+          <a href="https://www.instagram.com/cheng_syu" target="_blank" rel="me noopener">Instagram @cheng_syu</a></div>
+      </div>
     </div>
-    <div class="csf-col">
-      <span class="h">網站</span>
-      <a href="/">首頁</a>
-      <a href="/#services">服務</a>
-      <a href="/ai/">AI 應用知識</a>
-      <a href="/#contact">預約諮詢</a>
-    </div>
-    <div class="csf-col">
-      <span class="h">聯絡</span>
-      <a href="mailto:ai_serve@chengsyu.com">ai_serve@chengsyu.com</a>
-      <a href="https://www.threads.com/@cheng_syu" target="_blank" rel="me noopener">Threads @cheng_syu</a>
-      <a href="https://www.instagram.com/cheng_syu" target="_blank" rel="me noopener">Instagram @cheng_syu</a>
-    </div>
+    <div class="v2legal"><span>© 2026 成緒國際數位行銷有限公司（成緒行銷 CHENG SYU）</span><span>統一編號 90349945 · 台灣</span></div>
   </div>
-  <div class="csf-copy">© 2026 成緒國際數位行銷有限公司（成緒行銷 CHENG SYU）· Chengsyu Intelligence</div>
-</div>
-  <script src="/assets/site.js"></script>
+</footer>
+<script src="/assets/v2.js"></script>
 </body></html>
