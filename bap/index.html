@@ -350,10 +350,12 @@
 
   .lite-only{display:none}
   :root[data-mode="lite"] .lite-only{display:block}
-  :root[data-mode="lite"] .event:not(.milestone){display:none}
+  /* 懶人包不挑事件，80 則全留，只收起內文；避免「挑哪幾則」變成一種立場 */
   :root[data-mode="lite"] .card p{display:none}
-  :root[data-mode="lite"] .trackfilters,
-  :root[data-mode="lite"] .legend,
+  :root[data-mode="lite"] .card{padding:.7rem .95rem .75rem}
+  :root[data-mode="lite"] .event{padding-bottom:.85rem}
+  :root[data-mode="lite"] .spine::before{bottom:-.85rem}
+  :root[data-mode="lite"] .srcs{margin-top:.55rem;padding-top:.5rem}
   :root[data-mode="lite"] .full-only{display:none}
 
   .tldr{
@@ -552,7 +554,7 @@
       <a href="#faceoff">〈同一件事，中央和地方講的不一樣〉</a>並排比對。
     </p>
     <div class="stamp">
-      <span>更新 2026-08-01 17:31</span>
+      <span>更新 2026-08-01 18:05</span>
       <span>事件 80 則</span>
       <span>來源：<span class="n-org">食藥署</span>／<span class="n-org">行政院</span>／<span class="n-org">立法院</span>／各地方<span class="n-org">衛生局</span>／公視／中央社／<span class="n-org">EUR-Lex</span></span>
     </div>
@@ -571,13 +573,27 @@
     <div class="fig"><b>501 項</b><span>檢驗合格、獲准重新上架的產品（7/23）</span></div>
   </div>
 
+  <section id="principles">
+    <h2>這頁怎麼編的</h2>
+    <div class="tier-note">
+      <p style="margin:0 0 .6rem"><b>這是一份時序整理，不是評論。</b>編排上守四條規矩，讀者可以逐條檢查：</p>
+      <ul class="plain" style="margin:0">
+        <li><b>不挑事件。</b>切到「懶人包」不會少掉任何一則，80 則全部都在，只是收起內文、只看標題與來源。挑哪幾則本身就是一種立場，所以不挑。</li>
+        <li><b>質疑與回應成對出現。</b>只要收錄了某一方的指控，被指控方的回應也一定收；反之亦然。中央與地方講法不同的六個爭點，另外並排整理成一區。</li>
+        <li><b>不同立場都收。</b>執政與在野的民代、藍綠地方首長、民間團體與消保團體的主張都列入，包含針對不同執政縣市的抗議。</li>
+        <li><b>只寫查得到的，寫不出來就說寫不出來。</b>每則附可點來源，優先官方公告與公視、中央社。查不到官方原文的一律標明，不用推測補洞。</li>
+      </ul>
+      <p style="margin:.7rem 0 0">時間軸本身不對任何一方下判斷。需要評價與詮釋的內容集中在「媒體與評論怎麼看」那一區，且已標明來源等級不同。</p>
+    </div>
+  </section>
+
   <section id="timeline">
     <h2>時間軸</h2>
     <p class="lede">
       依日期排列。每則標示是哪一方的動作——業者、主管機關、地方政府、司法、法規、民意代表或民間團體。
       <span class="full-only">點下方按鈕可只看其中一條線；想單看外界怎麼質疑，按「民意代表」「抗議遊行」或「民間」。
       名字依人物、公司、機關與團體三類分色標示。</span>
-      趕時間就切「懶人包」，只留關鍵節點與來源連結。
+      趕時間就切「懶人包」——<b>事件一則都不會少，80 則全在</b>，只是收起內文，只看標題與來源。
     </p>
 
     <div class="filters" role="group" aria-label="檢視模式與角色篩選">
@@ -602,10 +618,10 @@
 
     <div class="tldr lite-only">
       <h3>30 秒看懂這件事</h3>
-      <p class="sub">每一點都能在下方時間軸找到對應事件與官方來源。</p>
+      <p class="sub">這十點是為了快速進入狀況而寫的摘要，每一點都能在下方時間軸找到對應事件與官方來源。下方 80 則事件不會因為切換模式而減少。</p>
       <ol>
         <li>2026 年 4 月生產的一批大豆沙拉油，驗出一級致癌物苯駢芘 <b>8.1 μg/kg</b>，是法定上限 2.0 的 4 倍。</li>
-        <li>最早 <b>5 月 13 日</b>就被下游業者驗出來，卻拖到 <b>6 月 30 日</b>才通報主管機關，中間隔了 48 天。</li>
+        <li>最早 <b>5 月 13 日</b>就被下游業者驗出來，<b>6 月 30 日</b>通報主管機關，相隔 48 天。</li>
         <li>問題油約 <b>1,300 公噸</b>，流向福懋、福壽、泰山三家大廠，再擴散到 360 家下游業者、1,380 所學校。</li>
         <li>食藥署 7 月 7 日開罰中聯 <b>1 億 6,520 萬元</b>，中央史上最高；地方另罰南僑 300 萬、福壽累計 900 萬。</li>
         <li>中聯總經理余凌冲一度交保，7 月 17 日改裁定<b>收押禁見</b>；四家公司不動產遭扣押 1.26 億元。</li>
@@ -628,7 +644,7 @@
       <div class="phase-head">
         <h3>第一階段：業者之間，民眾不知情</h3>
         <span class="range">2026-05-10 → 06-30</span>
-        <p>異常最早在 5 月 13 日就被驗出來，但一直在幾家公司之間往返送驗，直到 6 月 30 日才通報主管機關——中間隔了 48 天。這段是後來<span class="n-org">食藥署</span>開出史上最高罰鍰的主因。</p>
+        <p>異常最早在 5 月 13 日就被驗出來，之後在幾家公司之間往返送驗，6 月 30 日通報主管機關，相隔 48 天。這段是後來<span class="n-org">食藥署</span>開出史上最高罰鍰的主因。</p>
       </div>
 
       <div class="events">
@@ -669,7 +685,7 @@
           <div class="spine"><i></i></div>
           <div class="card">
             <h4><span class="track">業者</span><span class="n-corp">南僑</span>通報上游廠商<span class="n-corp">福壽</span></h4>
-            <p>確認超標六天後，訊息才往上游傳一層。</p>
+            <p>確認超標六天後，訊息往上游傳一層。</p>
             <div class="srcs"><a class="src" href="https://news.pts.org.tw/article/817542" target="_blank" rel="noopener">公視 全案時序</a></div>
           </div>
         </div>
@@ -732,7 +748,7 @@
           <div class="when">2026<b>06-30</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">業者</span><span class="n-corp">中聯</span>終於向主管機關通報，<span class="n-org">台中市食安處</span>當日聯合稽查</h4>
+            <h4><span class="track">業者</span><span class="n-corp">中聯</span>向主管機關通報，<span class="n-org">台中市食安處</span>當日聯合稽查</h4>
             <p>距離 5 月 13 日首次驗出異常已 48 天。<span class="n-corp">中聯</span>通報後，<span class="n-corp">泰山</span>、<span class="n-corp">福壽</span>、<span class="n-corp">福懋</span>、<span class="n-corp">南僑</span>才陸續跟進。<span class="n-org">台中市食品藥物安全處</span>獲報後立即啟動聯合稽查。</p>
             <div class="srcs">
               <a class="src" href="https://news.pts.org.tw/article/817542" target="_blank" rel="noopener">公視 全案時序</a>
@@ -897,7 +913,7 @@
           <div class="when">2026<b>07-06</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span>台北市不照中央的 20% 標準，改成不限比例全面下架</h4>
+            <h4><span class="track">地方政府</span>台北市未採中央的 20% 門檻，改為不限比例全面下架</h4>
             <p><span class="n-org">食藥署</span>規定，以油的原型出現、或使用占比 20% 以上的問題油製品才須預防性下架。台北市長<span class="n-person">蔣萬安</span>表示：「只要有任何使用到問題油品的加工製品，我們不分 20% 以上或以下先全面預防性下架。」低於 20% 的廠商要有相關證明才可恢復上架。</p>
             <p>總統<span class="n-person">賴清德</span>同日強調食安政策沒有妥協空間，該下架就要下架。</p>
             <div class="srcs"><a class="src" href="https://news.pts.org.tw/article/816392" target="_blank" rel="noopener">公視</a></div>
@@ -1057,7 +1073,7 @@
           <div class="spine"><i></i></div>
           <div class="card">
             <h4><span class="track">地方政府</span>台中市對<span class="n-corp">福壽</span>再罰 <span class="num">600 萬元</span>，累計裁罰 900 萬元</h4>
-            <p><span class="n-corp">福壽</span>「花生風味精華調合油 2L」檢出苯駢芘 <span class="num over">4.3 ppb</span>、「不飽和大豆沙拉油 2L」檢出 <span class="num over">3.8 ppb</span>。兩項產品 6 月 30 日自主送驗、7 月 6 日取得檢驗報告，卻遲至 7 月 12 日才通報。</p>
+            <p><span class="n-corp">福壽</span>「花生風味精華調合油 2L」檢出苯駢芘 <span class="num over">4.3 ppb</span>、「不飽和大豆沙拉油 2L」檢出 <span class="num over">3.8 ppb</span>。兩項產品 6 月 30 日自主送驗、7 月 6 日取得檢驗報告，7 月 12 日通報。</p>
             <p><span class="n-org">台中市府</span>依食安法即時通報規定從嚴裁罰，2 件產品各 300 萬元，累計對<span class="n-corp">福壽</span>裁罰 900 萬元。</p>
             <div class="srcs"><a class="src" data-org="gov" href="https://www.taichung.gov.tw/3319914/post" target="_blank" rel="noopener">台中市政府</a></div>
           </div>
@@ -1815,7 +1831,7 @@
             <p><span class="n-org">食藥署</span>副署長<span class="n-person">王德原</span>：「絕無門神情事」，強調專家會議決策均依科學評估，相關紀錄已主動函送檢調。署長<span class="n-person">姜至剛</span>重申絕無護航業者。</p>
           </div>
           <div class="side local">
-            <span class="who">在野・民代</span>
+            <span class="who">在野黨團</span>
             <p><span class="n-org">國民黨</span><span class="n-org">立法院</span>黨團質疑，7 月 4 日決定「20% 以上是否下架」的專家會議中有<span class="n-corp">中聯</span>代表列席並進行製程說明，要求公開完整紀錄、與會名單與決策依據。</p>
           </div>
         </div>
@@ -1855,6 +1871,9 @@
       <b>這一區的來源等級跟上面不同。</b>
       前面的時間軸只收官方公告與公視、中央社；這一區收的是其他媒體的報導、專欄社論與影音評論。
       放在這裡是為了呈現外界提出了哪些質疑，<b>不代表本頁背書其論點</b>，也不是官方立場。每則都可以點進原文自己判斷。
+      <br><br>
+      <b>另外要講清楚一件事：</b>這一區收到的評論，內容多半是對主管機關處理方式的批評——這反映的是這段期間評論市場的實際樣貌，不是本頁刻意選邊。
+      主管機關自己的說法與依據，完整收在上方時間軸的官方新聞稿裡（食藥署共 21 則、行政院修法說明、各地方衛生局公告），請一併對照閱讀。
     </div>
 
     <div class="media">
@@ -2029,7 +2048,7 @@
       <span class="n-org">IARC</span> 將苯駢芘列為第 1 類致癌物，見
       <a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Chemical-Agents-And-Related-Occupations-2012" target="_blank" rel="noopener">IARC Monographs Volume 100F（2012）</a>。
     </p>
-    <p class="sig">更新 2026-08-01 17:31</p>
+    <p class="sig">更新 2026-08-01 18:05</p>
   </div>
 </footer>
 
@@ -2044,10 +2063,9 @@
     var events = document.querySelectorAll('.event');
     var track = 'all';
 
+    // 懶人包不隱藏任何事件，只收起內文，所以可見與否只看軌道篩選
     function isShown(ev) {
-      if (ev.classList.contains('is-hidden')) return false;
-      if (root.getAttribute('data-mode') === 'lite' && !ev.classList.contains('milestone')) return false;
-      return true;
+      return !ev.classList.contains('is-hidden');
     }
 
     function countShown(scope) {
@@ -2076,12 +2094,6 @@
         modeBtns.forEach(function (b) {
           b.setAttribute('aria-pressed', String(b === btn));
         });
-        if (btn.dataset.mode === 'lite') {
-          track = 'all';
-          filterBtns.forEach(function (b) {
-            b.setAttribute('aria-pressed', String(b.dataset.filter === 'all'));
-          });
-        }
         refresh();
         return;
       }
