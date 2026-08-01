@@ -133,7 +133,8 @@
     line-height:1.18;
     letter-spacing:-.02em;
     font-weight:800;
-    text-wrap:balance;
+    text-wrap:pretty;
+    line-break:strict;
   }
   h1 .thin{font-weight:400;color:var(--ink-2);display:block;font-size:var(--step-2);letter-spacing:0;margin-top:.5rem}
 
@@ -186,7 +187,8 @@
     line-height:1.3;
     letter-spacing:-.015em;
     font-weight:800;
-    text-wrap:balance;
+    text-wrap:pretty;
+    line-break:strict;
   }
   .lede{margin:0 0 1.5rem;color:var(--ink-2);max-width:62ch}
 
@@ -305,7 +307,11 @@
     font-weight:700;
     line-height:1.55;
     letter-spacing:-.005em;
-    text-wrap:balance;
+    /* 中文標題不用 balance（會為了行長均勻而在怪位置斷），
+       改用標點禁則：不讓行首出現、。）」、行尾出現（「 */
+    text-wrap:normal;
+    line-break:strict;
+    overflow-wrap:break-word;
   }
   .card p{margin:0;color:var(--ink-2);line-height:1.8;font-size:.945rem}
   .card p + p{margin-top:.5rem}
@@ -330,6 +336,10 @@
   .event[data-track="民間"] .track{color:var(--voice);border-color:var(--voice)}
 
   .num{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink)}
+  /* 這些是不可拆的最小單位，斷行不能把它們切開 */
+  .num,.over,.d,.tag,.track,.when{white-space:nowrap}
+  .nb{white-space:nowrap}
+  .faceoff-item > h4,.note h4,.media-item h4{line-break:strict}
   .over{color:var(--red);font-weight:700}
 
   /* 名稱標示：人物 / 公司 / 機關組織 */
@@ -597,7 +607,7 @@
       <a href="#faceoff">〈同一件事，中央和地方講的不一樣〉</a>並排比對。
     </p>
     <div class="stamp">
-      <span>更新 2026-08-02 11:40</span>
+      <span>更新 2026-08-02 12:35</span>
       <span>事件 80 則</span>
       <span>來源：<span class="n-org">食藥署</span>／<span class="n-org">行政院</span>／<span class="n-org">立法院</span>／各地方<span class="n-org">衛生局</span>／公視／中央社／<span class="n-org">EUR-Lex</span></span>
     </div>
@@ -818,7 +828,7 @@
           <div class="when">2026<b>07-01</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span><span class="n-org">食藥署</span>首度公告：批號 315-1150404 檢出苯駢芘 8.1 μg/kg</h4>
+            <h4><span class="track">主管機關</span><span class="n-org">食藥署</span>首度公告：批號 315-1150404 檢出苯駢芘 <span class="nb">8.1 μg/kg</span></h4>
             <p><span class="n-org">食藥署</span>接獲<span class="n-corp">中聯油脂</span>主動通報，該批大豆沙拉油（製造日期 115 年 4 月 4 日、有效期限 115 年 9 月 30 日）檢出苯駢芘 <span class="num over">8.1 μg/kg</span>，不符《食品中污染物質及毒素衛生標準》<span class="num">2.0 μg/kg</span> 限量。</p>
             <p>問題油約 1,300 公噸，於 4 月 8 日出貨<span class="n-corp">福懋</span>約 588 公噸、4 月 9 日<span class="n-corp">福壽</span>約 421 公噸、4 月 10 日<span class="n-corp">泰山</span>約 291 公噸，共 15 個受影響品項。<span class="n-org">食藥署</span>啟動下架回收並派員查核。</p>
             <div class="srcs"><a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634379" target="_blank" rel="noopener">食藥署新聞稿</a></div>
@@ -866,7 +876,7 @@
           <div class="when">2026<b>07-03</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>累計回收逾 17 公噸；第二層加工品不列入強制下架</h4>
+            <h4><span class="track">主管機關</span>累計回收逾 <span class="nb">17 公噸</span>；第二層加工品不列入強制下架</h4>
             <p><span class="n-org">食藥署</span>說明回收處置情形，並說明依風險評估，第一層的大豆沙拉油及分裝產品須回收下架，第二層加工食品評估仍符合衛生安全標準，不公布名單、不全面下架——這項判斷後來引發外界質疑。</p>
             <div class="srcs">
               <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634410" target="_blank" rel="noopener">食藥署新聞稿</a>
@@ -879,7 +889,7 @@
           <div class="when">2026<b>07-03</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>同批油另驗出 3 種二級致癌物</h4>
+            <h4><span class="track">主管機關</span>同批油另驗出 <span class="nb">3 種</span>二級致癌物</h4>
             <p>除苯駢芘外，另檢出苯駢蒽 <span class="num">3.7</span>、苯駢苊 <span class="num">6.1</span>、䓛（Chrysene）<span class="num">3.4</span> μg/kg。這三項無個別法定限量，指引訂有「PAH4 總和 10 微克以下」的監測指標。<b>四項相加為 <span class="num over">21.3</span>，超過該指標——這個加總是本頁自行計算，公視原文並未相加。</b></p>
             <p><span class="n-org">食藥署</span>表示將持續精進管理措施，並研議自主檢驗逐批擴大、原料投入前先行檢驗。</p>
             <div class="srcs"><a class="src" href="https://news.pts.org.tw/article/816071" target="_blank" rel="noopener">公視</a></div>
@@ -890,7 +900,7 @@
           <div class="when">2026<b>07-03</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span><span class="n-org">台北市衛生局</span>稽查 11 處下游業者，42 校封存問題油</h4>
+            <h4><span class="track">地方政府</span><span class="n-org">台北市衛生局</span>稽查 <span class="nb">11 處</span>下游業者，<span class="nb">42 校</span>封存問題油</h4>
             <p>稽查 9 處通路賣場、2 處飯店餐廳，業者皆已配合上游下架退回，現場無違規產品。<span class="n-org">台北市教育局</span>要求各校停止使用並封存，共 42 校（園）受影響，已進行專案實地稽查。</p>
             <p><span class="n-org">衛生局</span>並說明，未依規定通報者將依食安法第 7 條處 3 萬元以上、300 萬元以下罰鍰。</p>
             <div class="srcs"><a class="src" data-org="gov" href="https://health.gov.taipei/News_Content.aspx?n=BB5A41BA1E6CA260&amp;sms=72544237BBE4C5F6&amp;s=B2813D3F4B946850" target="_blank" rel="noopener">台北市衛生局</a></div>
@@ -901,7 +911,7 @@
           <div class="when">2026<b>07-03</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span><span class="n-org">新北市衛生局</span>持續監督下架回收，累計查核 148 家</h4>
+            <h4><span class="track">地方政府</span><span class="n-org">新北市衛生局</span>持續監督下架回收，累計查核 <span class="nb">148 家</span></h4>
             <p>針對各大販售通路、餐廳、夜市及製造業稽查，當日查核 74 家、累計 148 家均未查獲問題批號產品。同時提醒消費者暫停食用並向購買通路辦理退換貨。</p>
             <div class="srcs"><a class="src" data-org="gov" href="https://www.ntpc.gov.tw/ch/home.jsp?id=e8ca970cde5c00e1&amp;dataserno=c43a095f62f5145a7931847daf1f4bbc" target="_blank" rel="noopener">新北市衛生局</a></div>
           </div>
@@ -924,7 +934,7 @@
           <div class="when">2026<b>07-05</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>公布 257 家受影響業者，要求落實三大措施</h4>
+            <h4><span class="track">主管機關</span>公布 <span class="nb">257 家</span>受影響業者，要求落實三大措施</h4>
             <div class="srcs"><a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634418" target="_blank" rel="noopener">食藥署新聞稿</a></div>
           </div>
         </div>
@@ -933,7 +943,7 @@
           <div class="when">2026<b>07-06</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>提出五項強化措施，名單更新為 360 家業者</h4>
+            <h4><span class="track">主管機關</span>提出五項強化措施，名單更新為 <span class="nb">360 家</span>業者</h4>
             <p>同日，<span class="n-corp">中聯</span>就外界質疑隱匿一事回應「配合調查」。</p>
             <div class="srcs">
               <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634424" target="_blank" rel="noopener">食藥署新聞稿</a>
@@ -946,7 +956,7 @@
           <div class="when">2026<b>07-06</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span><span class="n-org">高雄市衛生局</span>公布 28 家第二層下游業者</h4>
+            <h4><span class="track">地方政府</span><span class="n-org">高雄市衛生局</span>公布 <span class="nb">28 家</span>第二層下游業者</h4>
             <p>其中<span class="n-corp">明德食品</span>為製造廠商，共製造辣椒油 9 種品項，已於 2 日下架回收 9,478 罐；<span class="n-corp">維義事業</span>為代工代料製造；<span class="n-corp">安盛</span>製造寵物食品，其餘為販售或自用。</p>
             <p>截至當日上午 10 時回收問題油 3,514.2 公升，稽查餐飲通路 866 家均未使用不合格油品，校園、8 家校園團膳及 4 大軍校皆無使用。高雄市長<span class="n-person">陳其邁</span>指示<span class="n-org">衛生局</span>擴大追查第三層業者。</p>
             <div class="srcs"><a class="src" href="https://www.cna.com.tw/news/aloc/202607060127.aspx" target="_blank" rel="noopener">中央社</a></div>
@@ -957,7 +967,7 @@
           <div class="when">2026<b>07-06</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span>台北市未採中央的 20% 門檻，改為不限比例全面下架</h4>
+            <h4><span class="track">地方政府</span>台北市未採中央的 <span class="nb">20%</span> 門檻，改為不限比例全面下架</h4>
             <p><span class="n-org">食藥署</span>規定，以油的原型出現、或使用占比 20% 以上的問題油製品才須預防性下架。台北市長<span class="n-person">蔣萬安</span>表示：「只要有任何使用到問題油品的加工製品，我們不分 20% 以上或以下先全面預防性下架。」低於 20% 的廠商要有相關證明才可恢復上架。</p>
             <p>總統<span class="n-person">賴清德</span>同日強調食安政策沒有妥協空間，該下架就要下架。</p>
             <div class="srcs"><a class="src" href="https://news.pts.org.tw/article/816392" target="_blank" rel="noopener">公視</a></div>
@@ -981,7 +991,7 @@
           <div class="when">2026<b>07-07</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>20% 門檻取消：未達 20% 的 175 項產品也要下架</h4>
+            <h4><span class="track">主管機關</span><span class="nb">20%</span> 門檻取消：未達 <span class="nb">20%</span> 的 <span class="nb">175 項</span>產品也要下架</h4>
             <p><span class="n-org">衛福部</span>長<span class="n-person">石崇良</span>宣布：「其他未達 20% 的 175 項產品，也必須在 8 日深夜 12 時前預防性下架，待提出檢驗合格證明後，才可重新上架。」原本只要求含問題油 20% 以上的產品下架，至此改為一律預防性下架。</p>
             <p>同日<span class="n-org">食藥署</span>公布 360 家業者、232 項產品，資訊改為滾動揭露。</p>
             <div class="srcs">
@@ -996,7 +1006,7 @@
           <div class="when">2026<b>07-07</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span>高雄追到第 3 層，新增 20 家業者全數下架</h4>
+            <h4><span class="track">地方政府</span>高雄追到第 <span class="nb">3 層</span>，新增 <span class="nb">20 家</span>業者全數下架</h4>
             <p>包含<span class="n-corp">饗食天堂</span>大遠百店在內，<span class="n-org">衛生局</span>要求全數下架並配合退換貨，累計回收 3,551.7 公升。已掌握 30 家下游業者流向（<span class="n-corp">維義事業</span>供貨 3 家、<span class="n-corp">明德食品</span>供貨 12 家、其他 5 家），已查核 1,222 家業者，未發現使用問題油品。</p>
             <p>高雄市長<span class="n-person">陳其邁</span>指示：「只要確認使用問題油製成的加工食品，一律立即下架。」</p>
             <div class="srcs">
@@ -1021,7 +1031,7 @@
           <div class="when">2026<b>07-08</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>全面啟動 4 家油脂工廠實地稽查及抽驗</h4>
+            <h4><span class="track">主管機關</span>全面啟動 <span class="nb">4 家</span>油脂工廠實地稽查及抽驗</h4>
             <p>同日，<span class="n-corp">統一超商</span>與<span class="n-corp">全聯</span>也啟動預防性下架。</p>
             <div class="srcs">
               <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634454" target="_blank" rel="noopener">食藥署新聞稿</a>
@@ -1079,7 +1089,7 @@
           <div class="when">2026<b>07-09</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span>台中市「查到哪公布到哪」，公布第三層 20 家業者下架名單</h4>
+            <h4><span class="track">地方政府</span>台中市「查到哪公布到哪」，公布第三層 <span class="nb">20 家</span>業者下架名單</h4>
             <p>新增 20 家第三層以下業者，加上前一日 5 家，累計 25 家餐飲及食品業者。問題油品涉及<span class="n-corp">福壽</span>、<span class="n-corp">福懋</span>、<span class="n-corp">泰山</span>共 18 項產品、31 個批號，另新增<span class="n-corp">泰山</span>「好理調合油」1 個批號。</p>
             <p>累計回收 39,535 公斤，919 家次市場、賣場、夜市、餐飲業者查核完畢；校園 16 家團膳業者、86 所學校、224 家幼兒園確認未使用問題油品。<span class="n-corp">中聯</span> 4 至 6 月停工期間的 29 個批號產品已逐批檢驗。</p>
             <div class="srcs"><a class="src" data-org="gov" href="https://www.taichung.gov.tw/3317789/post" target="_blank" rel="noopener">台中市政府</a></div>
@@ -1118,7 +1128,7 @@
           <div class="when">2026<b>07-12</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span>台中市對<span class="n-corp">福壽</span>再罰 <span class="num">600 萬元</span>，累計裁罰 900 萬元</h4>
+            <h4><span class="track">地方政府</span>台中市對<span class="n-corp">福壽</span>再罰 <span class="num">600 萬元</span>，累計裁罰 <span class="nb">900 萬元</span></h4>
             <p><span class="n-corp">福壽</span>「花生風味精華調合油 2L」檢出苯駢芘 <span class="num over">4.3 ppb</span>、「不飽和大豆沙拉油 2L」檢出 <span class="num over">3.8 ppb</span>。兩項產品 6 月 30 日自主送驗、7 月 6 日取得檢驗報告，7 月 12 日通報。</p>
             <p><span class="n-org">台中市府</span>依食安法即時通報規定從嚴裁罰，2 件產品各 300 萬元，累計對<span class="n-corp">福壽</span>裁罰 900 萬元。</p>
             <div class="srcs"><a class="src" data-org="gov" href="https://www.taichung.gov.tw/3319914/post" target="_blank" rel="noopener">台中市政府</a></div>
@@ -1129,7 +1139,7 @@
           <div class="when">2026<b>07-13</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">民意代表</span>波及 1,380 所學校，立委要求大專院校餐廳也納入稽查</h4>
+            <h4><span class="track">民意代表</span>波及 <span class="nb">1,380 所</span>學校，立委要求大專院校餐廳也納入稽查</h4>
             <p><span class="n-org">教育部</span>透過食材登錄平台清查，全台共 1,380 所學校使用到<span class="n-corp">中聯</span>供應的油品，均已全數停用並預防性下架。<b>（兩天後 7 月 15 日<span class="n-org">教育部</span>在<span class="n-org">立法院</span>給的是另一個口徑：20 個縣市、861 所學校及 334 所幼兒園「疑似」使用。兩個數字統計時間與認定標準不同，不是互相矛盾。）</b>立委主張校園食安要「做全套」，建立預防、追溯、應變、照護四大機制，稽查範圍不應只到國中小營養午餐。</p>
             <p><span class="n-org">教育部</span>長<span class="n-person">鄭英耀</span>回應，將以數位工具加強追蹤，包含學校與主管機關 LINE 帳號綁定以便即時回報。</p>
             <div class="srcs">
@@ -1166,7 +1176,7 @@
           <div class="when">2026<b>07-15</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span><span class="n-org">台中市府</span>公布兩批預防性下架批號，累計回收 7 萬 1,004 公斤</h4>
+            <h4><span class="track">地方政府</span><span class="n-org">台中市府</span>公布兩批預防性下架批號，累計回收 <span class="nb">7 萬</span> <span class="nb">1,004 公斤</span></h4>
             <p>批號 314-1150518 的衍生產品包括<span class="n-corp">福壽</span> 17 項 55 個批號、<span class="n-corp">福懋</span> 6 項 11 個批號，下游業者<span class="n-corp">福壽</span> 342 家、<span class="n-corp">福懋</span> 78 家；批號 314-1150617 下游業者<span class="n-corp">福壽</span> 5 家、<span class="n-corp">福懋</span> 24 家。</p>
             <p>跨局處累計查核市場、賣場、夜市、餐飲、食品製造及販售業者 1,260 家次，142 家餐飲、加工等業者曾進貨或使用相關油品。</p>
             <div class="srcs">
@@ -1191,7 +1201,7 @@
           <div class="when">2026<b>07-16</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span><span class="n-corp">中聯</span>再遭查出隱匿批次，加罰 300 萬元</h4>
+            <h4><span class="track">主管機關</span><span class="n-corp">中聯</span>再遭查出隱匿批次，加罰 <span class="nb">300 萬元</span></h4>
             <p><span class="n-corp">中聯</span> 4 月 1 日生產的油品批號 314-1150401 未通報列入申報資料，且申報資料有不實情形。<span class="n-org">食藥署</span>依《食品安全衛生管理法》第 9 條、第 47 條第 12 款裁處 300 萬元，並責令提供樣品檢驗及追查流向。</p>
             <div class="srcs">
               <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=31599" target="_blank" rel="noopener">食藥署新聞稿</a>
@@ -1312,7 +1322,7 @@
           <div class="when">2026<b>07-21</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>30 批中 19 批合格解禁、8 批銷毀</h4>
+            <h4><span class="track">主管機關</span><span class="nb">30 批</span>中 <span class="nb">19 批</span>合格解禁、<span class="nb">8 批</span>銷毀</h4>
             <p><span class="n-corp">中聯</span> 115 年 4 至 6 月生產的 30 批大豆沙拉油，經檢驗有 19 批及其相關產品符合食品安全標準，自即日起重新上架；7 批苯駢芘超標、1 批無檢體，共 8 批一律不得上架並啟動銷毀程序。</p>
             <p><b>19 加 8 只有 27 批，剩下的 3 批呢？</b>另有 3 批尚未出貨的原油，檢驗雖符合標準，但仍由衛生主管機關留置管制、未流入市面，因此不在本次重新上架的範圍內。</p>
             <p>同日，<span class="n-org">衛福部</span>委託的第三方專家進廠展開獨立調查。</p>
@@ -1347,7 +1357,7 @@
           <div class="when">2026<b>07-23</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">法規</span><span class="n-org">行政院會</span>通過《食安法》修正草案：異常 24 小時內通報，隱匿最高罰 3,000 萬</h4>
+            <h4><span class="track">法規</span><span class="n-org">行政院會</span>通過《食安法》修正草案：異常 24 小時內通報，隱匿最高罰 <span class="nb">3,000 萬</span></h4>
             <p>草案共修正 17 條，圍繞五大方向：強化源頭管理、製程管理、異常通報、品質管理與數位治理。食品業者發現或知悉產品有危害安全衛生之虞時，應於 24 小時內通報，延遲通報罰鍰上限提高至 3,000 萬元。</p>
             <p>一定規模或上市櫃業者須自設經中央認證的實驗室；不論自設或委外，檢驗報告都要在 24 小時內上傳中央指定系統。草案已送<span class="n-org">立法院</span>審議。</p>
             <div class="srcs">
@@ -1362,7 +1372,7 @@
           <div class="when">2026<b>07-23</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>公布可重新上架的 501 項產品清單</h4>
+            <h4><span class="track">主管機關</span>公布可重新上架的 <span class="nb">501 項</span>產品清單</h4>
             <p>19 批合格油品由<span class="n-corp">泰山</span>、<span class="n-corp">福懋</span>、<span class="n-corp">福壽</span>三家業者製成的產品，共 501 項獲准回架。</p>
             <div class="srcs"><a class="src" href="https://www.cna.com.tw/news/ahel/202607230245.aspx" target="_blank" rel="noopener">中央社</a></div>
           </div>
@@ -1372,7 +1382,7 @@
           <div class="when">2026<b>07-23</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">司法</span>法院裁准扣押四家公司不動產，估算不法利得 1.26 億元</h4>
+            <h4><span class="track">司法</span>法院裁准扣押四家公司不動產，估算不法利得 <span class="nb">1.26 億元</span></h4>
             <p>檢方依食安法從銷貨金額推估<span class="n-corp">中聯</span>、<span class="n-corp">福壽</span>、<span class="n-corp">福懋</span>、<span class="n-corp">泰山</span>的不法利得逾 1 億 2,600 萬元，聲請扣押不動產獲法院裁准。</p>
             <div class="srcs"><a class="src" data-org="court" href="https://www.cna.com.tw/news/aipl/202607230119.aspx" target="_blank" rel="noopener">中央社</a></div>
           </div>
@@ -1382,7 +1392,7 @@
           <div class="when">2026<b>07-23</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">司法</span><span class="n-corp">中聯</span>廠長<span class="n-person">陳明榮</span>遭聲押，法院裁定 100 萬元交保</h4>
+            <h4><span class="track">司法</span><span class="n-corp">中聯</span>廠長<span class="n-person">陳明榮</span>遭聲押，法院裁定 <span class="nb">100 萬元</span>交保</h4>
             <p>法院審酌相關證據與證人均已訊問、查扣，認無逃亡之虞，裁定 100 萬元交保並限制住居、限制出境出海。</p>
             <div class="srcs"><a class="src" data-org="court" href="https://news.pts.org.tw/article/819096" target="_blank" rel="noopener">公視</a></div>
           </div>
@@ -1490,7 +1500,7 @@
           <div class="when">2026<b>07-29</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>擴大抽驗 3 家大豆油煉油廠 30 件油品，全數符合規定</h4>
+            <h4><span class="track">主管機關</span>擴大抽驗 <span class="nb">3 家</span>大豆油煉油廠 <span class="nb">30 件</span>油品，全數符合規定</h4>
             <p>同日，完整的《<span class="n-corp">中聯油脂</span>股份有限公司大豆油苯(a)駢芘超標事件調查報告》公開於<span class="n-org">食藥署</span>官網專區。</p>
             <div class="srcs"><a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634555" target="_blank" rel="noopener">食藥署新聞稿</a></div>
           </div>
@@ -1568,7 +1578,7 @@
           <div class="when">2026<b>07-23</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span><span class="n-org">台北市衛生局</span>稽查<span class="n-corp">棉花田</span>總公司及 36 家門市，下架 729 瓶</h4>
+            <h4><span class="track">地方政府</span><span class="n-org">台北市衛生局</span>稽查<span class="n-corp">棉花田</span>總公司及 <span class="nb">36 家</span>門市，下架 <span class="nb">729 瓶</span></h4>
             <p>稽查共 37 處，全面預防性下架「有機苦茶油 250 mL」（批號 26V224XW01）及<span class="n-corp">連淨</span>公司在<span class="n-corp">棉花田</span>販售的苦茶油系列商品，共 729 瓶；門市倉庫內 1 瓶問題批號油品已封存禁售。</p>
             <div class="srcs"><a class="src" data-org="gov" href="https://health.gov.taipei/News_Content.aspx?n=BB5A41BA1E6CA260&amp;sms=72544237BBE4C5F6&amp;s=E120000ED238D0D0" target="_blank" rel="noopener">台北市衛生局</a></div>
           </div>
@@ -1578,7 +1588,7 @@
           <div class="when">2026<b>07-27</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span><span class="n-corp">連淨</span>苦茶油再增 4 批不合格，其他批次暫停販賣</h4>
+            <h4><span class="track">主管機關</span><span class="n-corp">連淨</span>苦茶油再增 <span class="nb">4 批</span>不合格，其他批次暫停販賣</h4>
             <div class="srcs"><a class="src" href="https://www.cna.com.tw/news/ahel/202607270270.aspx" target="_blank" rel="noopener">中央社</a></div>
           </div>
         </div>
@@ -1620,7 +1630,7 @@
           <div class="when">2026<b>07-31</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">地方政府</span>台北市再檢出 2 批苦茶油超標，已下架並開放退貨</h4>
+            <h4><span class="track">地方政府</span>台北市再檢出 <span class="nb">2 批</span>苦茶油超標，已下架並開放退貨</h4>
             <div class="srcs"><a class="src" href="https://www.cna.com.tw/news/aloc/202607310356.aspx" target="_blank" rel="noopener">中央社</a></div>
           </div>
         </div>
@@ -1650,7 +1660,7 @@
 
     <div class="cols" style="margin-bottom:1.75rem">
       <div class="note flaw">
-        <h4>爭議一：20% 門檻的適用期間</h4>
+        <h4>爭議一：<span class="nb">20%</span> 門檻的適用期間</h4>
         <p>下架範圍在事件期間調整過數次。以下依日期列出中央標準的變化與依據，不做評斷。</p>
         <ul class="plain">
           <li><span class="d">07-03</span><span class="n-org">食藥署</span>：第 2 層加工品經風險評估仍符合衛生安全標準，不下架、不公布名單。</li>
@@ -1942,7 +1952,7 @@
         <p><a href="https://e-info.org.tw/node/81423" target="_blank" rel="noopener">環境資訊中心轉載（媒體）↗</a></p>
       </div>
       <div class="note">
-        <h4>跟 2026 年像在哪</h4>
+        <h4>跟 <span class="nb">2026 年</span>像在哪</h4>
         <p><b>官方先說安全、後來改口。</b>韓國食藥廳 10 月 24 日稱安全、10 月 25 日命回收；2026 年台灣則是 7 月 3 日表示第二層加工品風險低不下架，7 月 7 日改為一律下架。</p>
         <p><b>「無立即危害」與「加強處置」並存。</b>2012 年台灣官方評估風險可接受，但產品仍被下架處理；2026 年也出現「史上最高罰鍰」與「無立即健康危害」並列的情況。</p>
       </div>
@@ -2202,7 +2212,7 @@
 
       <div class="media-item">
         <div class="outlet"><span class="kind">公民新聞</span><span>PeoPo</span></div>
-        <h4><a href="https://www.peopo.org/news/850947" target="_blank" rel="noopener">油品致癌物超標，台灣食安 12 年來的共犯結構</a></h4>
+        <h4><a href="https://www.peopo.org/news/850947" target="_blank" rel="noopener">油品致癌物超標，台灣食安 <span class="nb">12 年</span>來的共犯結構</a></h4>
         <p>把本案放回 2014 年劣質油品事件以來的脈絡檢視。</p>
       </div>
 
@@ -2332,7 +2342,7 @@
       </div>
 
     </div>
-    <p class="sig">更新 2026-08-02 11:40</p>
+    <p class="sig">更新 2026-08-02 12:35</p>
   </div>
 </footer>
 
