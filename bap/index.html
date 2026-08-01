@@ -451,7 +451,24 @@
     background:var(--surface-2);
     border-bottom:1px solid var(--rule);
     font-size:1.02rem;font-weight:700;line-height:1.6;
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem .6rem;
   }
+  .faceoff-item > h4 .range{
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;font-weight:600;
+    font-variant-numeric:tabular-nums;
+    color:var(--ink-3);
+    border:1px solid var(--rule);border-radius:2px;
+    padding:.1rem .4rem;
+  }
+  .side .d{
+    font-family:var(--mono);font-size:.72rem;font-weight:700;
+    font-variant-numeric:tabular-nums;letter-spacing:.04em;
+    color:var(--ink);
+    background:var(--surface-2);
+    border-radius:2px;padding:.05rem .35rem;margin-right:.35rem;
+  }
+  .side.central .d{color:var(--gold)}
+  .side.local .d{color:var(--voice)}
   .faceoff-sides{display:grid;grid-template-columns:1fr 1fr}
   .side{padding:.85rem 1.05rem 1rem}
   .side + .side{border-left:1px solid var(--rule)}
@@ -550,11 +567,13 @@
       這頁把整起事件依時間排好，包含中央與各地方<span class="n-org">衛生局</span>的每一步、司法偵辦進度，
       以及立委、地方議員、民間團體的質疑與街頭抗議。
       來源以<span class="n-org">衛福部</span><span class="n-org">食藥署</span>與各地方<span class="n-org">衛生局</span>官網公告為主，輔以公視新聞網與中央社。
-      中央與地方講法不一致的地方，另外整理成
+      下架數量、公布家數、20% 門檻這三個爭議最多的數字，另外整理成
+      <a href="#numbers">〈三個最容易吵起來的數字〉</a>；
+      中央與地方講法不一致的地方，整理成
       <a href="#faceoff">〈同一件事，中央和地方講的不一樣〉</a>並排比對。
     </p>
     <div class="stamp">
-      <span>更新 2026-08-01 18:05</span>
+      <span>更新 2026-08-02 10:25</span>
       <span>事件 80 則</span>
       <span>來源：<span class="n-org">食藥署</span>／<span class="n-org">行政院</span>／<span class="n-org">立法院</span>／各地方<span class="n-org">衛生局</span>／公視／中央社／<span class="n-org">EUR-Lex</span></span>
     </div>
@@ -622,13 +641,14 @@
       <ol>
         <li>2026 年 4 月生產的一批大豆沙拉油，驗出一級致癌物苯駢芘 <b>8.1 μg/kg</b>，是法定上限 2.0 的 4 倍。</li>
         <li>最早 <b>5 月 13 日</b>就被下游業者驗出來，<b>6 月 30 日</b>通報主管機關，相隔 48 天。</li>
-        <li>問題油約 <b>1,300 公噸</b>，流向福懋、福壽、泰山三家大廠，再擴散到 360 家下游業者、1,380 所學校。</li>
-        <li>食藥署 7 月 7 日開罰中聯 <b>1 億 6,520 萬元</b>，中央史上最高；地方另罰南僑 300 萬、福壽累計 900 萬。</li>
-        <li>中聯總經理余凌冲一度交保，7 月 17 日改裁定<b>收押禁見</b>；四家公司不動產遭扣押 1.26 億元。</li>
+        <li>問題油約 <b>1,300 公噸</b>，流向<span class="n-corp">福懋</span>、<span class="n-corp">福壽</span>、<span class="n-corp">泰山</span>三家大廠，再擴散到 360 家下游業者、1,380 所學校。</li>
+        <li><span class="n-org">食藥署</span> 7 月 7 日開罰<span class="n-corp">中聯</span> <b>1 億 6,520 萬元</b>，中央史上最高；地方另罰<span class="n-corp">南僑</span> 300 萬、<span class="n-corp">福壽</span>累計 900 萬。</li>
+        <li><span class="n-corp">中聯</span>總經理<span class="n-person">余凌冲</span>一度交保，7 月 17 日改裁定<b>收押禁見</b>；四家公司不動產遭扣押 1.26 億元。</li>
         <li>7 月 21 日檢驗結果出爐：30 批中 <b>19 批合格重新上架、8 批銷毀</b>，另 3 批尚未出貨、留置管制。</li>
-        <li>7 月 23 日行政院通過《食安法》修正草案：異常須 <b>24 小時內通報</b>，隱匿最高罰 3,000 萬元。</li>
+        <li>7 月 23 日<span class="n-org">行政院</span>通過《食安法》修正草案：異常須 <b>24 小時內通報</b>，隱匿最高罰 3,000 萬元。</li>
         <li>7 月 27 日獨立調查認定是<b>原料、製程、檢驗三個環節缺失交互影響</b>，不是單一原因。</li>
-        <li>7 月下旬另有多起<b>苦茶油</b>驗出苯駢芘超標，食藥署強調與中聯無關，是獨立的另一條線。</li>
+        <li>7 月下旬另有多起<b>苦茶油</b>驗出苯駢芘超標，<span class="n-org">食藥署</span>強調與<span class="n-corp">中聯</span>無關，是獨立的另一條線。</li>
+        <li>常被誤解的「20% 以下不用下架」<b>只在 7 月 6 日到 7 日之間成立</b>，7 月 7 日中央就宣布未達 20% 的 175 項也要下架。</li>
         <li>中央與地方對「該下架多少、該公布多少」講法不同；7 月 25 日凱道有集會抗議。</li>
       </ol>
     </div>
@@ -937,11 +957,13 @@
           <div class="when">2026<b>07-07</b></div>
           <div class="spine"><i></i></div>
           <div class="card">
-            <h4><span class="track">主管機關</span>公布 360 家業者 232 項產品，並要求 7/8 24 時前完成全面下架</h4>
-            <p>預防性下架範圍擴大，資訊改為滾動揭露。</p>
+            <h4><span class="track">主管機關</span>20% 門檻取消：未達 20% 的 175 項產品也要下架</h4>
+            <p><span class="n-org">衛福部</span>長<span class="n-person">石崇良</span>宣布：「其他未達 20% 的 175 項產品，也必須在 8 日深夜 12 時前預防性下架，待提出檢驗合格證明後，才可重新上架。」原本只要求含問題油 20% 以上的產品下架，至此改為一律預防性下架。</p>
+            <p>同日<span class="n-org">食藥署</span>公布 360 家業者、232 項產品，資訊改為滾動揭露。</p>
             <div class="srcs">
+              <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634443" target="_blank" rel="noopener">食藥署 擴大下架</a>
+              <a class="src" href="https://news.pts.org.tw/article/816581" target="_blank" rel="noopener">公視 175 項</a>
               <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634440" target="_blank" rel="noopener">食藥署 名單</a>
-              <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634443" target="_blank" rel="noopener">食藥署 下架</a>
             </div>
           </div>
         </div>
@@ -1084,7 +1106,7 @@
           <div class="spine"><i></i></div>
           <div class="card">
             <h4><span class="track">民意代表</span>波及 1,380 所學校，立委要求大專院校餐廳也納入稽查</h4>
-            <p><span class="n-org">教育部</span>透過食材登錄平台清查，全台共 1,380 所學校使用到<span class="n-corp">中聯</span>供應的油品，均已全數停用並預防性下架。<b>（兩天後 7 月 15 日<span class="n-org">教育部</span>在立法院給的是另一個口徑：20 個縣市、861 所學校及 334 所幼兒園「疑似」使用。兩個數字統計時間與認定標準不同，不是互相矛盾。）</b>立委主張校園食安要「做全套」，建立預防、追溯、應變、照護四大機制，稽查範圍不應只到國中小營養午餐。</p>
+            <p><span class="n-org">教育部</span>透過食材登錄平台清查，全台共 1,380 所學校使用到<span class="n-corp">中聯</span>供應的油品，均已全數停用並預防性下架。<b>（兩天後 7 月 15 日<span class="n-org">教育部</span>在<span class="n-org">立法院</span>給的是另一個口徑：20 個縣市、861 所學校及 334 所幼兒園「疑似」使用。兩個數字統計時間與認定標準不同，不是互相矛盾。）</b>立委主張校園食安要「做全套」，建立預防、追溯、應變、照護四大機制，稽查範圍不應只到國中小營養午餐。</p>
             <p><span class="n-org">教育部</span>長<span class="n-person">鄭英耀</span>回應，將以數位工具加強追蹤，包含學校與主管機關 LINE 帳號綁定以便即時回報。</p>
             <div class="srcs">
               <a class="src" href="https://news.pts.org.tw/article/817339" target="_blank" rel="noopener">公視</a>
@@ -1387,7 +1409,7 @@
           <div class="spine"><i></i></div>
           <div class="card">
             <h4><span class="track">民意代表</span>中央與台中市互指稽查不力，稽查次數各說各話</h4>
-            <p><span class="n-org">衛福部</span>長<span class="n-person">石崇良</span>指出，<span class="n-org">台中市府</span>過去 8 年僅配合<span class="n-org">食藥署</span>檢驗<span class="n-corp">中聯油脂</span> 1 次（2024 年），相較台南、高雄明顯偏低。</p>
+            <p><span class="d">07-24</span><span class="n-org">衛福部</span>長<span class="n-person">石崇良</span>指出，<span class="n-org">台中市府</span>過去 8 年僅配合<span class="n-org">食藥署</span>檢驗<span class="n-corp">中聯油脂</span> 1 次（2024 年），相較台南、高雄明顯偏低。</p>
             <p>台中副市長<span class="n-person">鄭照新</span>反駁，依法業者送驗應納入稽查紀錄，2022 年至今共進行 18 次檢驗，呼籲「不要用局部以偏概全數字，造成錯誤印象」。</p>
             <div class="srcs"><a class="src" href="https://www.cna.com.tw/news/aloc/202607240086.aspx" target="_blank" rel="noopener">中央社</a></div>
           </div>
@@ -1593,6 +1615,123 @@
     </div>
   </section>
 
+  <!-- ============ 三個爭議數字 ============ -->
+  <section id="numbers">
+    <h2>三個最容易吵起來的數字</h2>
+    <p class="lede">
+      下架數量、公布家數、20% 門檻，是這起事件爭論最多的三件事。
+      吵起來多半不是因為誰造假，而是<b>不同單位在不同日期、用不同定義各講各的</b>，數字擺在一起就好像互相矛盾。
+      這一區把每個數字的「誰講的、算什麼、算到哪一天」全部攤開，讓你自己判斷。
+    </p>
+
+    <div class="cols" style="margin-bottom:1.75rem">
+      <div class="note flaw">
+        <h4>爭議一：20% 門檻</h4>
+        <p><b>最常見的誤解是「中央只要求 20% 以上下架」。實際上這個門檻只用了大約一天。</b></p>
+        <ul class="plain">
+          <li><span class="d">07-03</span>第 2 層加工品風險低，不下架、不公布名單</li>
+          <li><b>7/4</b>　專家會議後擴大預防性下架範圍（在野質疑的就是這場會議）</li>
+          <li><span class="d">07-06</span>標準明確化：以油的原型出現、或占比 20% 以上須下架。同日台北市宣布不分比例全面下架</li>
+          <li><span class="d">07-07</span><span class="n-org">衛福部</span>長<span class="n-person">石崇良</span>宣布未達 20% 的 <b>175 項</b>產品也須在 8 日 24 時前下架，<b>20% 門檻取消</b></li>
+          <li><span class="d">07-09</span>再擴大到<span class="n-corp">中聯</span> 4 至 6 月生產的全部油品及其產品</li>
+          <li><b>7/14 起</b>　轉入解禁評估，7/21 有 19 批合格回架、7/23 公布 501 項可重新上架</li>
+        </ul>
+        <p>所以「20% 以下不用下架」這句話，只在 7 月 6 日到 7 日之間成立。後來的爭論若仍以此為前提，等於用一個已經取消的規則在討論。</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:var(--step-2);font-weight:700;margin:0 0 .5rem">爭議二：下架與回收數量</h3>
+    <p class="lede">中央講「公噸」、台中講「公斤」、高雄講「公升」，而且「回收」和「下架」不是同一件事。</p>
+    <div class="scroller">
+      <table>
+        <caption>各單位公布的下架／回收量。數字每天滾動，脫離日期比較沒有意義。</caption>
+        <thead>
+          <tr><th>日期</th><th>公布單位</th><th>統計範圍</th><th>名目</th><th>數字</th></tr>
+        </thead>
+        <tbody>
+          <tr class="self"><td class="n">07-03</td><td><span class="n-org">食藥署</span></td><td>全國</td><td>回收</td><td class="n">17.422 公噸</td></tr>
+          <tr><td class="n">07-06</td><td><span class="n-org">高雄市衛生局</span></td><td>高雄市</td><td>回收</td><td class="n">3,514.2 公升</td></tr>
+          <tr><td class="n">07-07</td><td><span class="n-org">高雄市衛生局</span></td><td>高雄市</td><td>回收</td><td class="n">3,551.7 公升</td></tr>
+          <tr><td class="n">07-09</td><td><span class="n-org">台中市政府</span></td><td>台中市</td><td>累計回收</td><td class="n">39,535 公斤</td></tr>
+          <tr class="self"><td class="n">07-15</td><td><span class="n-org">台中市政府</span></td><td>台中市</td><td>累計下架回收</td><td class="n">71,004 公斤</td></tr>
+          <tr><td class="n">未取得</td><td><span class="n-org">桃園市衛生局</span></td><td>桃園市</td><td>首波下架</td><td class="n">逾 1.2 萬公斤</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cols" style="margin-top:1rem">
+      <div class="note">
+        <h4>單位不一樣</h4>
+        <p>1 公噸 ＝ 1,000 公斤，所以中央 7/3 的 17.422 公噸 ＝ 17,422 公斤。</p>
+        <p><b>公升是體積，不是重量。</b>食用油密度比水低，3,514.2 公升不等於 3,514.2 公斤，本頁不做換算。</p>
+      </div>
+      <div class="note">
+        <h4>名目不一樣</h4>
+        <p><b>「回收」</b>是已經收回來的量，<b>「下架」</b>是先停止販售、不一定已收回。台中 7/15 那筆是「下架回收」合計，涵蓋範圍比純回收大。</p>
+      </div>
+      <div class="note">
+        <h4>所以不是互相矛盾</h4>
+        <p>台中一個市 7/15 的 71,004 公斤，看起來比中央 7/3 的 17,422 公斤還多——因為相差 12 天，而且一個是全國「回收」、一個是單一縣市「下架回收」。</p>
+        <p>官方沒有公布過一個「全國最終總量」，本頁也沒有自行加總各縣市數字，那樣會重複計算。</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:var(--step-2);font-weight:700;margin:2rem 0 .5rem">爭議三：到底幾家業者受影響</h3>
+    <p class="lede">同一天可以同時出現 224 家和 291 家，因為一個是台中市、一個是全國；而且還要看算到第幾層。</p>
+    <div class="scroller">
+      <table>
+        <caption>各單位公布的受影響家數。「層」指離<span class="n-corp">中聯</span>幾手：第 1 層是直接向<span class="n-corp">中聯</span>進貨的三家大廠，第 2 層是向這三家進貨的下游，依此類推。</caption>
+        <thead>
+          <tr><th>日期</th><th>公布單位</th><th>統計範圍</th><th>算到第幾層</th><th>家數</th></tr>
+        </thead>
+        <tbody>
+          <tr class="self"><td class="n">07-01</td><td><span class="n-org">食藥署</span></td><td>全國</td><td>第 1 層</td><td class="n">3 家</td></tr>
+          <tr><td class="n">07-03</td><td><span class="n-org">台中市食安處</span></td><td>台中市</td><td>第 2 層</td><td class="n">224 家</td></tr>
+          <tr class="self"><td class="n">07-03</td><td><span class="n-org">食藥署</span></td><td>全國</td><td>第 2 層</td><td class="n">291 家</td></tr>
+          <tr><td class="n">07-05</td><td><span class="n-org">食藥署</span></td><td>全國</td><td>受影響業者</td><td class="n">257 家</td></tr>
+          <tr><td class="n">07-06</td><td><span class="n-org">高雄市衛生局</span></td><td>高雄市</td><td>第 2 層</td><td class="n">28 家</td></tr>
+          <tr><td class="n">07-06</td><td><span class="n-org">食藥署</span></td><td>全國</td><td>受影響業者</td><td class="n">360 家</td></tr>
+          <tr class="self"><td class="n">07-07</td><td><span class="n-org">食藥署</span></td><td>全國</td><td>受影響業者</td><td class="n">360 家・232 項產品</td></tr>
+          <tr><td class="n">07-07</td><td><span class="n-org">高雄市衛生局</span></td><td>高雄市</td><td>第 3 層</td><td class="n">新增 20 家</td></tr>
+          <tr><td class="n">07-09</td><td><span class="n-org">台中市政府</span></td><td>台中市</td><td>第 3 層以下</td><td class="n">累計 25 家</td></tr>
+          <tr><td class="n">07-15</td><td><span class="n-org">台中市政府</span></td><td>台中市</td><td>曾進貨或使用</td><td class="n">142 家</td></tr>
+          <tr><td class="n">07-18</td><td><span class="n-org">台中市政府</span></td><td>台中市</td><td>掌握下游</td><td class="n">210 家</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cols" style="margin-top:1rem">
+      <div class="note">
+        <h4>學校不是廠商</h4>
+        <p>7/13 <span class="n-org">教育部</span>清查的 <b>1,380 所學校</b>是使用單位，不在上表的業者家數裡，兩者不能相加。</p>
+        <p>7/15 <span class="n-org">教育部</span>在<span class="n-org">立法院</span>給的是另一個口徑：20 個縣市、861 所學校及 334 所幼兒園「疑似」使用。統計時間與認定標準不同。</p>
+      </div>
+      <div class="note flaw">
+        <h4>291 → 257 為什麼變少</h4>
+        <p>7/3 的 291 家是「問題油品流向」的家數，7/5 的 257 家是「受影響業者」，兩者定義與清查基準不同。</p>
+        <p><b>官方沒有逐一對照說明這兩個數字的關係，本頁也不自行推論。</b>把它當成同一個指標的前後變化來讀，會讀錯。</p>
+      </div>
+      <div class="note">
+        <h4>地方數字不能相加</h4>
+        <p>台中 210 家、高雄 28 家＋20 家這類地方數字只涵蓋該縣市，且同一家連鎖業者可能同時出現在多個縣市名單，相加會重複計算。</p>
+        <p>要看全國規模，請以<span class="n-org">食藥署</span>公布的數字為準。</p>
+      </div>
+    </div>
+
+    <p class="lede" style="margin-top:1.25rem">
+      來源：
+      <a href="https://news.pts.org.tw/article/816016" target="_blank" rel="noopener">公視 07-03（291 家・17.422 公噸）</a>、
+      <a href="https://news.pts.org.tw/article/815953" target="_blank" rel="noopener">公視 07-03（台中 224 家）</a>、
+      <a href="https://news.pts.org.tw/article/816581" target="_blank" rel="noopener">公視 07-07（175 項・20% 取消）</a>、
+      <a href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634418" target="_blank" rel="noopener">食藥署 07-05（257 家）</a>、
+      <a href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634440" target="_blank" rel="noopener">食藥署 07-07（360 家 232 項）</a>、
+      <a href="https://www.cna.com.tw/news/aloc/202607060127.aspx" target="_blank" rel="noopener">中央社 07-06（高雄 28 家）</a>、
+      <a href="https://www.cna.com.tw/news/aloc/202607070228.aspx" target="_blank" rel="noopener">中央社 07-07（高雄第 3 層）</a>、
+      <a href="https://www.taichung.gov.tw/3317789/post" target="_blank" rel="noopener">台中市府 07-09</a>、
+      <a href="https://www.taichung.gov.tw/3322652/post" target="_blank" rel="noopener">台中市府 07-15</a>、
+      <a href="https://www.cna.com.tw/news/aloc/202607180155.aspx" target="_blank" rel="noopener">中央社 07-18（台中 210 家）</a>、
+      <a href="https://news.pts.org.tw/article/817339" target="_blank" rel="noopener">公視 07-13（1,380 校）</a>
+    </p>
+  </section>
+
   <!-- ============ 罰鍰 ============ -->
   <section id="penalties" class="full-only">
     <h2>裁罰彙整</h2>
@@ -1711,6 +1850,86 @@
     </p>
   </section>
 
+  <!-- ============ 2012 先例 ============ -->
+  <section id="korea2012">
+    <h2>2012 年的先例：韓國農心泡麵案</h2>
+    <p class="lede">
+      這不是台灣第一次為苯駢芘吵起來。2012 年韓國農心泡麵事件的處理過程，和 2026 年這次有幾個相似的地方，
+      當年台、港、韓三地主管機關都留下公開紀錄，可以直接對照。以下每一則都附官方或官方性來源。
+    </p>
+
+    <div class="scroller" style="margin-bottom:1.25rem">
+      <table>
+        <caption>2012 年農心泡麵苯駢芘事件時序。標「韓媒」者為韓國媒體報導，非官方發布。</caption>
+        <thead>
+          <tr><th>日期</th><th>誰</th><th>發生什麼</th><th>來源</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="n">2012-06</td><td>韓國</td>
+            <td>在一批煙燻魚肉（柴魚）檢出苯駢芘，超過韓國法定限量 10 μg/kg。農心以該批柴魚做為泡麵湯粉原料。</td>
+            <td><a href="https://www.cfs.gov.hk/english/press/2012_10_30_1.html" target="_blank" rel="noopener">香港食安中心</a></td>
+          </tr>
+          <tr>
+            <td class="n">2012-10-23</td><td>韓國國會</td>
+            <td>立委揭露農心 6 款泡麵湯粉檢出苯駢芘，最高 4.7 ppb。</td>
+            <td>韓媒</td>
+          </tr>
+          <tr class="self">
+            <td class="n">2012-10-24</td><td>韓國食藥廳</td>
+            <td>表示依風險評估結果認為安全，未要求回收。</td>
+            <td><a href="https://www.khan.co.kr/article/201210251724311" target="_blank" rel="noopener">京鄉新聞（韓媒）</a></td>
+          </tr>
+          <tr class="self">
+            <td class="n">2012-10-25</td><td>韓國食藥廳</td>
+            <td><b>隔天改口</b>，發布官方新聞稿「食藥廳、農心等苯駢芘檢出相關後續措施」，命 4 家業者、9 項產品回收並廢棄。</td>
+            <td><a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=155858578" target="_blank" rel="noopener">韓國政策簡報（官方）</a></td>
+          </tr>
+          <tr>
+            <td class="n">2012-10-25</td><td>台灣 TFDA</td>
+            <td>發布〈TFDA 持續追蹤掌握韓國農心牌速食麵檢出含苯芘事件〉。輸台兩款為「爽口海鮮味烏龍麵」約 37,507 公斤、「香辣海鮮味烏龍麵」約 22,435 公斤。當時的說法是「韓國政府評估無安全危害性，並未要求產品下架」，並表示「若韓國原廠基於保障消費者等考量，宣布回收產品，將建議並注意台灣進口商回收相關產品」。<b>該篇通篇未提及台灣要求下架。</b></td>
+            <td><a href="https://www.mohw.gov.tw/cp-3159-23986-1.html" target="_blank" rel="noopener">衛福部（官方）</a></td>
+          </tr>
+          <tr>
+            <td class="n">2012-10-30</td><td>香港食安中心</td>
+            <td>檢驗 8 個樣本（含 5 款相關產品），<b>全部未檢出苯駢芘</b>；本地代理商已自願將所有批次下架。</td>
+            <td><a href="https://www.cfs.gov.hk/english/press/2012_10_30_1.html" target="_blank" rel="noopener">香港政府（官方）</a></td>
+          </tr>
+          <tr>
+            <td class="n">2012-11-05</td><td>台灣 TFDA</td>
+            <td>檢驗結果：2 件「爽口海鮮烏龍麵」調味包檢出苯芘 <b>1.01 及 0.97 ppb</b>。以最高 1.01 μg/kg 估算每日攝入約 0.012 μg，「遠低於 JECFA 之每日平均攝入量(0.24 μg)，亦遠低於<span class="n-org">歐盟</span> 2008 年調查資料苯芘平均每日飲食攝入量 0.235 μg」，評估並無健康危害之虞。</td>
+            <td><a href="https://www.mohw.gov.tw/fp-16-23944-1.html" target="_blank" rel="noopener">衛福部（官方）</a></td>
+          </tr>
+          <tr>
+            <td class="n">2012-11-06</td><td>台灣衛生署</td>
+            <td>說明致癌風險評估：「將增加百萬分之一點五(1.5×10⁻⁶) 的致癌風險，一般致癌風險介於 10⁻⁶～10⁻⁴ 尚屬可接受的範圍」、「該等產品於一般正常攝食情況下，尚不致有明顯危害健康之虞」。</td>
+            <td><a href="https://www.mohw.gov.tw/cp-3159-23947-1.html" target="_blank" rel="noopener">衛福部（官方）</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cols">
+      <div class="note flaw">
+        <h4>官方新聞稿與媒體報導不一致的一點</h4>
+        <p>當年媒體（蘋果日報，經環境資訊中心轉載）報導台灣衛生署同日宣布跟進、要求兩款烏龍麵下架，賣場也已全面下架。</p>
+        <p>但<span class="n-org">衛福部</span> 10 月 25 日的官方新聞稿通篇沒有提到台灣要求下架，只寫韓方未要求下架、以及若韓方回收將建議進口商跟進。</p>
+        <p><b>本頁兩邊都列出來，不做取捨。</b>通路端是否自主下架、與主管機關是否下令下架，是兩件事。</p>
+        <p><a href="https://e-info.org.tw/node/81423" target="_blank" rel="noopener">環境資訊中心轉載（媒體）↗</a></p>
+      </div>
+      <div class="note">
+        <h4>跟 2026 年像在哪</h4>
+        <p><b>官方先說安全、後來改口。</b>韓國食藥廳 10/24 說安全、10/25 命回收；2026 年台灣則是 7/3 說第二層加工品風險低不下架、7/7 改為一律下架。</p>
+        <p><b>「無立即危害」與「加強處置」並存。</b>2012 年台灣官方評估風險可接受，但產品仍被下架處理；2026 年也出現「史上最高罰鍰」與「無立即健康危害」並列的情況。</p>
+      </div>
+      <div class="note">
+        <h4>不一樣的地方，別直接比大小</h4>
+        <p>2012 年泡麵調味包本身沒有苯駢芘限量，超標的是上游柴魚原料（韓國限量 10 μg/kg）；2026 年是食用油脂本身就有 2.0 μg/kg 限量，且檢出 8.1。</p>
+        <p>兩者食品類別與適用限量不同，<b>1.01 ppb 和 8.1 ppb 不能直接放在一起比誰嚴重</b>。看數字要先看是哪一類食品、適用哪個限量。</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ 為什麼會發生 ============ -->
   <section id="cause" class="full-only">
     <h2>為什麼會發生：獨立調查的三個缺口</h2>
@@ -1756,64 +1975,78 @@
     <div class="faceoff">
 
       <div class="faceoff-item">
-        <h4>爭點一：加工品要下架到什麼程度</h4>
+        <h4>爭點一：加工品要下架到什麼程度<span class="range">2026-07-03 → 07-09</span></h4>
         <div class="faceoff-sides">
           <div class="side central">
             <span class="who">中央</span>
-            <p><span class="n-org">食藥署</span>規定，問題油製成的產品、半成品，以油的原型出現、或使用占比 20% 以上者，才須預防性下架。</p>
+            <p><span class="d">07-03</span><span class="n-org">食藥署</span>：第 2 層加工品經風險評估仍符合衛生安全標準，不下架、不公布名單。</p>
+            <p><span class="d">07-06</span>改為：以油的原型出現、或使用占比 20% 以上者須預防性下架。</p>
+            <p><span class="d">07-07</span><span class="n-org">衛福部</span>長<span class="n-person">石崇良</span>宣布未達 20% 的 175 項產品也須下架，<b>20% 門檻取消</b>，改為一律預防性下架、檢驗合格才能回架。</p>
+            <p><span class="d">07-09</span>再擴大到<span class="n-corp">中聯</span> 4 至 6 月生產的全部油品及其產品。</p>
           </div>
           <div class="side local">
             <span class="who">地方</span>
-            <p>台北市不採此標準。市長<span class="n-person">蔣萬安</span>：「只要有任何使用到問題油品的加工製品，我們不分 20% 以上或以下先全面預防性下架。」低於 20% 者須提出證明才可恢復上架。</p>
+            <p><span class="d">07-06</span>台北市未採 20% 門檻。市長<span class="n-person">蔣萬安</span>：「只要有任何使用到問題油品的加工製品，我們不分 20% 以上或以下先全面預防性下架。」低於 20% 者須提出證明才可恢復上架。</p>
+            <p>也就是說，台北市比中央早一天採取不分比例的做法；中央隔天跟上。<b>兩邊最後的做法是一致的</b>，差別在於中間那幾天。</p>
           </div>
         </div>
-        <div class="srcs"><a class="src" href="https://news.pts.org.tw/article/816392" target="_blank" rel="noopener">公視 07-06</a></div>
+        <div class="srcs">
+          <a class="src" href="https://www.cna.com.tw/news/ahel/202607030240.aspx" target="_blank" rel="noopener">中央社 07-03</a>
+          <a class="src" href="https://news.pts.org.tw/article/816392" target="_blank" rel="noopener">公視 07-06</a>
+          <a class="src" href="https://news.pts.org.tw/article/816581" target="_blank" rel="noopener">公視 07-07</a>
+          <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634464" target="_blank" rel="noopener">食藥署 07-09</a>
+        </div>
       </div>
 
       <div class="faceoff-item">
-        <h4>爭點二：第二層以下的產品名單要不要公布</h4>
+        <h4>爭點二：第二層以下的產品名單要不要公布<span class="range">2026-07-03 → 07-12</span></h4>
         <div class="faceoff-sides">
           <div class="side central">
             <span class="who">中央</span>
-            <p><span class="n-org">食藥署</span>表示，第 2 層加工品經風險評估仍符合衛生安全標準，風險低，不公布名單、不要求全面下架。</p>
+            <p><span class="d">07-03</span><span class="n-org">食藥署</span>表示，第 2 層加工品經風險評估仍符合衛生安全標準，風險低，不公布名單、不要求全面下架。</p>
+            <p><span class="d">07-05</span>起改口：陸續公布 257 家、360 家受影響業者與 232 項產品，並自 <span class="d">07-12</span> 起改為每日更新受影響產品流向。</p>
           </div>
           <div class="side local">
             <span class="who">地方</span>
+            <p><span class="d">07-03</span><span class="n-org">台中市</span>食安處已公布首波下游名單 224 家（<span class="n-corp">王品</span>、<span class="n-corp">桂冠</span>、<span class="n-corp">聯華</span>食品等），比中央早。</p>
             <p><span class="n-org">台中市府</span>表示「查到哪公布到哪」，逐日公布第三層以下受影響業者名單。<span class="n-org">高雄市衛生局</span>也追到第 3 層，20 家使用者全數下架。</p>
           </div>
         </div>
         <div class="srcs">
           <a class="src" href="https://www.cna.com.tw/news/ahel/202607030240.aspx" target="_blank" rel="noopener">中央社 07-03</a>
+          <a class="src" href="https://news.pts.org.tw/article/815953" target="_blank" rel="noopener">公視 台中 224 家</a>
+          <a class="src" data-org="gov" href="https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&amp;id=t634440" target="_blank" rel="noopener">食藥署 360 家</a>
           <a class="src" data-org="gov" href="https://www.taichung.gov.tw/3317789/post" target="_blank" rel="noopener">台中市府 07-09</a>
           <a class="src" href="https://www.cna.com.tw/news/aloc/202607070228.aspx" target="_blank" rel="noopener">中央社 07-07</a>
         </div>
       </div>
 
       <div class="faceoff-item">
-        <h4>爭點三：平時到底稽查了幾次</h4>
+        <h4>爭點三：平時到底稽查了幾次<span class="range">2026-07-24</span></h4>
         <div class="faceoff-sides">
           <div class="side central">
             <span class="who">中央</span>
-            <p><span class="n-org">衛福部</span>長<span class="n-person">石崇良</span>指出，<span class="n-org">台中市府</span>過去 8 年僅配合<span class="n-org">食藥署</span>檢驗<span class="n-corp">中聯油脂</span> 1 次（2024 年），相較台南、高雄明顯偏低。</p>
+            <p><span class="d">07-24</span><span class="n-org">衛福部</span>長<span class="n-person">石崇良</span>指出，<span class="n-org">台中市府</span>過去 8 年僅配合<span class="n-org">食藥署</span>檢驗<span class="n-corp">中聯油脂</span> 1 次（2024 年），相較台南、高雄明顯偏低。</p>
           </div>
           <div class="side local">
             <span class="who">地方</span>
-            <p>台中副市長<span class="n-person">鄭照新</span>反駁，依法業者送驗應納入稽查紀錄，2022 年至今共 18 次，呼籲「不要用局部以偏概全數字，造成錯誤印象」。</p>
+            <p><span class="d">07-24</span>台中副市長<span class="n-person">鄭照新</span>反駁，依法業者送驗應納入稽查紀錄，2022 年至今共 18 次，呼籲「不要用局部以偏概全數字，造成錯誤印象」。</p>
           </div>
         </div>
         <div class="srcs"><a class="src" href="https://www.cna.com.tw/news/aloc/202607240086.aspx" target="_blank" rel="noopener">中央社 07-24</a></div>
       </div>
 
       <div class="faceoff-item">
-        <h4>爭點四：中央有沒有阻止地方查廠</h4>
+        <h4>爭點四：中央有沒有阻止地方查廠<span class="range">2026-07-17 → 07-24</span></h4>
         <div class="faceoff-sides">
           <div class="side central">
             <span class="who">中央</span>
-            <p><span class="n-org">食藥署</span> 7 月 18 日發表嚴正聲明：「中央從未阻止查廠，勿以片段說法混淆視聽。」</p>
+            <p><span class="d">07-18</span><span class="n-org">食藥署</span>發表嚴正聲明：「中央從未阻止查廠，勿以片段說法混淆視聽。」</p>
           </div>
           <div class="side local">
             <span class="who">地方</span>
-            <p>台中市長<span class="n-person">盧秀燕</span>指中央數次施壓地方不要查廠、不要公布流向、不要下架問題油品；7 月 24 日再批中央有人是「癌細胞」，質疑「為什麼中央這次故意要拖、要蓋牌」。</p>
+            <p><span class="d">07-17</span>台中市長<span class="n-person">盧秀燕</span>指中央數次施壓地方不要查廠、不要公布流向、不要下架問題油品。</p>
+            <p><span class="d">07-24</span>再批中央有人是「癌細胞」，質疑「誰在包庇」、「為什麼中央這次故意要拖、要蓋牌」。</p>
           </div>
         </div>
         <div class="srcs">
@@ -1824,15 +2057,15 @@
       </div>
 
       <div class="faceoff-item">
-        <h4>爭點五：專家會議有沒有護航業者</h4>
+        <h4>爭點五：專家會議有沒有護航業者<span class="range">會議 07-04｜爭議 07-30 → 07-31</span></h4>
         <div class="faceoff-sides">
           <div class="side central">
             <span class="who">中央</span>
-            <p><span class="n-org">食藥署</span>副署長<span class="n-person">王德原</span>：「絕無門神情事」，強調專家會議決策均依科學評估，相關紀錄已主動函送檢調。署長<span class="n-person">姜至剛</span>重申絕無護航業者。</p>
+            <p><span class="d">07-30・07-31</span><span class="n-org">食藥署</span>副署長<span class="n-person">王德原</span>：「絕無門神情事」，強調專家會議決策均依科學評估，相關紀錄已主動函送檢調。署長<span class="n-person">姜至剛</span>重申絕無護航業者。</p>
           </div>
           <div class="side local">
             <span class="who">在野黨團</span>
-            <p><span class="n-org">國民黨</span><span class="n-org">立法院</span>黨團質疑，7 月 4 日決定「20% 以上是否下架」的專家會議中有<span class="n-corp">中聯</span>代表列席並進行製程說明，要求公開完整紀錄、與會名單與決策依據。</p>
+            <p><span class="d">07-31</span><span class="n-org">國民黨</span><span class="n-org">立法院</span>黨團質疑，7 月 4 日決定「20% 以上是否下架」的專家會議中有<span class="n-corp">中聯</span>代表列席並進行製程說明，要求公開完整紀錄、與會名單與決策依據。</p>
           </div>
         </div>
         <div class="srcs">
@@ -1842,16 +2075,16 @@
       </div>
 
       <div class="faceoff-item">
-        <h4>爭點六：誰罰了誰</h4>
+        <h4>爭點六：誰罰了誰<span class="range">2026-07-07 → 07-16</span></h4>
         <div class="faceoff-sides">
           <div class="side central">
             <span class="who">中央</span>
-            <p><span class="n-org">食藥署</span>對<span class="n-corp">中聯</span>開罰 1 億 6,520 萬元（延遲通報，違反食安法第 15 條、依第 44 條裁處），另因隱匿批號 314-1150401 未據實登錄加罰 300 萬元。</p>
+            <p><span class="d">07-07・07-16</span><span class="n-org">食藥署</span>對<span class="n-corp">中聯</span>開罰 1 億 6,520 萬元（延遲通報，違反食安法第 15 條、依第 44 條裁處），另因隱匿批號 314-1150401 未據實登錄加罰 300 萬元。</p>
           </div>
           <div class="side local">
             <span class="who">地方</span>
-            <p><span class="n-org">台北市衛生局</span>對<span class="n-corp">南僑</span>罰 300 萬元（自主檢驗發現異常卻只通知上游、未依食安法第 7 條第 5 項向<span class="n-org">衛生局</span>通報）。</p>
-            <p><span class="n-org">台中市府</span>對<span class="n-corp">福壽</span>累計裁罰 900 萬元，其中 7 月 12 日因 2 項產品超標涉延遲通報再罰 600 萬元。</p>
+            <p><span class="d">07-07</span><span class="n-org">台北市衛生局</span>對<span class="n-corp">南僑</span>罰 300 萬元（自主檢驗發現異常卻只通知上游、未依食安法第 7 條第 5 項向<span class="n-org">衛生局</span>通報）。</p>
+            <p><span class="d">07-12</span><span class="n-org">台中市府</span>對<span class="n-corp">福壽</span>累計裁罰 900 萬元，其中 7 月 12 日因 2 項產品超標涉延遲通報再罰 600 萬元。</p>
           </div>
         </div>
         <div class="srcs">
@@ -1873,7 +2106,7 @@
       放在這裡是為了呈現外界提出了哪些質疑，<b>不代表本頁背書其論點</b>，也不是官方立場。每則都可以點進原文自己判斷。
       <br><br>
       <b>另外要講清楚一件事：</b>這一區收到的評論，內容多半是對主管機關處理方式的批評——這反映的是這段期間評論市場的實際樣貌，不是本頁刻意選邊。
-      主管機關自己的說法與依據，完整收在上方時間軸的官方新聞稿裡（食藥署共 21 則、行政院修法說明、各地方衛生局公告），請一併對照閱讀。
+      主管機關自己的說法與依據，完整收在上方時間軸的官方新聞稿裡（<span class="n-org">食藥署</span>共 21 則、<span class="n-org">行政院</span>修法說明、各地方<span class="n-org">衛生局</span>公告），請一併對照閱讀。
     </div>
 
     <div class="media">
@@ -2009,7 +2242,7 @@
       </div>
       <div class="note">
         <h4>其他縣市</h4>
-        <p>各縣市衛生局多有發布稽查與下架進度，請搜尋所在縣市的衛生局官網。</p>
+        <p>各縣市<span class="n-org">衛生局</span>多有發布稽查與下架進度，請搜尋所在縣市的<span class="n-org">衛生局</span>官網。</p>
         <p><span class="n-org">桃園市</span><span class="n-org">衛生局</span>的公告頁（「首波 32 家下架逾 1.2 萬公斤」）在本頁多次測試都回傳伺服器錯誤 HTTP 428，無法確認一般讀者能否開啟，因此不放連結。</p>
       </div>
     </div>
@@ -2030,7 +2263,7 @@
       該區開頭已另外標明。時間軸本身不收這類來源。
     </p>
     <p>
-      <b>連結核對：</b>2026-08-01 把全頁 122 個外部連結逐一實際連過一次，都能開啟。
+      <b>連結核對：</b>2026-08-02 把全頁 132 個外部連結逐一實際連過一次，都能開啟。
       其中關鍵評論網那則會擋自動化程式，用一般瀏覽器開啟正常；
       <span class="n-org">桃園市</span><span class="n-org">衛生局</span>公告頁回傳 HTTP 428、無法確認讀者能否開啟，已不放連結。
       標「未查得」的欄位表示本頁沒有查到官方原文，不等於該國沒有訂定。
@@ -2040,15 +2273,16 @@
       若發現錯誤或有更新的官方公告，歡迎指正。
     </p>
     <p>
-      刻意未收錄：2014 年強冠劣質豬油案的苯駢芘檢出值、2012 年韓國泡麵調味包案，
-      以及 <span class="n-org">IARC</span> 將苯駢芘由第 2A 類調整為第 1 類的確切年份與韓國現行限量——
+      刻意未收錄：2014 年強冠劣質豬油案的苯駢芘檢出值，以及 <span class="n-org">IARC</span>
+      將苯駢芘由第 2A 類調整為第 1 類的確切年份與韓國食用油現行限量——
       這幾項查不到官方或公視、中央社等級的可點來源，寧可不寫，也不放沒把握的數字。
+      （2012 年韓國農心泡麵案原本也在這份清單裡，後來找到台灣<span class="n-org">衛福部</span>、香港食安中心與韓國政策簡報的官方原文，已補進〈2012 年的先例〉一節。）
     </p>
     <p>
       <span class="n-org">IARC</span> 將苯駢芘列為第 1 類致癌物，見
       <a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Chemical-Agents-And-Related-Occupations-2012" target="_blank" rel="noopener">IARC Monographs Volume 100F（2012）</a>。
     </p>
-    <p class="sig">更新 2026-08-01 18:05</p>
+    <p class="sig">更新 2026-08-02 10:25</p>
   </div>
 </footer>
 
