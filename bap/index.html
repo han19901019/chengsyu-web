@@ -534,6 +534,30 @@
     padding-block:2.25rem 3rem;
   }
   footer p{margin:0 0 .6rem;color:var(--ink-3);font-size:var(--step--1);line-height:1.85;max-width:70ch}
+
+  .about{
+    display:grid;gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    border-radius:3px;
+    margin:1rem 0 1.5rem;
+  }
+  @media (min-width:760px){ .about{grid-template-columns:1fr 1fr} }
+  .about > div{background:var(--surface);padding:.95rem 1.15rem}
+  .about h4{
+    margin:0 0 .4rem;
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;
+    color:var(--ink-3);font-weight:600;
+  }
+  .about p{margin:0;color:var(--ink-2);font-size:.9rem;line-height:1.8;max-width:none}
+  .about p + p{margin-top:.45rem}
+  .about ul{margin:.25rem 0 0;padding-left:1.15rem;color:var(--ink-2);font-size:.9rem;line-height:1.8}
+  .about ul li{margin-bottom:.25rem}
+  .about .tag{
+    font-family:var(--mono);font-size:.72rem;
+    background:var(--surface-2);border-radius:2px;padding:.05rem .35rem;
+    color:var(--ink);
+  }
   footer a{color:var(--gold)}
   footer .sig{font-family:var(--mono);letter-spacing:.08em;color:var(--ink-2);margin-top:1.25rem}
 
@@ -573,7 +597,7 @@
       <a href="#faceoff">〈同一件事，中央和地方講的不一樣〉</a>並排比對。
     </p>
     <div class="stamp">
-      <span>更新 2026-08-02 10:25</span>
+      <span>更新 2026-08-02 11:05</span>
       <span>事件 80 則</span>
       <span>來源：<span class="n-org">食藥署</span>／<span class="n-org">行政院</span>／<span class="n-org">立法院</span>／各地方<span class="n-org">衛生局</span>／公視／中央社／<span class="n-org">EUR-Lex</span></span>
     </div>
@@ -2253,36 +2277,62 @@
 <footer>
   <div class="wrap">
     <p class="eyebrow">關於這一頁</p>
-    <p>
-      本頁為民間整理，非官方公告，一切以各主管機關最新公告為準。所有事件均附可點擊的來源連結，
-      優先採用<span class="n-org">衛生福利部食品藥物管理署</span>、<span class="n-org">行政院</span>等官方公告，其次為公視新聞網與中央社；
-      國際標準部分引用 <span class="n-org">IARC</span> 與 <span class="n-org">EUR-Lex</span> 法規原文。
-    </p>
-    <p>
-      唯一的例外是「媒體與評論怎麼看」那一區，來源是其他媒體、專欄社論與影音評論，等級與上面不同，
-      該區開頭已另外標明。時間軸本身不收這類來源。
-    </p>
-    <p>
-      <b>連結核對：</b>2026-08-02 把全頁 132 個外部連結逐一實際連過一次，都能開啟。
-      其中關鍵評論網那則會擋自動化程式，用一般瀏覽器開啟正常；
-      <span class="n-org">桃園市</span><span class="n-org">衛生局</span>公告頁回傳 HTTP 428、無法確認讀者能否開啟，已不放連結。
-      標「未查得」的欄位表示本頁沒有查到官方原文，不等於該國沒有訂定。
-      文中若出現「本頁自行加總／自行計算」，表示那個數字是我算的，不是來源原文寫的。
-    </p>
-    <p>
-      若發現錯誤或有更新的官方公告，歡迎指正。
-    </p>
-    <p>
-      刻意未收錄：2014 年強冠劣質豬油案的苯駢芘檢出值，以及 <span class="n-org">IARC</span>
-      將苯駢芘由第 2A 類調整為第 1 類的確切年份與韓國食用油現行限量——
-      這幾項查不到官方或公視、中央社等級的可點來源，寧可不寫，也不放沒把握的數字。
-      （2012 年韓國農心泡麵案原本也在這份清單裡，後來找到台灣<span class="n-org">衛福部</span>、香港食安中心與韓國政策簡報的官方原文，已補進〈2012 年的先例〉一節。）
-    </p>
-    <p>
-      <span class="n-org">IARC</span> 將苯駢芘列為第 1 類致癌物，見
-      <a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Chemical-Agents-And-Related-Occupations-2012" target="_blank" rel="noopener">IARC Monographs Volume 100F（2012）</a>。
-    </p>
-    <p class="sig">更新 2026-08-02 10:25</p>
+    <div class="about">
+
+      <div>
+        <h4>這是什麼</h4>
+        <p>民間整理的事件時序，不是官方公告。所有內容以各主管機關最新公告為準。</p>
+        <p>時間軸只排時序、不下判斷；需要評價與詮釋的內容集中在「媒體與評論怎麼看」一區。</p>
+      </div>
+
+      <div>
+        <h4>來源分三級</h4>
+        <ul>
+          <li><b>官方</b>：<span class="n-org">衛生福利部食品藥物管理署</span>、<span class="n-org">行政院</span>、<span class="n-org">立法院</span>、各地方<span class="n-org">衛生局</span>；國際部分為 <span class="n-org">IARC</span>、<span class="n-org">EUR-Lex</span>、香港食物安全中心、韓國政策簡報。</li>
+          <li><b>官方性媒體</b>：公視新聞網、中央社。</li>
+          <li><b>其他媒體</b>：只出現在「媒體與評論怎麼看」一區，時間軸本身不收。</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>頁面上的標示</h4>
+        <ul>
+          <li><span class="tag">未查得</span>本頁沒有查到官方原文，不等於該國沒有訂定。</li>
+          <li><span class="tag">本頁自行加總</span>該數字由本頁計算，來源原文沒有寫。</li>
+          <li><span class="tag">韓媒</span>韓國媒體報導，非官方發布。</li>
+          <li><span class="tag">地方政府網站轉載</span>非發布機關的原始頁面。</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>連結核對</h4>
+        <p>全頁 132 個外部連結於 2026-08-02 逐一實際連過，都能開啟。兩個例外已在頁面上標明：</p>
+        <ul>
+          <li>關鍵評論網該則會擋自動化程式，一般瀏覽器開啟正常。</li>
+          <li><span class="n-org">桃園市衛生局</span>公告頁回傳 HTTP 428，無法確認讀者能否開啟，因此不放連結。</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>未收錄的項目</h4>
+        <p>以下幾項查不到官方或公視、中央社等級的可點來源，因此不寫：</p>
+        <ul>
+          <li>2014 年強冠劣質豬油案的苯駢芘檢出值</li>
+          <li><span class="n-org">IARC</span> 將苯駢芘由第 2A 類調整為第 1 類的確切年份</li>
+          <li>韓國食用油的現行限量</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>指正</h4>
+        <p>發現錯誤，或有更新的官方公告，歡迎指正。</p>
+        <p><span class="n-org">IARC</span> 將苯駢芘列為第 1 類致癌物，見
+          <a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Chemical-Agents-And-Related-Occupations-2012" target="_blank" rel="noopener">IARC Monographs Volume 100F（2012）</a>。
+        </p>
+      </div>
+
+    </div>
+    <p class="sig">更新 2026-08-02 11:05</p>
   </div>
 </footer>
 
